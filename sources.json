@@ -1,0 +1,75 @@
+[
+  {
+    "id": "dig-goldwater",
+    "source": "The Dig at Howard University — Camille Wimberly Goldwater Scholar Profile",
+    "url": "https://thedig.howard.edu/all-stories/howard-university-student-camille-wimberly-selected-2026-goldwater-scholarship-recipient",
+    "kind": "html",
+    "profile": "commentary",
+    "selector": "#block-hu-dig-content > .paragraph-widget--text-html",
+    "exclude_selector": ".visually-hidden"
+  },
+  {
+    "id": "karsh-scholars",
+    "source": "Howard University Karsh STEM Scholars Program (Official Site)",
+    "url": "https://karshstemscholars.howard.edu/about",
+    "kind": "html",
+    "profile": "formal"
+  },
+  {
+    "id": "hilltop-r1",
+    "source": "The Hilltop (Student Newspaper)",
+    "url": "https://thehilltoponline.com/2024/11/22/beyond-the-numbers-what-r1-status-can-mean-for-howard/",
+    "kind": "html",
+    "profile": "commentary"
+  },
+  {
+    "id": "ous-research",
+    "source": "Howard University Office of Undergraduate Studies",
+    "url": "https://ous.howard.edu/undergraduate-research",
+    "kind": "html",
+    "profile": "formal"
+  },
+  {
+    "id": "amgen-scholars",
+    "source": "Howard University Provost's Office",
+    "url": "https://provost.howard.edu/amgen-scholars",
+    "kind": "html",
+    "profile": "formal"
+  },
+  {
+    "id": "afro-independent-study",
+    "source": "Howard University Department of Afro-American Studies — Independent Study",
+    "url": "https://afroamericanstudies.howard.edu/beyond-classroom/independent-study",
+    "kind": "html",
+    "profile": "formal",
+    "exclude_selector": ".contact-box"
+  },
+  {
+    "id": "ukweli",
+    "source": "Ukweli: Howard University Undergraduate Research Journal",
+    "url": "https://coas.howard.edu/experiential-learning/independent-research/ukweli-howard-university-undergraduate-research-journal",
+    "kind": "html",
+    "profile": "formal"
+  },
+  {
+    "id": "research-month",
+    "source": "Howard University Research Month",
+    "url": "https://researchmonth.howard.edu/",
+    "kind": "html",
+    "profile": "formal"
+  },
+  {
+    "id": "eecs-labs",
+    "source": "College of Engineering and Architecture (CEA)",
+    "url": "https://cea.howard.edu/academics/departments/electrical-engineering-and-computer-science/research/research-centers-and",
+    "kind": "html",
+    "profile": "formal"
+  },
+  {
+    "id": "chemistry-research",
+    "source": "Howard University Department of Chemistry",
+    "url": "https://chemistry.howard.edu/academics/undergraduate-program/undergraduate-research",
+    "kind": "html",
+    "profile": "formal"
+  }
+]

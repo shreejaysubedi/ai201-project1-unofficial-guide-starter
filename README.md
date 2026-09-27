@@ -1,5 +1,22 @@
 # The Unofficial Guide — Project 1
 
+## Running ingestion and chunking
+
+The first two pipeline stages are implemented in `ingest.py` and `chunking.py`.
+`sources.json` contains the 10 URLs and source profiles from `planning.md`.
+
+```bash
+python -m pip install -r requirements.txt
+python ingest.py --check-tokens
+python -m unittest discover -s tests -v
+```
+
+See [INGESTION.md](INGESTION.md) for output formats, offline runs, and local-file
+fallbacks for inaccessible sources. Embedding, vector storage, and querying are
+not implemented yet.
+
+---
+
 > **How to use this template:**
 > Complete each section *after* you've built and tested the corresponding part of your system.
 > Do not write placeholder text — if a section isn't done yet, leave it blank and come back.
@@ -9,31 +26,28 @@
 
 ## Domain
 
-<!-- What topic or category of knowledge does your system cover?
-     Why is this knowledge valuable, and why is it hard to find through official channels?
-     Example: "Student reviews of CS professors at [university] — useful because official
-     course descriptions don't reflect teaching style, exam difficulty, or workload." -->
+Undergraduate Research Opportunities at Howard University: finding labs, faculty outreach, summer fellowships, independent study, and student experiences. The corpus combines department guidance with reported student perspectives to help connect practical questions to program requirements and research opportunities.
 
 ---
 
 ## Document Sources
 
-<!-- List every source you collected documents from.
-     Be specific: include URLs, subreddit names, forum thread titles, or file names.
-     Aim for variety — sources that together cover different subtopics or perspectives. -->
+All 10 sources below were successfully fetched on September 27, 2026. The Dig is Howard’s university news outlet; The Hilltop is the student newspaper. Their reporting provides attributed student experiences, while the eight formal sources provide program and department information. The two replacements preserve the 500/100 news and 800/150 formal chunking profiles.
 
 | # | Source | Type | URL or file path |
 |---|--------|------|-----------------|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
-| 6 | | | |
-| 7 | | | |
-| 8 | | | |
-| 9 | | | |
-| 10 | | | |
+| 1 | The Dig at Howard University — Camille Wimberly Goldwater Scholar Profile | University news / student experience (HTML) | [Source](https://thedig.howard.edu/all-stories/howard-university-student-camille-wimberly-selected-2026-goldwater-scholarship-recipient) |
+| 2 | Howard University Karsh STEM Scholars Program (Official Site) | Official guidance / directory (HTML) | [Source](https://karshstemscholars.howard.edu/about) |
+| 3 | The Hilltop (Student Newspaper) | Student newspaper (HTML) | [Source](https://thehilltoponline.com/2024/11/22/beyond-the-numbers-what-r1-status-can-mean-for-howard/) |
+| 4 | Howard University Office of Undergraduate Studies | Official guidance / directory (HTML) | [Source](https://ous.howard.edu/undergraduate-research) |
+| 5 | Howard University Provost's Office | Official guidance / directory (HTML) | [Source](https://provost.howard.edu/amgen-scholars) |
+| 6 | Howard University Department of Afro-American Studies — Independent Study | Official guidance / directory (HTML) | [Source](https://afroamericanstudies.howard.edu/beyond-classroom/independent-study) |
+| 7 | Ukweli: Howard University Undergraduate Research Journal | Official guidance / directory (HTML) | [Source](https://coas.howard.edu/experiential-learning/independent-research/ukweli-howard-university-undergraduate-research-journal) |
+| 8 | Howard University Research Month | Official guidance / directory (HTML) | [Source](https://researchmonth.howard.edu/) |
+| 9 | College of Engineering and Architecture (CEA) | Official guidance / directory (HTML) | [Source](https://cea.howard.edu/academics/departments/electrical-engineering-and-computer-science/research/research-centers-and) |
+| 10 | Howard University Department of Chemistry | Official guidance / directory (HTML) | [Source](https://chemistry.howard.edu/academics/undergraduate-program/undergraduate-research) |
+
+The Dig’s Camille Wimberly profile replaces the inaccessible Reddit thread. The Afro-American Studies Independent Study page replaces the unavailable Political Science PDF. Independent-study eligibility in this corpus is now department-specific to Afro-American Studies; the old POLS requirements are not used.
 
 ---
 
@@ -46,29 +60,131 @@
      - Any preprocessing you did before chunking (e.g., stripping HTML, removing headers)
      - What your final chunk count was across all documents -->
 
-**Chunk size:**
+**Chunk size:** Maximum 500 characters for The Dig and The Hilltop; maximum 800 characters for official guides and directories.
 
-**Overlap:**
+**Overlap:** Exactly 100 characters for commentary/news and 150 characters for official sources.
 
-**Why these choices fit your documents:**
+**Why these choices fit your documents:** Smaller chunks keep student commentary focused; larger chunks retain more context for rules, procedures, and lab descriptions. The recursive splitter prefers paragraph, line, sentence, then word boundaries. HTML navigation/footer/script elements are removed before Unicode and whitespace normalization. The inspection below shows that exact-character overlap still produces some opening fragments and that cleaning needs further refinement.
 
-**Final chunk count:**
+**Final chunk count:** 88 chunks from all 10 successfully ingested source documents (September 27, 2026). Counted directly from `documents/processed/chunks.jsonl` and cross-checked against `documents/processed/report.json`. The live fetch succeeded for all 10 sources; the final run reused those snapshots after refining extraction for the new pages.
+
+The source totals are: The Dig 17, Karsh 4, The Hilltop 22, Office of Undergraduate Studies 6, Amgen 5, Afro-American Studies 4, Ukweli 7, Research Month 3, EECS labs 12, Chemistry 8.
+
+The total is within the suggested 50–2,000 range, and the corpus now covers all 10 planned sources. This range is only a size sanity check; it does not establish standalone chunk quality. All 88 chunks passed the 256-token check, with a maximum of 193 tokens.
 
 ---
 
 ## Sample Chunks
 
-<!-- Paste 5 representative chunks from your document collection after running your ingestion pipeline.
-     For each chunk, note which source document it came from.
-     These must be actual text — not screenshots. -->
+These five samples were copied from `documents/processed/chunks.jsonl` from the September 27, 2026 run. They cover five sources and both chunking profiles. Only outer whitespace is omitted for display; fragments and cleaning artifacts are preserved so the inspection reflects the actual output. Character counts include the stored whitespace.
 
-| # | Source document | Chunk text |
-|---|----------------|------------|
-| 1 | | |
-| 2 | | |
-| 3 | | |
-| 4 | | |
-| 5 | | |
+### Chunk 1
+
+**Source document:** [Karsh STEM Scholars Program — About](https://karshstemscholars.howard.edu/about)
+
+**Chunk ID:** `karsh-scholars:body:0:9ed05f7d8fb0ca31`
+
+**Length:** 668 characters; 122 tokens.
+
+> About
+>
+> 2020 Inspiring Programs in STEM Award Recipient
+>
+> Each year, the Karsh STEM Scholars Program attracts hundreds of competitive high school students who are interested in beginning their STEM careers at Howard University. Scholars selected for the program are awarded a scholarship for tuition, mandatory fees, room, board and an allowance for books associated with attending the University and are required to ultimately pursue, a PhD, or a combined MD-PhD, within a STEM discipline. The program aims to challenge students, through rigorous coursework and preparation, to live, prosper and contribute to a world that is increasingly diverse and global in nature.
+
+**Standalone meaning: Yes.** It identifies the program and gives complete statements about scholarship coverage and the expected degree path. The award heading adds minor noise, but the main paragraph is coherent.
+
+**Answerable from this chunk alone:** “What expenses does the Karsh scholarship cover, and what degree are scholars expected to pursue?” It supports tuition, mandatory fees, room, board, books, and a STEM PhD or MD-PhD. It does not list every program obligation, so it cannot answer a question about all requirements.
+
+### Chunk 2
+
+**Source document:** [Howard University Provost's Office — Amgen Scholars Program](https://provost.howard.edu/amgen-scholars)
+
+**Chunk ID:** `amgen-scholars:body:0:4e12ae345cc8d5fb`
+
+**Length:** 767 characters; 148 tokens.
+
+> Amgen Scholars Program
+>
+> Deadline: February 1, 2026 (11:59PM Eastern Time)
+>
+> Brief Description
+>
+> The Amgen Scholars Program at Howard is a 9-week residential summer research program for undergraduates interested in doing research in biotechnology and related biomedical sciences.
+>
+> Internship Dates: Saturday, May 16, 2026 through Saturday, July 18, 2026.
+>
+> Howard Amgen Scholars conduct hands-on research under the mentorship of faculty and supervisors (post-docs and doctoral students). Laboratory hosts are affiliated with a variety of divisions of the university - the Faculty of Arts and Sciences (FAS) departments: Physics, Chemistry, Engineering; Howard University Medical School, Molecular and Cellular Biology, and Howard’s Interdisciplinary Research Institute.
+
+**Standalone meaning: Yes.** The program name, duration, research area, mentorship, and host units are all present, with complete sentences and no raw HTML. The application and internship dates are explicitly for 2026; this snapshot should not be used to infer future dates.
+
+**Answerable from this chunk alone:** “How long is Howard's Amgen program, what research does it involve, and who mentors participants?” It supports a nine-week residential program in biotechnology and related biomedical sciences with faculty and supervisor mentorship.
+
+### Chunk 3
+
+**Source document:** [The Hilltop — Beyond the Numbers: What R1 Status Can Mean for Howard](https://thehilltoponline.com/2024/11/22/beyond-the-numbers-what-r1-status-can-mean-for-howard/)
+
+**Chunk ID:** `hilltop-r1:body:18:16ecf00de7b59396`
+
+**Length:** 470 characters; 101 tokens.
+
+> ularly in areas where resources at HBCUs have historically been limited due to financial barriers.
+>
+> “We’ve already accomplished so much as an R2 institution. Becoming R1 will open even more doors and strengthen Howard’s role in innovation,” Zoey Hall, a sophomore computer science major and maternal and child health minor from St. Louis said.
+>
+> Advertisement. Scroll to continue reading.
+>
+> Hall is also a member of the seventh cohort of the Karsh STEM Scholars Program.
+
+**Standalone meaning: Partly.** Zoey Hall's quote and attribution form a complete, useful thought. However, the chunk begins with the mid-word fragment “ularly,” and “Advertisement. Scroll to continue reading.” is leftover page boilerplate. There are no raw HTML tags, but cleaning is incomplete.
+
+**Answerable from this chunk alone:** “What does Zoey Hall think R1 status would mean for Howard?” Her quoted expectation is that it will open more doors and strengthen Howard's role in innovation. The fragment at the start cannot stand alone and should not be used as evidence about financial barriers.
+
+### Chunk 4
+
+**Source document:** [Howard University Department of Afro-American Studies — Independent Study](https://afroamericanstudies.howard.edu/beyond-classroom/independent-study)
+
+**Chunk ID:** `afro-independent-study:body:1:b0db48b34ced2e43`
+
+**Length:** 799 characters; 149 tokens.
+
+> be eligible to register for Independent Study, a student must:
+>
+> Earn a cumulative weighted average of 3.0 or better by the end of their second year;
+>
+> Secure a written agreement from a full-time faculty member to supervise the project; and
+>
+> Submit a written proposal for approval for the project
+>
+> The request must be made in the semester preceding the commencement of an independent study.
+>
+> Written Proposal
+>
+> The proposal may be in the form of a memorandum that describes the problem or issue that will be addressed in the independent study project. The student must set forth a description of the anticipated objective(s) of the project in terms of potential issues that will be addressed and proposed solution(s) and a research plan that demonstrates that some preliminary research has been done.
+
+**Standalone meaning: Mostly, with a scope caveat.** The opening loses “To” from the preceding eligibility sentence, but the academic threshold, written supervision agreement, proposal requirement, and preceding-semester timing remain together. The department name is supplied by source metadata, not the body. The paragraph about proposal objectives is related context; the full-time AFRO-professor requirement appears in another chunk.
+
+**Answerable from this chunk alone:** “What academic threshold, paperwork, and timing are required to request independent study?” It supports a 3.0 cumulative weighted average by the end of the second year, a written faculty-supervision agreement, a proposal for approval, and a request in the preceding semester. Do not generalize this to other departments or use it as an exhaustive description of faculty-advisor requirements.
+
+### Chunk 5
+
+**Source document:** [The Dig — Howard University Student Camille Wimberly Selected as a 2026 Goldwater Scholarship Recipient](https://thedig.howard.edu/all-stories/howard-university-student-camille-wimberly-selected-2026-goldwater-scholarship-recipient)
+
+**Chunk ID:** `dig-goldwater:body:4:ef3f0e6f93ec7b44`
+
+**Length:** 471 characters; 97 tokens.
+
+> nts that have a promising future in research. I’m very grateful to have been recognized for that.”
+>
+> An Emerging STEM Researcher
+>
+> Wimberly’s research pursuits began when she joined Dr. Karl Thompson’s microbiology lab during her first year at Howard. In his lab, Thompson, an associate professor of microbiology, explores how microorganisms adapt, survive, and cause disease with an emphasis on identifying pathways that can be targeted for new therapeutic interventions.
+
+**Standalone meaning: Partly.** The research paragraph identifies Wimberly, Dr. Karl Thompson’s microbiology lab, her first-year start, and the lab’s focus. It begins with the mid-word fragment “nts” from an earlier quote; that fragment has no independent meaning. The name in the source metadata identifies Camille Wimberly fully. Unrelated recommended stories and sharing controls have been excluded from extraction.
+
+**Answerable from this chunk alone:** “When and in whose lab did Wimberly begin research at Howard?” It directly supports her first year in Dr. Karl Thompson’s microbiology lab. This describes one student’s experience and does not establish a general application process or guarantee first-year placement.
+
+**Inspection conclusion:** Two samples stand alone cleanly; three contain useful answers with boundary, cleaning, or source-scope caveats. Both replacement sources are represented. The Afro-American Studies eligibility threshold, supervision agreement, proposal, and request timing survive together in Chunk 4. Exact-character overlap still creates opening fragments, and the Hilltop advertisement remains a known cleaning issue. No sample contains raw HTML tags or encoded entities. The samples have not been manually repaired; future chunker work should improve sentence boundaries and retain section context without exceeding the size limits.
 
 ---
 
@@ -198,7 +314,7 @@ System response (refusal):
 
 ## Evaluation Report
 
-<!-- Run your 5 test questions from planning.md through your system and record the results.
+<!-- Run your 7 test questions from planning.md through your system and record the results.
      Be honest — a partially accurate or inaccurate result that you explain well is more
      valuable than a suspiciously perfect result. -->
 
@@ -209,6 +325,8 @@ System response (refusal):
 | 3 | | | | | |
 | 4 | | | | | |
 | 5 | | | | | |
+| 6 | | | | | |
+| 7 | | | | | |
 
 **Retrieval quality:** Relevant / Partially relevant / Off-target  
 **Response accuracy:** Accurate / Partially accurate / Inaccurate
