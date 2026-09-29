@@ -1,0 +1,427 @@
+{
+  "run_at": "2026-09-29T17:09:16.386099+00:00",
+  "model": "openai/gpt-oss-120b",
+  "k": 5,
+  "cases": [
+    {
+      "label": "supported: Karsh",
+      "question": "What does a Howard student receive as a Karsh STEM Scholar, and what is required of them in return?",
+      "retrieved_chunks": [
+        {
+          "id": "karsh-scholars:body:0:9ed05f7d8fb0ca31",
+          "text": "About\n\n2020 Inspiring Programs in STEM Award Recipient\n\nEach year, the Karsh STEM Scholars Program attracts hundreds of competitive high school students who are interested in beginning their STEM careers at Howard University. Scholars selected for the program are awarded a scholarship for tuition, mandatory fees, room, board and an allowance for books associated with attending the University and are required to ultimately pursue, a PhD, or a combined MD-PhD, within a STEM discipline. The program aims to challenge students, through rigorous coursework and preparation, to live, prosper and contribute to a world that is increasingly diverse and global in nature. ",
+          "metadata": {
+            "end_char": 668,
+            "char_count": 668,
+            "load_mode": "cached",
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/karsh-scholars.html",
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "source_id": "karsh-scholars",
+            "source": "Howard University Karsh STEM Scholars Program (Official Site)",
+            "title": "About | Karsh STEM Scholars",
+            "start_char": 0,
+            "kind": "html",
+            "chunk_index": 0,
+            "document_id": "karsh-scholars:body",
+            "token_count": 122,
+            "url": "https://karshstemscholars.howard.edu/about",
+            "embedding_token_count": 136,
+            "chunk_overlap": 150,
+            "chunk_size": 800,
+            "profile": "formal"
+          },
+          "distance": 0.1816103458404541
+        },
+        {
+          "id": "karsh-scholars:body:1:8a3131ab1147f45d",
+          "text": " students, through rigorous coursework and preparation, to live, prosper and contribute to a world that is increasingly diverse and global in nature. Since 2017, the Karsh STEM Scholars Program has been home to some of the University’s most talented students, many of whom are student researchers and interns at STEM-related organizations across the world.\n\nOur Mission\n\nThe Karsh STEM Scholars Program’s mission is to increase the number of underrepresented minorities who earn a PhD or combined MD/PhD in a STEM discipline. Participants must be interested in pursuing a career in research and/or teaching, policy development or a leadership role in government or the corporate world.\n\nHow to Apply\n\nThe Complete Package\n\nTuition Scholarship (either 75% or 100% depending on family income)\n\n",
+          "metadata": {
+            "url": "https://karshstemscholars.howard.edu/about",
+            "char_count": 792,
+            "source_id": "karsh-scholars",
+            "chunk_size": 800,
+            "title": "About | Karsh STEM Scholars",
+            "embedding_token_count": 171,
+            "load_mode": "cached",
+            "kind": "html",
+            "profile": "formal",
+            "token_count": 157,
+            "source": "Howard University Karsh STEM Scholars Program (Official Site)",
+            "chunk_overlap": 150,
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/karsh-scholars.html",
+            "start_char": 518,
+            "chunk_index": 1,
+            "document_id": "karsh-scholars:body",
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "end_char": 1310
+          },
+          "distance": 0.232177734375
+        },
+        {
+          "id": "karsh-scholars:body:2:ed2ecaf9477329ab",
+          "text": " role in government or the corporate world.\n\nHow to Apply\n\nThe Complete Package\n\nTuition Scholarship (either 75% or 100% depending on family income)\n\nRoom + board\n\nBooks + supplies stipend\n\nMandatory Summer Bridge Program (incoming freshman)\n\nResearch internships (required during summers)\n\nStudy abroad\n\nIn-program Advising\n\nLarge & small study groups\n\nTutoring\n\nMentoring\n\nCultural arts\n\nScholar Spotlight\n\nLadaisha Thompson\n\nCohort 1\n\n",
+          "metadata": {
+            "load_mode": "cached",
+            "chunk_index": 2,
+            "title": "About | Karsh STEM Scholars",
+            "url": "https://karshstemscholars.howard.edu/about",
+            "chunk_size": 800,
+            "document_id": "karsh-scholars:body",
+            "embedding_token_count": 94,
+            "end_char": 1598,
+            "profile": "formal",
+            "char_count": 438,
+            "start_char": 1160,
+            "source_id": "karsh-scholars",
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/karsh-scholars.html",
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "source": "Howard University Karsh STEM Scholars Program (Official Site)",
+            "kind": "html",
+            "token_count": 80,
+            "chunk_overlap": 150
+          },
+          "distance": 0.2548797130584717
+        },
+        {
+          "id": "amgen-scholars:body:4:b9d3956860f6bdbd",
+          "text": "ent\n\nBe undergraduate students enrolled in accredited four-year colleges or universities in the United States, Puerto Rico or other U.S. territories\n\nBe sophomores (with four quarters or three semesters of college experience), juniors or non-graduating seniors (who are returning in the fall to continue undergraduate studies)\n\nHave earned a cumulative grade point average of 3.2 or above (on a 4.0 scale)\n\nHave an interest in pursuing a STEM Ph.D. or M.D./Ph.D.\n\nPrevious research experience is not required for participation\n\nHow to Apply\n\nReview the program and application information thoroughly\n\nGo to link to complete an Howard-Amgen Scholars application in Submittable\n\nFaculty profiles will be listed on the webpage soon.\n\nFor questions, please contact: Ronald.smith1@howard.edu\n\nApply Here",
+          "metadata": {
+            "embedding_token_count": 175,
+            "chunk_size": 800,
+            "load_mode": "cached",
+            "profile": "formal",
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "url": "https://provost.howard.edu/amgen-scholars",
+            "token_count": 167,
+            "title": "Amgen Scholars Program | Howard University Provost's Office",
+            "document_id": "amgen-scholars:body",
+            "start_char": 2340,
+            "char_count": 798,
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/amgen-scholars.html",
+            "source_id": "amgen-scholars",
+            "end_char": 3138,
+            "kind": "html",
+            "source": "Howard University Provost's Office",
+            "chunk_index": 4,
+            "chunk_overlap": 150
+          },
+          "distance": 0.3300628066062927
+        },
+        {
+          "id": "hilltop-r1:body:19:640ed2c0414ebd0b",
+          "text": "continue reading.\n\nHall is also a member of the seventh cohort of the Karsh STEM Scholars Program.\n\nThe ripple effects of R1 status extend beyond research labs. Increased funding will allow for more research fellowships and scholarships while raising the university’s profile among donors and corporate partners. This elevated status will attract new opportunities, ensuring Howard’s students and faculty continue to lead in fields ranging from environmental science to cultural studies.\n\n",
+          "metadata": {
+            "source_id": "hilltop-r1",
+            "kind": "html",
+            "source": "The Hilltop (Student Newspaper)",
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/hilltop-r1.html",
+            "chunk_index": 19,
+            "profile": "commentary",
+            "embedding_token_count": 95,
+            "chunk_size": 500,
+            "char_count": 489,
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "document_id": "hilltop-r1:body",
+            "token_count": 87,
+            "url": "https://thehilltoponline.com/2024/11/22/beyond-the-numbers-what-r1-status-can-mean-for-howard/",
+            "end_char": 5952,
+            "title": "Beyond the Numbers: What R1 Status Can Mean for Howard - The Hilltop",
+            "start_char": 5463,
+            "chunk_overlap": 100,
+            "load_mode": "cached"
+          },
+          "distance": 0.34370362758636475
+        }
+      ],
+      "answer": "A Karsh STEM Scholar receives a scholarship that covers tuition, mandatory fees, room and board, and provides an allowance or stipend for books and supplies \\(with tuition coverage of either 75% or 100% depending on family income\\). [S1] [S3]\n\nIn return, the scholar is required to ultimately pursue a PhD or a combined MD‑PhD in a STEM discipline and must complete program components such as the mandatory Summer Bridge program and required summer research internships. [S1] [S3]",
+      "sources_markdown": "## Sources — retrieved context\n\n- **[S1, S2, S3] Howard University Karsh STEM Scholars Program \\(Official Site\\)** — chunk positions (zero-based): 0, 1, 2 — chunk IDs: karsh\\-scholars:body:0:9ed05f7d8fb0ca31, karsh\\-scholars:body:1:8a3131ab1147f45d, karsh\\-scholars:body:2:ed2ecaf9477329ab — [Open source](https://karshstemscholars.howard.edu/about)\n- **[S4] Howard University Provost's Office** — chunk positions (zero-based): 4 — chunk IDs: amgen\\-scholars:body:4:b9d3956860f6bdbd — [Open source](https://provost.howard.edu/amgen-scholars)\n- **[S5] The Hilltop \\(Student Newspaper\\)** — chunk positions (zero-based): 19 — chunk IDs: hilltop\\-r1:body:19:640ed2c0414ebd0b — [Open source](https://thehilltoponline.com/2024/11/22/beyond-the-numbers-what-r1-status-can-mean-for-howard/)",
+      "included_chunks": [
+        {
+          "reference": "S1",
+          "text": "About\n\n2020 Inspiring Programs in STEM Award Recipient\n\nEach year, the Karsh STEM Scholars Program attracts hundreds of competitive high school students who are interested in beginning their STEM careers at Howard University. Scholars selected for the program are awarded a scholarship for tuition, mandatory fees, room, board and an allowance for books associated with attending the University and are required to ultimately pursue, a PhD, or a combined MD-PhD, within a STEM discipline. The program aims to challenge students, through rigorous coursework and preparation, to live, prosper and contribute to a world that is increasingly diverse and global in nature. ",
+          "metadata": {
+            "source": "Howard University Karsh STEM Scholars Program (Official Site)",
+            "chunk_id": "karsh-scholars:body:0:9ed05f7d8fb0ca31",
+            "chunk_index": 0,
+            "source_id": "karsh-scholars",
+            "document_id": "karsh-scholars:body",
+            "url": "https://karshstemscholars.howard.edu/about"
+          }
+        },
+        {
+          "reference": "S2",
+          "text": " students, through rigorous coursework and preparation, to live, prosper and contribute to a world that is increasingly diverse and global in nature. Since 2017, the Karsh STEM Scholars Program has been home to some of the University’s most talented students, many of whom are student researchers and interns at STEM-related organizations across the world.\n\nOur Mission\n\nThe Karsh STEM Scholars Program’s mission is to increase the number of underrepresented minorities who earn a PhD or combined MD/PhD in a STEM discipline. Participants must be interested in pursuing a career in research and/or teaching, policy development or a leadership role in government or the corporate world.\n\nHow to Apply\n\nThe Complete Package\n\nTuition Scholarship (either 75% or 100% depending on family income)\n\n",
+          "metadata": {
+            "source": "Howard University Karsh STEM Scholars Program (Official Site)",
+            "chunk_id": "karsh-scholars:body:1:8a3131ab1147f45d",
+            "chunk_index": 1,
+            "source_id": "karsh-scholars",
+            "document_id": "karsh-scholars:body",
+            "url": "https://karshstemscholars.howard.edu/about"
+          }
+        },
+        {
+          "reference": "S3",
+          "text": " role in government or the corporate world.\n\nHow to Apply\n\nThe Complete Package\n\nTuition Scholarship (either 75% or 100% depending on family income)\n\nRoom + board\n\nBooks + supplies stipend\n\nMandatory Summer Bridge Program (incoming freshman)\n\nResearch internships (required during summers)\n\nStudy abroad\n\nIn-program Advising\n\nLarge & small study groups\n\nTutoring\n\nMentoring\n\nCultural arts\n\nScholar Spotlight\n\nLadaisha Thompson\n\nCohort 1\n\n",
+          "metadata": {
+            "source": "Howard University Karsh STEM Scholars Program (Official Site)",
+            "chunk_id": "karsh-scholars:body:2:ed2ecaf9477329ab",
+            "chunk_index": 2,
+            "source_id": "karsh-scholars",
+            "document_id": "karsh-scholars:body",
+            "url": "https://karshstemscholars.howard.edu/about"
+          }
+        },
+        {
+          "reference": "S4",
+          "text": "ent\n\nBe undergraduate students enrolled in accredited four-year colleges or universities in the United States, Puerto Rico or other U.S. territories\n\nBe sophomores (with four quarters or three semesters of college experience), juniors or non-graduating seniors (who are returning in the fall to continue undergraduate studies)\n\nHave earned a cumulative grade point average of 3.2 or above (on a 4.0 scale)\n\nHave an interest in pursuing a STEM Ph.D. or M.D./Ph.D.\n\nPrevious research experience is not required for participation\n\nHow to Apply\n\nReview the program and application information thoroughly\n\nGo to link to complete an Howard-Amgen Scholars application in Submittable\n\nFaculty profiles will be listed on the webpage soon.\n\nFor questions, please contact: Ronald.smith1@howard.edu\n\nApply Here",
+          "metadata": {
+            "source": "Howard University Provost's Office",
+            "chunk_id": "amgen-scholars:body:4:b9d3956860f6bdbd",
+            "chunk_index": 4,
+            "source_id": "amgen-scholars",
+            "document_id": "amgen-scholars:body",
+            "url": "https://provost.howard.edu/amgen-scholars"
+          }
+        },
+        {
+          "reference": "S5",
+          "text": "continue reading.\n\nHall is also a member of the seventh cohort of the Karsh STEM Scholars Program.\n\nThe ripple effects of R1 status extend beyond research labs. Increased funding will allow for more research fellowships and scholarships while raising the university’s profile among donors and corporate partners. This elevated status will attract new opportunities, ensuring Howard’s students and faculty continue to lead in fields ranging from environmental science to cultural studies.\n\n",
+          "metadata": {
+            "source": "The Hilltop (Student Newspaper)",
+            "chunk_id": "hilltop-r1:body:19:640ed2c0414ebd0b",
+            "chunk_index": 19,
+            "source_id": "hilltop-r1",
+            "document_id": "hilltop-r1:body",
+            "url": "https://thehilltoponline.com/2024/11/22/beyond-the-numbers-what-r1-status-can-mean-for-howard/"
+          }
+        }
+      ],
+      "status": "answered"
+    },
+    {
+      "label": "supported: independent study",
+      "question": "What must a student arrange before beginning an Independent Study in Howard’s Department of Afro-American Studies?",
+      "retrieved_chunks": [
+        {
+          "id": "afro-independent-study:body:0:d16e112e01a90207",
+          "text": "Independent Study\n\nIndependent Study Project Instructions\n\nIn an independent study, you essentially create your own course on a topic of your choice, working in concert with your faculty advisor. If you are looking for something different - a special field experience, a chance to try research, or simply explore a topic in more depth - you should consider doing an independent study under faculty supervision. In some cases, faculty members are willing to have you assist with their research projects or will guide your study on a topic of mutual interest.\n\nEligibility\n\nTo be eligible to register for Independent Study, a student must:\n\nEarn a cumulative weighted average of 3.0 or better by the end of their second year;\n\n",
+          "metadata": {
+            "url": "https://afroamericanstudies.howard.edu/beyond-classroom/independent-study",
+            "kind": "html",
+            "embedding_token_count": 147,
+            "chunk_size": 800,
+            "chunk_overlap": 150,
+            "end_char": 725,
+            "start_char": 0,
+            "char_count": 725,
+            "document_id": "afro-independent-study:body",
+            "load_mode": "cached",
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/afro-independent-study.html",
+            "source": "Howard University Department of Afro-American Studies — Independent Study",
+            "source_id": "afro-independent-study",
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "token_count": 134,
+            "title": "Independent Study | Howard University Department of Afro-American Studies",
+            "chunk_index": 0,
+            "profile": "formal"
+          },
+          "distance": 0.23948657512664795
+        },
+        {
+          "id": "afro-independent-study:body:1:b0db48b34ced2e43",
+          "text": "be eligible to register for Independent Study, a student must:\n\nEarn a cumulative weighted average of 3.0 or better by the end of their second year;\n\nSecure a written agreement from a full-time faculty member to supervise the project; and\n\nSubmit a written proposal for approval for the project\n\nThe request must be made in the semester preceding the commencement of an independent study.\n\nWritten Proposal\n\nThe proposal may be in the form of a memorandum that describes the problem or issue that will be addressed in the independent study project. The student must set forth a description of the anticipated objective(s) of the project in terms of potential issues that will be addressed and proposed solution(s) and a research plan that demonstrates that some preliminary research has been done.\n\n",
+          "metadata": {
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "token_count": 149,
+            "source": "Howard University Department of Afro-American Studies — Independent Study",
+            "url": "https://afroamericanstudies.howard.edu/beyond-classroom/independent-study",
+            "title": "Independent Study | Howard University Department of Afro-American Studies",
+            "chunk_size": 800,
+            "profile": "formal",
+            "source_id": "afro-independent-study",
+            "char_count": 799,
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/afro-independent-study.html",
+            "chunk_index": 1,
+            "document_id": "afro-independent-study:body",
+            "chunk_overlap": 150,
+            "start_char": 575,
+            "load_mode": "cached",
+            "embedding_token_count": 162,
+            "end_char": 1374,
+            "kind": "html"
+          },
+          "distance": 0.2580968141555786
+        },
+        {
+          "id": "afro-independent-study:body:3:a182aff8f4b1a401",
+          "text": "issue your project addresses and secondary legal sources, e.g. law review and journal articles, books (monographs and anthologies).\n\nFaculty Advisor\n\nEach project must be supervised by a full-time AFRO professor. The student must meet with the faculty advisor to ensure the focus and scope of the project is clearly laid out in the proposal. The faculty member must provide both a written approval of the project and a written commitment to supervise and evaluate the project.",
+          "metadata": {
+            "kind": "html",
+            "title": "Independent Study | Howard University Department of Afro-American Studies",
+            "start_char": 1664,
+            "embedding_token_count": 105,
+            "profile": "formal",
+            "source": "Howard University Department of Afro-American Studies — Independent Study",
+            "token_count": 92,
+            "char_count": 476,
+            "chunk_overlap": 150,
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "end_char": 2140,
+            "chunk_index": 3,
+            "url": "https://afroamericanstudies.howard.edu/beyond-classroom/independent-study",
+            "source_id": "afro-independent-study",
+            "document_id": "afro-independent-study:body",
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/afro-independent-study.html",
+            "load_mode": "cached",
+            "chunk_size": 800
+          },
+          "distance": 0.28294938802719116
+        },
+        {
+          "id": "afro-independent-study:body:2:ffd1e7b284af4fdd",
+          "text": "potential issues that will be addressed and proposed solution(s) and a research plan that demonstrates that some preliminary research has been done.\n\nThe memorandum must be a minimum of two pages, single-spaced, and include the following:\n\na statement of the problem or issue the project addresses;\n\na preliminary annotated bibliography. The bibliography must include both the sources of law cited in your statement of the legal problem or issue your project addresses and secondary legal sources, e.g. law review and journal articles, books (monographs and anthologies).\n\nFaculty Advisor\n\n",
+          "metadata": {
+            "title": "Independent Study | Howard University Department of Afro-American Studies",
+            "profile": "formal",
+            "kind": "html",
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "url": "https://afroamericanstudies.howard.edu/beyond-classroom/independent-study",
+            "load_mode": "cached",
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/afro-independent-study.html",
+            "document_id": "afro-independent-study:body",
+            "chunk_size": 800,
+            "end_char": 1814,
+            "chunk_index": 2,
+            "char_count": 590,
+            "chunk_overlap": 150,
+            "source": "Howard University Department of Afro-American Studies — Independent Study",
+            "start_char": 1224,
+            "source_id": "afro-independent-study",
+            "embedding_token_count": 125,
+            "token_count": 112
+          },
+          "distance": 0.4285048842430115
+        },
+        {
+          "id": "ous-research:body:3:fc5887448d703f4b",
+          "text": "s a means to prepare students for research outside of the collegiate environment.\n\nContact the Ukweli Team at huurj@howard.edu for more information.\n\nHoward University Research Programs for Undergraduates\n\nHumanities, Social Sciences\n\nHoward University Center for African Studies - Foreign Language & Area Studies (FLAS) Fellowship Program\n\nLibrary of Congress Archive, History and Heritage Advanced (AHHA) Summer Internship Program\n\nMellon Mays Undergraduate Fellowship Program\n\nUC Davis Summer Poverty Research Engagement Experience (UCD-SPREE)\n\nYoung AfricanA Leadership Initiative (YAALI) Research Abroad\n\nSTEM\n\nHHMI Science Education Alliance-Phage Hunters Advancing Genomics and Evolutionary Science (SEA-PHAGES) Program\n\n",
+          "metadata": {
+            "chunk_overlap": 150,
+            "kind": "html",
+            "embedding_token_count": 142,
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/ous-research.html",
+            "profile": "formal",
+            "token_count": 134,
+            "url": "https://ous.howard.edu/undergraduate-research",
+            "end_char": 2203,
+            "load_mode": "cached",
+            "char_count": 728,
+            "title": "Undergraduate Research | Howard University Office of Undergraduate Studies",
+            "start_char": 1475,
+            "chunk_index": 3,
+            "source_id": "ous-research",
+            "document_id": "ous-research:body",
+            "source": "Howard University Office of Undergraduate Studies",
+            "chunk_size": 800
+          },
+          "distance": 0.47046947479248047
+        }
+      ],
+      "answer": "A student must secure a written agreement from a full\\-time faculty member to supervise the project and submit a written proposal for approval, and the request must be made in the semester preceding the start of the independent study. [S2]",
+      "sources_markdown": "## Sources — retrieved context\n\n- **[S1, S2, S3, S4] Howard University Department of Afro\\-American Studies — Independent Study** — chunk positions (zero-based): 0, 1, 3, 2 — chunk IDs: afro\\-independent\\-study:body:0:d16e112e01a90207, afro\\-independent\\-study:body:1:b0db48b34ced2e43, afro\\-independent\\-study:body:3:a182aff8f4b1a401, afro\\-independent\\-study:body:2:ffd1e7b284af4fdd — [Open source](https://afroamericanstudies.howard.edu/beyond-classroom/independent-study)\n- **[S5] Howard University Office of Undergraduate Studies** — chunk positions (zero-based): 3 — chunk IDs: ous\\-research:body:3:fc5887448d703f4b — [Open source](https://ous.howard.edu/undergraduate-research)",
+      "included_chunks": [
+        {
+          "reference": "S1",
+          "text": "Independent Study\n\nIndependent Study Project Instructions\n\nIn an independent study, you essentially create your own course on a topic of your choice, working in concert with your faculty advisor. If you are looking for something different - a special field experience, a chance to try research, or simply explore a topic in more depth - you should consider doing an independent study under faculty supervision. In some cases, faculty members are willing to have you assist with their research projects or will guide your study on a topic of mutual interest.\n\nEligibility\n\nTo be eligible to register for Independent Study, a student must:\n\nEarn a cumulative weighted average of 3.0 or better by the end of their second year;\n\n",
+          "metadata": {
+            "source": "Howard University Department of Afro-American Studies — Independent Study",
+            "chunk_id": "afro-independent-study:body:0:d16e112e01a90207",
+            "chunk_index": 0,
+            "source_id": "afro-independent-study",
+            "document_id": "afro-independent-study:body",
+            "url": "https://afroamericanstudies.howard.edu/beyond-classroom/independent-study"
+          }
+        },
+        {
+          "reference": "S2",
+          "text": "be eligible to register for Independent Study, a student must:\n\nEarn a cumulative weighted average of 3.0 or better by the end of their second year;\n\nSecure a written agreement from a full-time faculty member to supervise the project; and\n\nSubmit a written proposal for approval for the project\n\nThe request must be made in the semester preceding the commencement of an independent study.\n\nWritten Proposal\n\nThe proposal may be in the form of a memorandum that describes the problem or issue that will be addressed in the independent study project. The student must set forth a description of the anticipated objective(s) of the project in terms of potential issues that will be addressed and proposed solution(s) and a research plan that demonstrates that some preliminary research has been done.\n\n",
+          "metadata": {
+            "source": "Howard University Department of Afro-American Studies — Independent Study",
+            "chunk_id": "afro-independent-study:body:1:b0db48b34ced2e43",
+            "chunk_index": 1,
+            "source_id": "afro-independent-study",
+            "document_id": "afro-independent-study:body",
+            "url": "https://afroamericanstudies.howard.edu/beyond-classroom/independent-study"
+          }
+        },
+        {
+          "reference": "S3",
+          "text": "issue your project addresses and secondary legal sources, e.g. law review and journal articles, books (monographs and anthologies).\n\nFaculty Advisor\n\nEach project must be supervised by a full-time AFRO professor. The student must meet with the faculty advisor to ensure the focus and scope of the project is clearly laid out in the proposal. The faculty member must provide both a written approval of the project and a written commitment to supervise and evaluate the project.",
+          "metadata": {
+            "source": "Howard University Department of Afro-American Studies — Independent Study",
+            "chunk_id": "afro-independent-study:body:3:a182aff8f4b1a401",
+            "chunk_index": 3,
+            "source_id": "afro-independent-study",
+            "document_id": "afro-independent-study:body",
+            "url": "https://afroamericanstudies.howard.edu/beyond-classroom/independent-study"
+          }
+        },
+        {
+          "reference": "S4",
+          "text": "potential issues that will be addressed and proposed solution(s) and a research plan that demonstrates that some preliminary research has been done.\n\nThe memorandum must be a minimum of two pages, single-spaced, and include the following:\n\na statement of the problem or issue the project addresses;\n\na preliminary annotated bibliography. The bibliography must include both the sources of law cited in your statement of the legal problem or issue your project addresses and secondary legal sources, e.g. law review and journal articles, books (monographs and anthologies).\n\nFaculty Advisor\n\n",
+          "metadata": {
+            "source": "Howard University Department of Afro-American Studies — Independent Study",
+            "chunk_id": "afro-independent-study:body:2:ffd1e7b284af4fdd",
+            "chunk_index": 2,
+            "source_id": "afro-independent-study",
+            "document_id": "afro-independent-study:body",
+            "url": "https://afroamericanstudies.howard.edu/beyond-classroom/independent-study"
+          }
+        },
+        {
+          "reference": "S5",
+          "text": "s a means to prepare students for research outside of the collegiate environment.\n\nContact the Ukweli Team at huurj@howard.edu for more information.\n\nHoward University Research Programs for Undergraduates\n\nHumanities, Social Sciences\n\nHoward University Center for African Studies - Foreign Language & Area Studies (FLAS) Fellowship Program\n\nLibrary of Congress Archive, History and Heritage Advanced (AHHA) Summer Internship Program\n\nMellon Mays Undergraduate Fellowship Program\n\nUC Davis Summer Poverty Research Engagement Experience (UCD-SPREE)\n\nYoung AfricanA Leadership Initiative (YAALI) Research Abroad\n\nSTEM\n\nHHMI Science Education Alliance-Phage Hunters Advancing Genomics and Evolutionary Science (SEA-PHAGES) Program\n\n",
+          "metadata": {
+            "source": "Howard University Office of Undergraduate Studies",
+            "chunk_id": "ous-research:body:3:fc5887448d703f4b",
+            "chunk_index": 3,
+            "source_id": "ous-research",
+            "document_id": "ous-research:body",
+            "url": "https://ous.howard.edu/undergraduate-research"
+          }
+        }
+      ],
+      "status": "answered"
+    },
+    {
+      "label": "partial",
+      "question": "How long does the program last, and what is its fee?",
+      "retrieved_chunks": [
+        {
+          "id": "manual-fixture:1",
+          "text": "The program lasts nine weeks.",
+          "metadata": {
+            "source": "Synthetic manual partial-answer fixture",
+            "chunk_index": 1
+          }
+        }
+      ],
+      "answer": "The program lasts nine weeks. [S1]\n\n**Missing information:** The fee is not provided in the retrieved documents.",
+      "sources_markdown": "## Sources — retrieved context\n\n- **[S1] Synthetic manual partial\\-answer fixture** — chunk positions (zero-based): 1 — chunk IDs: manual\\-fixture:1",
+      "included_chunks": [
+        {
+          "reference": "S1",
+          "text": "The program lasts nine weeks.",
+          "metadata": {
+            "source": "Synthetic manual partial-answer fixture",
+            "chunk_id": "manual-fixture:1",
+            "chunk_index": 1
+          }
+        }
+      ],
+      "status": "partial"
+    }
+  ]
+}

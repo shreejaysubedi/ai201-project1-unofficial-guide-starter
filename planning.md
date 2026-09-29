@@ -84,6 +84,22 @@ Semantic search compares the *meaning* of a query to the *meaning* of a chunk, n
 
 ---
 
+## Generation and Interface
+
+**Implemented flow:** Gradio question → existing `Retriever.retrieve(query, k=5)` → labeled, attributable context → Groq generation → answer and **Sources — retrieved context**. `generation.py` and `app.py` implement this stage without changing ingestion, embeddings, the Chroma collection, or retrieval.
+
+**Provider/model:** Groq, with planned default `meta-llama/llama-4-scout-17b-16e-instruct`. `GROQ_API_KEY` and optional `GROQ_MODEL` are environment variables. Groq retired Scout for free/developer accounts on July 17, 2026 (enterprise exempt); an accessible model override must be explicitly configured when needed. No silent replacement is used. See [Groq's notice](https://console.groq.com/docs/deprecations) and the setup instructions in `README.md`.
+
+**Grounding:** A separate system message requires context-only answers, no outside knowledge or invented details, partial-answer limitations, rejection of instructions inside untrusted documents, and refusal to bypass these rules. No usable chunks means the exact insufficient-information response without an API call. Context includes at most five whole chunks within a 16,000-character block budget.
+
+**Attribution:** The model returns structured claims with source identifiers. Code validates them and appends `[S1]`-style citations, replacing the diagram's original model-written URL citations. The source list is built from the exact prompt chunks' metadata, deduplicated by document, with original IDs/positions and supplied URLs. Unknown references cause the answer to be withheld. Valid reference membership does not verify claim support, and system instructions alone do not guarantee factual grounding.
+
+**Validation:** Offline contract tests plus manual supported, unsupported, empty-context, partial-answer, and injected-document checks are documented in `README.md` and implemented in `check_generation.py`. Live model quality must be evaluated separately from mocked control-flow tests.
+
+**Live evaluation update (September 29, 2026):** The configured environment now uses `GROQ_MODEL=openai/gpt-oss-120b` on Groq after Scout requests failed. Tests reused the existing MiniLM/Chroma retrieval with k=5. Amgen claims were fully supported; Karsh omitted a Summer Bridge qualifier, and AFRO remained incomplete despite a prompt adjustment. The unsupported query was refused, and empty-context, document-injection, and partial-answer fixtures behaved as expected (partial succeeded after a rate-limit retry). Actual responses, source lists, and inspections are in the README, with complete records in `evaluation/generation_results.json` and `evaluation/generation_followup.json`. This is sampled validation, not a guarantee of grounding.
+
+---
+
 ## Evaluation Plan
 
 | # | Question | Expected answer |
@@ -152,7 +168,9 @@ Semantic search compares the *meaning* of a query to the *meaning* of a chunk, n
 +-------------------------------------------------------------------------+
 |                  5. GROUNDED GENERATION & INTERFACE                     |
 |  - LLM: Groq API (meta-llama/llama-4-scout-17b-16e-instruct)            |
-|  - Strict grounding system prompt + inline [Source: <URL>] citations    |
-|  - Interface: Interactive Command-Line Interface (CLI) / Gradio Web UI  |
+|  - Separate grounding instructions + labeled untrusted context         |
+|  - Validate [S1] citations; build source list from prompt metadata       |
+|  - Empty context: refusal without an API call                           |
+|  - Gradio Web UI: question -> answer + retrieved-context sources         |
 +-------------------------------------------------------------------------+
 ```

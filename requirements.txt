@@ -3,9 +3,10 @@ chromadb==1.5.9
 groq==0.15.0
 python-dotenv==1.0.1
 
-# Query interface — add whichever you use for Milestone 5:
-# gradio>=6.9.0
-# streamlit>=1.40.0
+# Query interface
+gradio==6.9.0
+# Keep Gradio compatible with the existing Transformers/MiniLM environment.
+huggingface-hub>=0.34.0,<1.0
 
 # Document ingestion
 requests>=2.32.0,<3
