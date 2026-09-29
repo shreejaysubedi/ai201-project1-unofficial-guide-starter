@@ -414,82 +414,66 @@ I don’t have enough information in the retrieved documents to answer that.
 >
 > - **[S1, S2, S3, S4, S5] Howard University Provost's Office** — chunk positions (zero-based): 3, 4, 2, 0, 1 — chunk IDs: amgen\-scholars:body:3:7b6ce12461922171, amgen\-scholars:body:4:b9d3956860f6bdbd, amgen\-scholars:body:2:92489f92f7d8d8f8, amgen\-scholars:body:0:4e12ae345cc8d5fb, amgen\-scholars:body:1:4da0a040776823da — [Open source](https://provost.howard.edu/amgen-scholars)
 
+**Demo video:** Not recorded yet.
+
 ---
 
 ## Evaluation Report
 
-<!-- Run your 7 test questions from planning.md through your system and record the results.
-     Be honest — a partially accurate or inaccurate result that you explain well is more
-     valuable than a suspiciously perfect result. -->
+I ran all seven questions from my plan with `openai/gpt-oss-120b` and k=5. The table summarizes the answers; [the full results](evaluation/milestone6_results.json) include the exact responses, citations, chunks, and distances. I checked each answer against both the expected answer and its retrieved text.
 
 | # | Question | Expected answer | System response (summarized) | Retrieval quality | Response accuracy |
 |---|----------|-----------------|------------------------------|-------------------|-------------------|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
-| 7 | | | | | |
+| 1 | What does a Howard student receive as a Karsh STEM Scholar, and what is required of them in return? | 75% or 100% tuition, housing and books; summer research and a STEM PhD/MD-PhD path. | Lists the benefits, degree goal, Summer Bridge and summer internships. Leaves out who Summer Bridge applies to. | Partially relevant | Partially accurate |
+| 2 | What impact does Howard University's Carnegie R1 status have on student research opportunities, according to student researchers in The Hilltop? | Student accounts of more funding, fellowships, lab partnerships, and credibility. | Says R1 will strengthen programs and lab partnerships, then reports missing details. Attributes article narration to students. | Partially relevant | Partially accurate |
+| 3 | What are the eligibility and commitment requirements for the Amgen Scholars Program at Howard University? | Eligible class standing, GPA 3.2, STEM degree interest; nine weeks of research and a symposium presentation. The plan also lists stipend/housing/travel benefits. | Lists eligibility, GPA, full-time participation, housing, lab duties, symposium and assigned work. Includes the 2026 dates. | Relevant | Accurate |
+| 4 | What must a student arrange before beginning an Independent Study in Howard’s Department of Afro-American Studies? | 3.0 average by the end of year two; written supervision agreement, proposal, preceding-semester request, and approval/supervision by a full-time AFRO professor. | Lists written supervision, proposal and timing. Leaves out the academic threshold and AFRO-specific advisor requirements. | Partially relevant | Partially accurate |
+| 5 | Where can Howard undergraduate students publish their independent research findings on campus? | Publish in Ukweli, Howard’s student-led undergraduate research journal. | Correctly names Ukweli, but adds that Research Month includes journal publishing. | Partially relevant | Partially accurate |
+| 6 | Do these sources establish an automatic university research stipend available without applying to a program or arranging a research opportunity? | The sources do not establish an automatic university-wide research stipend. | Says there is no evidence of an automatic stipend, but calls Karsh’s books allowance a research stipend. | Partially relevant | Partially accurate |
+| 7 | How did Camille Wimberly begin undergraduate research, and what mentoring did she describe? | Joined Karl Thompson’s lab in her first year; support from older undergraduates, Thompson, and Ananya Hota. | Names Thompson’s lab and Hota, quotes a mentor fragment, and reports missing details. Misses the first-year start and fuller mentorship account. | Partially relevant | Partially accurate |
 
-**Retrieval quality:** Relevant / Partially relevant / Off-target  
-**Response accuracy:** Accurate / Partially accurate / Inaccurate
+The Amgen answer covers the requirements asked for, so I marked it accurate even though it does not repeat the funding benefits in my expected answer. The other answers have useful information but also miss details or make claims their citations do not fully support.
 
 ---
 
 ## Failure Case Analysis
 
-<!-- Identify at least one question where retrieval or generation did not work as expected.
-     Write a specific explanation of *why* it failed, tied to a part of the pipeline.
-
-     "The answer was wrong" is not an explanation.
-
-     "The relevant information was split across a chunk boundary, so retrieval returned
-     only half the context — the model didn't have enough to answer correctly" is an explanation.
-
-     "The embedding model treated the professor's nickname as out-of-vocabulary and returned
-     results from an unrelated review" is an explanation. -->
-
-**Question that failed:**
+**Question that failed:** How did Camille Wimberly begin undergraduate research, and what mentoring did she describe?
 
 **What the system returned:**
 
-**Root cause (tied to a specific pipeline stage):**
+> Camille Wimberly began her undergraduate research by working in Thompson’s microbiology lab. [S4]
+>
+> She described mentorship from alum Ananya Hota \(B.S. ’25\), a 2024 Goldwater Scholarship recipient who also worked in Thompson’s lab. [S2]
+>
+> She referred to a “great mentor” in her research experience. [S4]
+>
+> **Missing information:** Details on the exact circumstances or steps that led her to start in Thompson’s lab are not provided.
 
-**What you would change to fix it:**
+**Root cause (tied to a specific pipeline stage):** Retrieval found the right article but missed the parts that answer the question. Document chunk 4 says she joined the lab in her first year, and chunk 7 describes help from older students and Thompson. Neither appeared in the top five. The answer also treats working in the lab as proof that this was where she started, which its cited chunk does not establish. Valid source IDs did not catch that gap.
+
+**What you would change to fix it:** Test retrieval that combines meaning with exact terms such as “first year” and “mentor,” and keep mentorship quotes together when chunking. The answer should also avoid claiming a starting point when the supplied text only says she worked in that lab.
 
 ---
 
 ## Spec Reflection
 
-<!-- Reflect on how planning.md shaped your implementation.
-     Answer both questions with at least 2–3 sentences each. -->
+**One way the spec helped you during implementation:** Having the sources and chunk sizes written down made it easier to build each part without guessing. The diagram helped me connect retrieval to generation while keeping the source information with each chunk.
 
-**One way the spec helped you during implementation:**
-
-**One way your implementation diverged from the spec, and why:**
+**One way your implementation diverged from the spec, and why:** The plan names Llama 4 Scout, but the app uses `openai/gpt-oss-120b` through Groq because Scout was unavailable to my account. I also use source IDs checked by the code instead of letting the model write its own source links. This keeps links tied to the documents actually retrieved.
 
 ---
 
 ## AI Usage
 
-<!-- Describe at least 2 specific instances where you used an AI tool during this project.
-     For each: what did you give the AI as input, what did it produce, and what did you
-     change, override, or direct differently?
-
-     "I used Claude to help me code" is not sufficient.
-     "I gave Claude my Chunking Strategy section from planning.md and asked it to implement
-     chunk_text(). It returned a function using a fixed character split. I overrode the
-     chunk size from 500 to 200 because my documents are short reviews, not long guides." -->
-
 **Instance 1**
 
-- *What I gave the AI:*
-- *What it produced:*
-- *What I changed or overrode:*
+- *What I gave the AI:* My planning document and the ingestion/chunking requirements.
+- *What it produced:* Code to load the sources, clean the text, and split it into chunks.
+- *What I changed or overrode:* I asked it to rerun the pipeline. I also required five real sample chunks with source names in the README.
 
 **Instance 2**
 
-- *What I gave the AI:*
-- *What it produced:*
-- *What I changed or overrode:*
+- *What I gave the AI:* The pipeline diagram, existing retrieval code, and requirements for grounded answers and a Gradio interface.
+- *What it produced:* The generation code, interface, source list, and checks for supported and unsupported questions.
+- *What I changed or overrode:* I required it to reuse my retrieval code, build sources from metadata, and skip the LLM call when no usable context was available. I also asked for live checks rather than relying only on mocked tests.

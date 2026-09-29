@@ -1,0 +1,1421 @@
+{
+  "run_at": "2026-09-29T18:35:44.900034+00:00",
+  "model": "openai/gpt-oss-120b",
+  "k": 5,
+  "cases": [
+    {
+      "label": "planning question 1",
+      "question": "What does a Howard student receive as a Karsh STEM Scholar, and what is required of them in return?",
+      "expected_answer": "Karsh STEM Scholars receive a scholarship covering tuition (75–100% depending on family income), room and board, and a books/supplies stipend. In return, scholars are required to complete summer research internships every year and are expected to ultimately pursue a PhD or combined MD/PhD in a STEM discipline.",
+      "retrieved_chunks": [
+        {
+          "id": "karsh-scholars:body:0:9ed05f7d8fb0ca31",
+          "text": "About\n\n2020 Inspiring Programs in STEM Award Recipient\n\nEach year, the Karsh STEM Scholars Program attracts hundreds of competitive high school students who are interested in beginning their STEM careers at Howard University. Scholars selected for the program are awarded a scholarship for tuition, mandatory fees, room, board and an allowance for books associated with attending the University and are required to ultimately pursue, a PhD, or a combined MD-PhD, within a STEM discipline. The program aims to challenge students, through rigorous coursework and preparation, to live, prosper and contribute to a world that is increasingly diverse and global in nature. ",
+          "metadata": {
+            "embedding_token_count": 136,
+            "source_id": "karsh-scholars",
+            "source": "Howard University Karsh STEM Scholars Program (Official Site)",
+            "title": "About | Karsh STEM Scholars",
+            "profile": "formal",
+            "load_mode": "cached",
+            "token_count": 122,
+            "url": "https://karshstemscholars.howard.edu/about",
+            "document_id": "karsh-scholars:body",
+            "chunk_overlap": 150,
+            "chunk_index": 0,
+            "start_char": 0,
+            "char_count": 668,
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/karsh-scholars.html",
+            "chunk_size": 800,
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "kind": "html",
+            "end_char": 668
+          },
+          "distance": 0.1816103458404541
+        },
+        {
+          "id": "karsh-scholars:body:1:8a3131ab1147f45d",
+          "text": " students, through rigorous coursework and preparation, to live, prosper and contribute to a world that is increasingly diverse and global in nature. Since 2017, the Karsh STEM Scholars Program has been home to some of the University’s most talented students, many of whom are student researchers and interns at STEM-related organizations across the world.\n\nOur Mission\n\nThe Karsh STEM Scholars Program’s mission is to increase the number of underrepresented minorities who earn a PhD or combined MD/PhD in a STEM discipline. Participants must be interested in pursuing a career in research and/or teaching, policy development or a leadership role in government or the corporate world.\n\nHow to Apply\n\nThe Complete Package\n\nTuition Scholarship (either 75% or 100% depending on family income)\n\n",
+          "metadata": {
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/karsh-scholars.html",
+            "kind": "html",
+            "token_count": 157,
+            "char_count": 792,
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "embedding_token_count": 171,
+            "url": "https://karshstemscholars.howard.edu/about",
+            "document_id": "karsh-scholars:body",
+            "chunk_index": 1,
+            "source_id": "karsh-scholars",
+            "profile": "formal",
+            "chunk_overlap": 150,
+            "source": "Howard University Karsh STEM Scholars Program (Official Site)",
+            "title": "About | Karsh STEM Scholars",
+            "load_mode": "cached",
+            "start_char": 518,
+            "end_char": 1310,
+            "chunk_size": 800
+          },
+          "distance": 0.232177734375
+        },
+        {
+          "id": "karsh-scholars:body:2:ed2ecaf9477329ab",
+          "text": " role in government or the corporate world.\n\nHow to Apply\n\nThe Complete Package\n\nTuition Scholarship (either 75% or 100% depending on family income)\n\nRoom + board\n\nBooks + supplies stipend\n\nMandatory Summer Bridge Program (incoming freshman)\n\nResearch internships (required during summers)\n\nStudy abroad\n\nIn-program Advising\n\nLarge & small study groups\n\nTutoring\n\nMentoring\n\nCultural arts\n\nScholar Spotlight\n\nLadaisha Thompson\n\nCohort 1\n\n",
+          "metadata": {
+            "chunk_size": 800,
+            "source": "Howard University Karsh STEM Scholars Program (Official Site)",
+            "start_char": 1160,
+            "title": "About | Karsh STEM Scholars",
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "end_char": 1598,
+            "chunk_overlap": 150,
+            "load_mode": "cached",
+            "embedding_token_count": 94,
+            "url": "https://karshstemscholars.howard.edu/about",
+            "char_count": 438,
+            "document_id": "karsh-scholars:body",
+            "kind": "html",
+            "chunk_index": 2,
+            "token_count": 80,
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/karsh-scholars.html",
+            "source_id": "karsh-scholars",
+            "profile": "formal"
+          },
+          "distance": 0.2548797130584717
+        },
+        {
+          "id": "amgen-scholars:body:4:b9d3956860f6bdbd",
+          "text": "ent\n\nBe undergraduate students enrolled in accredited four-year colleges or universities in the United States, Puerto Rico or other U.S. territories\n\nBe sophomores (with four quarters or three semesters of college experience), juniors or non-graduating seniors (who are returning in the fall to continue undergraduate studies)\n\nHave earned a cumulative grade point average of 3.2 or above (on a 4.0 scale)\n\nHave an interest in pursuing a STEM Ph.D. or M.D./Ph.D.\n\nPrevious research experience is not required for participation\n\nHow to Apply\n\nReview the program and application information thoroughly\n\nGo to link to complete an Howard-Amgen Scholars application in Submittable\n\nFaculty profiles will be listed on the webpage soon.\n\nFor questions, please contact: Ronald.smith1@howard.edu\n\nApply Here",
+          "metadata": {
+            "chunk_index": 4,
+            "source": "Howard University Provost's Office",
+            "title": "Amgen Scholars Program | Howard University Provost's Office",
+            "embedding_token_count": 175,
+            "chunk_size": 800,
+            "source_id": "amgen-scholars",
+            "document_id": "amgen-scholars:body",
+            "start_char": 2340,
+            "end_char": 3138,
+            "load_mode": "cached",
+            "char_count": 798,
+            "chunk_overlap": 150,
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "profile": "formal",
+            "token_count": 167,
+            "kind": "html",
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/amgen-scholars.html",
+            "url": "https://provost.howard.edu/amgen-scholars"
+          },
+          "distance": 0.3300628066062927
+        },
+        {
+          "id": "hilltop-r1:body:19:640ed2c0414ebd0b",
+          "text": "continue reading.\n\nHall is also a member of the seventh cohort of the Karsh STEM Scholars Program.\n\nThe ripple effects of R1 status extend beyond research labs. Increased funding will allow for more research fellowships and scholarships while raising the university’s profile among donors and corporate partners. This elevated status will attract new opportunities, ensuring Howard’s students and faculty continue to lead in fields ranging from environmental science to cultural studies.\n\n",
+          "metadata": {
+            "chunk_overlap": 100,
+            "embedding_token_count": 95,
+            "chunk_size": 500,
+            "load_mode": "cached",
+            "chunk_index": 19,
+            "document_id": "hilltop-r1:body",
+            "char_count": 489,
+            "end_char": 5952,
+            "title": "Beyond the Numbers: What R1 Status Can Mean for Howard - The Hilltop",
+            "kind": "html",
+            "token_count": 87,
+            "url": "https://thehilltoponline.com/2024/11/22/beyond-the-numbers-what-r1-status-can-mean-for-howard/",
+            "start_char": 5463,
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/hilltop-r1.html",
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "profile": "commentary",
+            "source": "The Hilltop (Student Newspaper)",
+            "source_id": "hilltop-r1"
+          },
+          "distance": 0.34370362758636475
+        }
+      ],
+      "answer": "A Karsh STEM Scholar receives a scholarship that covers tuition, mandatory fees, room and board, and provides an allowance or stipend for books and supplies \\(with tuition coverage of either 75% or 100% depending on family income\\). [S1] [S3]\n\nIn return, the scholar is required to ultimately pursue a PhD or a combined MD‑PhD in a STEM discipline and must complete program components such as the mandatory Summer Bridge program and required summer research internships. [S1] [S3]",
+      "sources_markdown": "## Sources — retrieved context\n\n- **[S1, S2, S3] Howard University Karsh STEM Scholars Program \\(Official Site\\)** — chunk positions (zero-based): 0, 1, 2 — chunk IDs: karsh\\-scholars:body:0:9ed05f7d8fb0ca31, karsh\\-scholars:body:1:8a3131ab1147f45d, karsh\\-scholars:body:2:ed2ecaf9477329ab — [Open source](https://karshstemscholars.howard.edu/about)\n- **[S4] Howard University Provost's Office** — chunk positions (zero-based): 4 — chunk IDs: amgen\\-scholars:body:4:b9d3956860f6bdbd — [Open source](https://provost.howard.edu/amgen-scholars)\n- **[S5] The Hilltop \\(Student Newspaper\\)** — chunk positions (zero-based): 19 — chunk IDs: hilltop\\-r1:body:19:640ed2c0414ebd0b — [Open source](https://thehilltoponline.com/2024/11/22/beyond-the-numbers-what-r1-status-can-mean-for-howard/)",
+      "included_chunks": [
+        {
+          "reference": "S1",
+          "text": "About\n\n2020 Inspiring Programs in STEM Award Recipient\n\nEach year, the Karsh STEM Scholars Program attracts hundreds of competitive high school students who are interested in beginning their STEM careers at Howard University. Scholars selected for the program are awarded a scholarship for tuition, mandatory fees, room, board and an allowance for books associated with attending the University and are required to ultimately pursue, a PhD, or a combined MD-PhD, within a STEM discipline. The program aims to challenge students, through rigorous coursework and preparation, to live, prosper and contribute to a world that is increasingly diverse and global in nature. ",
+          "metadata": {
+            "source": "Howard University Karsh STEM Scholars Program (Official Site)",
+            "chunk_id": "karsh-scholars:body:0:9ed05f7d8fb0ca31",
+            "chunk_index": 0,
+            "source_id": "karsh-scholars",
+            "document_id": "karsh-scholars:body",
+            "url": "https://karshstemscholars.howard.edu/about"
+          }
+        },
+        {
+          "reference": "S2",
+          "text": " students, through rigorous coursework and preparation, to live, prosper and contribute to a world that is increasingly diverse and global in nature. Since 2017, the Karsh STEM Scholars Program has been home to some of the University’s most talented students, many of whom are student researchers and interns at STEM-related organizations across the world.\n\nOur Mission\n\nThe Karsh STEM Scholars Program’s mission is to increase the number of underrepresented minorities who earn a PhD or combined MD/PhD in a STEM discipline. Participants must be interested in pursuing a career in research and/or teaching, policy development or a leadership role in government or the corporate world.\n\nHow to Apply\n\nThe Complete Package\n\nTuition Scholarship (either 75% or 100% depending on family income)\n\n",
+          "metadata": {
+            "source": "Howard University Karsh STEM Scholars Program (Official Site)",
+            "chunk_id": "karsh-scholars:body:1:8a3131ab1147f45d",
+            "chunk_index": 1,
+            "source_id": "karsh-scholars",
+            "document_id": "karsh-scholars:body",
+            "url": "https://karshstemscholars.howard.edu/about"
+          }
+        },
+        {
+          "reference": "S3",
+          "text": " role in government or the corporate world.\n\nHow to Apply\n\nThe Complete Package\n\nTuition Scholarship (either 75% or 100% depending on family income)\n\nRoom + board\n\nBooks + supplies stipend\n\nMandatory Summer Bridge Program (incoming freshman)\n\nResearch internships (required during summers)\n\nStudy abroad\n\nIn-program Advising\n\nLarge & small study groups\n\nTutoring\n\nMentoring\n\nCultural arts\n\nScholar Spotlight\n\nLadaisha Thompson\n\nCohort 1\n\n",
+          "metadata": {
+            "source": "Howard University Karsh STEM Scholars Program (Official Site)",
+            "chunk_id": "karsh-scholars:body:2:ed2ecaf9477329ab",
+            "chunk_index": 2,
+            "source_id": "karsh-scholars",
+            "document_id": "karsh-scholars:body",
+            "url": "https://karshstemscholars.howard.edu/about"
+          }
+        },
+        {
+          "reference": "S4",
+          "text": "ent\n\nBe undergraduate students enrolled in accredited four-year colleges or universities in the United States, Puerto Rico or other U.S. territories\n\nBe sophomores (with four quarters or three semesters of college experience), juniors or non-graduating seniors (who are returning in the fall to continue undergraduate studies)\n\nHave earned a cumulative grade point average of 3.2 or above (on a 4.0 scale)\n\nHave an interest in pursuing a STEM Ph.D. or M.D./Ph.D.\n\nPrevious research experience is not required for participation\n\nHow to Apply\n\nReview the program and application information thoroughly\n\nGo to link to complete an Howard-Amgen Scholars application in Submittable\n\nFaculty profiles will be listed on the webpage soon.\n\nFor questions, please contact: Ronald.smith1@howard.edu\n\nApply Here",
+          "metadata": {
+            "source": "Howard University Provost's Office",
+            "chunk_id": "amgen-scholars:body:4:b9d3956860f6bdbd",
+            "chunk_index": 4,
+            "source_id": "amgen-scholars",
+            "document_id": "amgen-scholars:body",
+            "url": "https://provost.howard.edu/amgen-scholars"
+          }
+        },
+        {
+          "reference": "S5",
+          "text": "continue reading.\n\nHall is also a member of the seventh cohort of the Karsh STEM Scholars Program.\n\nThe ripple effects of R1 status extend beyond research labs. Increased funding will allow for more research fellowships and scholarships while raising the university’s profile among donors and corporate partners. This elevated status will attract new opportunities, ensuring Howard’s students and faculty continue to lead in fields ranging from environmental science to cultural studies.\n\n",
+          "metadata": {
+            "source": "The Hilltop (Student Newspaper)",
+            "chunk_id": "hilltop-r1:body:19:640ed2c0414ebd0b",
+            "chunk_index": 19,
+            "source_id": "hilltop-r1",
+            "document_id": "hilltop-r1:body",
+            "url": "https://thehilltoponline.com/2024/11/22/beyond-the-numbers-what-r1-status-can-mean-for-howard/"
+          }
+        }
+      ],
+      "status": "answered",
+      "manual_review": {
+        "retrieval_quality": "Partially relevant",
+        "response_accuracy": "Partially accurate",
+        "reason": "The benefits and degree/research obligations match S1/S3, but the answer drops the incoming-freshman qualifier for Summer Bridge. Amgen and R1 hits are irrelevant to the requested program."
+      }
+    },
+    {
+      "label": "planning question 2",
+      "question": "What impact does Howard University's Carnegie R1 status have on student research opportunities, according to student researchers in The Hilltop?",
+      "expected_answer": "Student researchers quoted in *The Hilltop* report that R1 status increases research funding, creates more research fellowships and scholarships, connects students to higher-profile external partnerships (such as Brookhaven National Laboratory and the National Renewable Energy Laboratory), and raises the university's credibility with outside institutions and donors.",
+      "retrieved_chunks": [
+        {
+          "id": "hilltop-r1:body:1:e45c4fdcaa477b45",
+          "text": "\n\nHoward is on the cusp of a historic achievement that will redefine its role in higher education.\n\nAttaining R1 status, the highest level of research activity in the Carnegie Classification system, represents an extraordinary milestone. Out of nearly 6,000 colleges and universities in the United States, only 146—just 2.4 percent—hold this designation.\n\n",
+          "metadata": {
+            "token_count": 72,
+            "embedding_token_count": 80,
+            "kind": "html",
+            "chunk_index": 1,
+            "chunk_overlap": 100,
+            "char_count": 356,
+            "url": "https://thehilltoponline.com/2024/11/22/beyond-the-numbers-what-r1-status-can-mean-for-howard/",
+            "title": "Beyond the Numbers: What R1 Status Can Mean for Howard - The Hilltop",
+            "profile": "commentary",
+            "document_id": "hilltop-r1:body",
+            "start_char": 314,
+            "source": "The Hilltop (Student Newspaper)",
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "end_char": 670,
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/hilltop-r1.html",
+            "source_id": "hilltop-r1",
+            "load_mode": "cached",
+            "chunk_size": 500
+          },
+          "distance": 0.22267276048660278
+        },
+        {
+          "id": "hilltop-r1:body:2:fc5645afa14a7c48",
+          "text": "0 colleges and universities in the United States, only 146—just 2.4 percent—hold this designation.\n\nHoward is projected to regain R1 status in spring 2025 during the Carnegie Classification’s update, which occurs every three years and will reflect the university’s recent advancements in research and doctoral education. ",
+          "metadata": {
+            "chunk_overlap": 100,
+            "title": "Beyond the Numbers: What R1 Status Can Mean for Howard - The Hilltop",
+            "embedding_token_count": 73,
+            "chunk_size": 500,
+            "kind": "html",
+            "profile": "commentary",
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/hilltop-r1.html",
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "chunk_index": 2,
+            "start_char": 570,
+            "char_count": 321,
+            "url": "https://thehilltoponline.com/2024/11/22/beyond-the-numbers-what-r1-status-can-mean-for-howard/",
+            "end_char": 891,
+            "source_id": "hilltop-r1",
+            "load_mode": "cached",
+            "token_count": 65,
+            "source": "The Hilltop (Student Newspaper)",
+            "document_id": "hilltop-r1:body"
+          },
+          "distance": 0.26678574085235596
+        },
+        {
+          "id": "hilltop-r1:body:8:b9f3d5b46d74e313",
+          "text": "arch legacy also lies in addressing systemic challenges through the humanities and social sciences. This commitment ensures the university’s research resonates far beyond academic circles, reaching into communities and addressing real-world issues.\n\nThe Carnegie Classification of Institutions of Higher Education designates universities with “very high research activity” as R1 institutions, a status that reflects significant research output and doctoral education. ",
+          "metadata": {
+            "document_id": "hilltop-r1:body",
+            "start_char": 2090,
+            "title": "Beyond the Numbers: What R1 Status Can Mean for Howard - The Hilltop",
+            "chunk_size": 500,
+            "source_id": "hilltop-r1",
+            "load_mode": "cached",
+            "char_count": 468,
+            "embedding_token_count": 85,
+            "kind": "html",
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "token_count": 77,
+            "source": "The Hilltop (Student Newspaper)",
+            "end_char": 2558,
+            "profile": "commentary",
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/hilltop-r1.html",
+            "chunk_index": 8,
+            "url": "https://thehilltoponline.com/2024/11/22/beyond-the-numbers-what-r1-status-can-mean-for-howard/",
+            "chunk_overlap": 100
+          },
+          "distance": 0.30274903774261475
+        },
+        {
+          "id": "hilltop-r1:body:15:168a8034cc34fbd3",
+          "text": "ook down at us or think of us as ‘party’ institutions, but you can’t deny R1 status,” Diallo said.\n\nPrograms like the Humanities and Social Sciences Scholars Program and partnerships with national labs already prepare students for advanced research, and R1 status will amplify these efforts.\n\nIn an effort to achieve R1 status, Howard has been conducting research across the country.\n\n",
+          "metadata": {
+            "token_count": 82,
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/hilltop-r1.html",
+            "chunk_index": 15,
+            "start_char": 4181,
+            "end_char": 4566,
+            "kind": "html",
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "profile": "commentary",
+            "url": "https://thehilltoponline.com/2024/11/22/beyond-the-numbers-what-r1-status-can-mean-for-howard/",
+            "source": "The Hilltop (Student Newspaper)",
+            "char_count": 385,
+            "title": "Beyond the Numbers: What R1 Status Can Mean for Howard - The Hilltop",
+            "embedding_token_count": 90,
+            "document_id": "hilltop-r1:body",
+            "chunk_overlap": 100,
+            "chunk_size": 500,
+            "source_id": "hilltop-r1",
+            "load_mode": "cached"
+          },
+          "distance": 0.30452609062194824
+        },
+        {
+          "id": "hilltop-r1:body:4:cda58e5f5f19cc67",
+          "text": " in the United States based on their degree offerings, research activity, and institutional focus.\n\n“Achieving R1 status is about more than just prestige; it’s a testament to the hard work and collaboration of our faculty, students and administration,” Bruce Jones, Howard’s senior vice president of research said.\n\n",
+          "metadata": {
+            "start_char": 978,
+            "profile": "commentary",
+            "token_count": 64,
+            "url": "https://thehilltoponline.com/2024/11/22/beyond-the-numbers-what-r1-status-can-mean-for-howard/",
+            "chunk_index": 4,
+            "end_char": 1294,
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/hilltop-r1.html",
+            "chunk_overlap": 100,
+            "source": "The Hilltop (Student Newspaper)",
+            "title": "Beyond the Numbers: What R1 Status Can Mean for Howard - The Hilltop",
+            "load_mode": "cached",
+            "char_count": 316,
+            "kind": "html",
+            "source_id": "hilltop-r1",
+            "document_id": "hilltop-r1:body",
+            "embedding_token_count": 72,
+            "chunk_size": 500,
+            "processed_at": "2026-09-27T08:04:24.241351+00:00"
+          },
+          "distance": 0.323613703250885
+        }
+      ],
+      "answer": "Student researchers say that Howard’s R1 status will amplify existing programs—such as the Humanities and Social Sciences Scholars Program and partnerships with national labs—that already prepare students for advanced research, thereby expanding student research opportunities. [S4]\n\n**Missing information:** The retrieved excerpts do not provide additional specific examples or details about how the amplified efforts will change student research experiences.",
+      "sources_markdown": "## Sources — retrieved context\n\n- **[S1, S2, S3, S4, S5] The Hilltop \\(Student Newspaper\\)** — chunk positions (zero-based): 1, 2, 8, 15, 4 — chunk IDs: hilltop\\-r1:body:1:e45c4fdcaa477b45, hilltop\\-r1:body:2:fc5645afa14a7c48, hilltop\\-r1:body:8:b9f3d5b46d74e313, hilltop\\-r1:body:15:168a8034cc34fbd3, hilltop\\-r1:body:4:cda58e5f5f19cc67 — [Open source](https://thehilltoponline.com/2024/11/22/beyond-the-numbers-what-r1-status-can-mean-for-howard/)",
+      "included_chunks": [
+        {
+          "reference": "S1",
+          "text": "\n\nHoward is on the cusp of a historic achievement that will redefine its role in higher education.\n\nAttaining R1 status, the highest level of research activity in the Carnegie Classification system, represents an extraordinary milestone. Out of nearly 6,000 colleges and universities in the United States, only 146—just 2.4 percent—hold this designation.\n\n",
+          "metadata": {
+            "source": "The Hilltop (Student Newspaper)",
+            "chunk_id": "hilltop-r1:body:1:e45c4fdcaa477b45",
+            "chunk_index": 1,
+            "source_id": "hilltop-r1",
+            "document_id": "hilltop-r1:body",
+            "url": "https://thehilltoponline.com/2024/11/22/beyond-the-numbers-what-r1-status-can-mean-for-howard/"
+          }
+        },
+        {
+          "reference": "S2",
+          "text": "0 colleges and universities in the United States, only 146—just 2.4 percent—hold this designation.\n\nHoward is projected to regain R1 status in spring 2025 during the Carnegie Classification’s update, which occurs every three years and will reflect the university’s recent advancements in research and doctoral education. ",
+          "metadata": {
+            "source": "The Hilltop (Student Newspaper)",
+            "chunk_id": "hilltop-r1:body:2:fc5645afa14a7c48",
+            "chunk_index": 2,
+            "source_id": "hilltop-r1",
+            "document_id": "hilltop-r1:body",
+            "url": "https://thehilltoponline.com/2024/11/22/beyond-the-numbers-what-r1-status-can-mean-for-howard/"
+          }
+        },
+        {
+          "reference": "S3",
+          "text": "arch legacy also lies in addressing systemic challenges through the humanities and social sciences. This commitment ensures the university’s research resonates far beyond academic circles, reaching into communities and addressing real-world issues.\n\nThe Carnegie Classification of Institutions of Higher Education designates universities with “very high research activity” as R1 institutions, a status that reflects significant research output and doctoral education. ",
+          "metadata": {
+            "source": "The Hilltop (Student Newspaper)",
+            "chunk_id": "hilltop-r1:body:8:b9f3d5b46d74e313",
+            "chunk_index": 8,
+            "source_id": "hilltop-r1",
+            "document_id": "hilltop-r1:body",
+            "url": "https://thehilltoponline.com/2024/11/22/beyond-the-numbers-what-r1-status-can-mean-for-howard/"
+          }
+        },
+        {
+          "reference": "S4",
+          "text": "ook down at us or think of us as ‘party’ institutions, but you can’t deny R1 status,” Diallo said.\n\nPrograms like the Humanities and Social Sciences Scholars Program and partnerships with national labs already prepare students for advanced research, and R1 status will amplify these efforts.\n\nIn an effort to achieve R1 status, Howard has been conducting research across the country.\n\n",
+          "metadata": {
+            "source": "The Hilltop (Student Newspaper)",
+            "chunk_id": "hilltop-r1:body:15:168a8034cc34fbd3",
+            "chunk_index": 15,
+            "source_id": "hilltop-r1",
+            "document_id": "hilltop-r1:body",
+            "url": "https://thehilltoponline.com/2024/11/22/beyond-the-numbers-what-r1-status-can-mean-for-howard/"
+          }
+        },
+        {
+          "reference": "S5",
+          "text": " in the United States based on their degree offerings, research activity, and institutional focus.\n\n“Achieving R1 status is about more than just prestige; it’s a testament to the hard work and collaboration of our faculty, students and administration,” Bruce Jones, Howard’s senior vice president of research said.\n\n",
+          "metadata": {
+            "source": "The Hilltop (Student Newspaper)",
+            "chunk_id": "hilltop-r1:body:4:cda58e5f5f19cc67",
+            "chunk_index": 4,
+            "source_id": "hilltop-r1",
+            "document_id": "hilltop-r1:body",
+            "url": "https://thehilltoponline.com/2024/11/22/beyond-the-numbers-what-r1-status-can-mean-for-howard/"
+          }
+        }
+      ],
+      "status": "partial",
+      "manual_review": {
+        "retrieval_quality": "Partially relevant",
+        "response_accuracy": "Partially accurate",
+        "reason": "The retrieved Hilltop passages give general R1 background, not most of the specific student accounts in the expected answer. S4 is article narration; the answer presents it as what student researchers say. Funding, fellowships, named labs, and credibility are not explained."
+      }
+    },
+    {
+      "label": "planning question 3",
+      "question": "What are the eligibility and commitment requirements for the Amgen Scholars Program at Howard University?",
+      "expected_answer": "The Amgen Scholars Program is a 9-week intensive residential summer research program hosted through the Provost's Office. Applicants must be sophomores or above with a 3.2 cumulative GPA and an interest in a STEM PhD or MD/PhD. Selected undergraduates conduct hands-on biotechnology and molecular science research under faculty mentors, receive a $5,000 stipend plus housing, meals, and travel, and must present their findings at the Amgen Scholars Symposium.",
+      "retrieved_chunks": [
+        {
+          "id": "amgen-scholars:body:3:7b6ce12461922171",
+          "text": "\nComplete surveys, readings (articles) as assigned\n\nScholars will receive:\n\nA $5,000 stipend\n\nHousing and meals paid for by the Howard Amgen Program\n\nTravel allowance for travel to and from DC\n\nPaid travel to and from the Amgen Scholars Symposium.\n\nEligibility\n\nThe Amgen Scholars Program at Howard selects undergraduates with high academic success, research interests in the indicated fields, and a commitment to pursuing a career in science, especially research. Applicants must:\n\nBe a U.S. citizen or a U.S. permanent resident\n\nBe undergraduate students enrolled in accredited four-year colleges or universities in the United States, Puerto Rico or other U.S. territories\n\n",
+          "metadata": {
+            "start_char": 1814,
+            "title": "Amgen Scholars Program | Howard University Provost's Office",
+            "source_id": "amgen-scholars",
+            "url": "https://provost.howard.edu/amgen-scholars",
+            "document_id": "amgen-scholars:body",
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/amgen-scholars.html",
+            "char_count": 676,
+            "chunk_size": 800,
+            "kind": "html",
+            "end_char": 2490,
+            "embedding_token_count": 141,
+            "load_mode": "cached",
+            "source": "Howard University Provost's Office",
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "profile": "formal",
+            "chunk_overlap": 150,
+            "chunk_index": 3,
+            "token_count": 133
+          },
+          "distance": 0.20305168628692627
+        },
+        {
+          "id": "amgen-scholars:body:4:b9d3956860f6bdbd",
+          "text": "ent\n\nBe undergraduate students enrolled in accredited four-year colleges or universities in the United States, Puerto Rico or other U.S. territories\n\nBe sophomores (with four quarters or three semesters of college experience), juniors or non-graduating seniors (who are returning in the fall to continue undergraduate studies)\n\nHave earned a cumulative grade point average of 3.2 or above (on a 4.0 scale)\n\nHave an interest in pursuing a STEM Ph.D. or M.D./Ph.D.\n\nPrevious research experience is not required for participation\n\nHow to Apply\n\nReview the program and application information thoroughly\n\nGo to link to complete an Howard-Amgen Scholars application in Submittable\n\nFaculty profiles will be listed on the webpage soon.\n\nFor questions, please contact: Ronald.smith1@howard.edu\n\nApply Here",
+          "metadata": {
+            "end_char": 3138,
+            "url": "https://provost.howard.edu/amgen-scholars",
+            "load_mode": "cached",
+            "start_char": 2340,
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/amgen-scholars.html",
+            "source_id": "amgen-scholars",
+            "title": "Amgen Scholars Program | Howard University Provost's Office",
+            "char_count": 798,
+            "profile": "formal",
+            "source": "Howard University Provost's Office",
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "token_count": 167,
+            "chunk_size": 800,
+            "embedding_token_count": 175,
+            "kind": "html",
+            "chunk_overlap": 150,
+            "document_id": "amgen-scholars:body",
+            "chunk_index": 4
+          },
+          "distance": 0.2201836109161377
+        },
+        {
+          "id": "amgen-scholars:body:2:92489f92f7d8d8f8",
+          "text": "n process. Additionally, the interns will have the opportunity to speak to graduate students, and various scientists.\n\nScholar expectations include:\n\nFull participation in the 9 weeks of the internship program. Scholars will not have time to take summer courses or have a job other than the Howard Amgen Internship.\n\nReside in housing provided on Howard’s campus\n\nParticipate as a full collaborator in the assigned laboratory\n\nAttend all activities as part of the summer experience\n\nMandatory attendance and participation in the Amgen Scholars Symposium\n\nPresent his/her/their summer project at the symposium oral presentation\n\nComplete surveys, readings (articles) as assigned\n\nScholars will receive:\n\nA $5,000 stipend\n\nHousing and meals paid for by the Howard Amgen Program\n\n",
+          "metadata": {
+            "load_mode": "cached",
+            "kind": "html",
+            "profile": "formal",
+            "embedding_token_count": 150,
+            "source": "Howard University Provost's Office",
+            "end_char": 1964,
+            "chunk_size": 800,
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/amgen-scholars.html",
+            "token_count": 142,
+            "start_char": 1187,
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "chunk_overlap": 150,
+            "url": "https://provost.howard.edu/amgen-scholars",
+            "chunk_index": 2,
+            "document_id": "amgen-scholars:body",
+            "char_count": 777,
+            "title": "Amgen Scholars Program | Howard University Provost's Office",
+            "source_id": "amgen-scholars"
+          },
+          "distance": 0.25642114877700806
+        },
+        {
+          "id": "amgen-scholars:body:0:4e12ae345cc8d5fb",
+          "text": "Amgen Scholars Program\n\nDeadline: February 1, 2026 (11:59PM Eastern Time)\n\nBrief Description\n\nThe Amgen Scholars Program at Howard is a 9-week residential summer research program for undergraduates interested in doing research in biotechnology and related biomedical sciences.\n\nInternship Dates: Saturday, May 16, 2026 through Saturday, July 18, 2026.\n\nHoward Amgen Scholars conduct hands-on research under the mentorship of faculty and supervisors (post-docs and doctoral students). Laboratory hosts are affiliated with a variety of divisions of the university - the Faculty of Arts and Sciences (FAS) departments: Physics, Chemistry, Engineering; Howard University Medical School, Molecular and Cellular Biology, and Howard’s Interdisciplinary Research Institute.\n\n",
+          "metadata": {
+            "chunk_size": 800,
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/amgen-scholars.html",
+            "kind": "html",
+            "end_char": 767,
+            "url": "https://provost.howard.edu/amgen-scholars",
+            "chunk_index": 0,
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "document_id": "amgen-scholars:body",
+            "chunk_overlap": 150,
+            "embedding_token_count": 156,
+            "source_id": "amgen-scholars",
+            "load_mode": "cached",
+            "title": "Amgen Scholars Program | Howard University Provost's Office",
+            "profile": "formal",
+            "start_char": 0,
+            "char_count": 767,
+            "source": "Howard University Provost's Office",
+            "token_count": 148
+          },
+          "distance": 0.2890801429748535
+        },
+        {
+          "id": "amgen-scholars:body:1:4da0a040776823da",
+          "text": "hysics, Chemistry, Engineering; Howard University Medical School, Molecular and Cellular Biology, and Howard’s Interdisciplinary Research Institute.\n\nHoward Amgen Scholars participate in scholarly and pre-professional development sessions and cohort social activities and will attend the North American Amgen Scholars Symposium. Examples of Howard’s pre-professional development and scholarly training include workshops on topics such as how to think like a scientist/researcher, research integrity, PhD and MD/PhD student experiences, and the graduate school application process. Additionally, the interns will have the opportunity to speak to graduate students, and various scientists.\n\nScholar expectations include:\n\n",
+          "metadata": {
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "document_id": "amgen-scholars:body",
+            "token_count": 125,
+            "chunk_size": 800,
+            "kind": "html",
+            "source": "Howard University Provost's Office",
+            "chunk_index": 1,
+            "char_count": 720,
+            "start_char": 617,
+            "source_id": "amgen-scholars",
+            "title": "Amgen Scholars Program | Howard University Provost's Office",
+            "embedding_token_count": 133,
+            "load_mode": "cached",
+            "chunk_overlap": 150,
+            "url": "https://provost.howard.edu/amgen-scholars",
+            "end_char": 1337,
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/amgen-scholars.html",
+            "profile": "formal"
+          },
+          "distance": 0.3293269872665405
+        }
+      ],
+      "answer": "Applicants must be U.S. citizens or U.S. permanent residents. [S1]\n\nApplicants must be undergraduate students enrolled in accredited four‑year colleges or universities in the United States, Puerto Rico, or other U.S. territories. [S1] [S2]\n\nApplicants must be sophomores \\(with four quarters or three semesters of college experience\\), juniors, or non‑graduating seniors who will return in the fall. [S2]\n\nApplicants must have a cumulative GPA of 3.2 or above on a 4.0 scale. [S2]\n\nApplicants must have an interest in pursuing a STEM Ph.D. or M.D./Ph.D. [S2]\n\nPrevious research experience is not required for participation. [S2]\n\nScholars must fully participate in the nine‑week residential internship and cannot take summer courses or hold another job during the program. [S3]\n\nScholars must reside in housing provided on Howard’s campus. [S3]\n\nScholars must work as full collaborators in their assigned laboratory and attend all program activities. [S3]\n\nScholars must attend and participate in the Amgen Scholars Symposium, present their summer project as an oral presentation, and complete assigned surveys and readings. [S3]\n\nThe program runs from Saturday, May 16, 2026 through Saturday, July 18, 2026 \\(a nine‑week period\\). [S4]",
+      "sources_markdown": "## Sources — retrieved context\n\n- **[S1, S2, S3, S4, S5] Howard University Provost's Office** — chunk positions (zero-based): 3, 4, 2, 0, 1 — chunk IDs: amgen\\-scholars:body:3:7b6ce12461922171, amgen\\-scholars:body:4:b9d3956860f6bdbd, amgen\\-scholars:body:2:92489f92f7d8d8f8, amgen\\-scholars:body:0:4e12ae345cc8d5fb, amgen\\-scholars:body:1:4da0a040776823da — [Open source](https://provost.howard.edu/amgen-scholars)",
+      "included_chunks": [
+        {
+          "reference": "S1",
+          "text": "\nComplete surveys, readings (articles) as assigned\n\nScholars will receive:\n\nA $5,000 stipend\n\nHousing and meals paid for by the Howard Amgen Program\n\nTravel allowance for travel to and from DC\n\nPaid travel to and from the Amgen Scholars Symposium.\n\nEligibility\n\nThe Amgen Scholars Program at Howard selects undergraduates with high academic success, research interests in the indicated fields, and a commitment to pursuing a career in science, especially research. Applicants must:\n\nBe a U.S. citizen or a U.S. permanent resident\n\nBe undergraduate students enrolled in accredited four-year colleges or universities in the United States, Puerto Rico or other U.S. territories\n\n",
+          "metadata": {
+            "source": "Howard University Provost's Office",
+            "chunk_id": "amgen-scholars:body:3:7b6ce12461922171",
+            "chunk_index": 3,
+            "source_id": "amgen-scholars",
+            "document_id": "amgen-scholars:body",
+            "url": "https://provost.howard.edu/amgen-scholars"
+          }
+        },
+        {
+          "reference": "S2",
+          "text": "ent\n\nBe undergraduate students enrolled in accredited four-year colleges or universities in the United States, Puerto Rico or other U.S. territories\n\nBe sophomores (with four quarters or three semesters of college experience), juniors or non-graduating seniors (who are returning in the fall to continue undergraduate studies)\n\nHave earned a cumulative grade point average of 3.2 or above (on a 4.0 scale)\n\nHave an interest in pursuing a STEM Ph.D. or M.D./Ph.D.\n\nPrevious research experience is not required for participation\n\nHow to Apply\n\nReview the program and application information thoroughly\n\nGo to link to complete an Howard-Amgen Scholars application in Submittable\n\nFaculty profiles will be listed on the webpage soon.\n\nFor questions, please contact: Ronald.smith1@howard.edu\n\nApply Here",
+          "metadata": {
+            "source": "Howard University Provost's Office",
+            "chunk_id": "amgen-scholars:body:4:b9d3956860f6bdbd",
+            "chunk_index": 4,
+            "source_id": "amgen-scholars",
+            "document_id": "amgen-scholars:body",
+            "url": "https://provost.howard.edu/amgen-scholars"
+          }
+        },
+        {
+          "reference": "S3",
+          "text": "n process. Additionally, the interns will have the opportunity to speak to graduate students, and various scientists.\n\nScholar expectations include:\n\nFull participation in the 9 weeks of the internship program. Scholars will not have time to take summer courses or have a job other than the Howard Amgen Internship.\n\nReside in housing provided on Howard’s campus\n\nParticipate as a full collaborator in the assigned laboratory\n\nAttend all activities as part of the summer experience\n\nMandatory attendance and participation in the Amgen Scholars Symposium\n\nPresent his/her/their summer project at the symposium oral presentation\n\nComplete surveys, readings (articles) as assigned\n\nScholars will receive:\n\nA $5,000 stipend\n\nHousing and meals paid for by the Howard Amgen Program\n\n",
+          "metadata": {
+            "source": "Howard University Provost's Office",
+            "chunk_id": "amgen-scholars:body:2:92489f92f7d8d8f8",
+            "chunk_index": 2,
+            "source_id": "amgen-scholars",
+            "document_id": "amgen-scholars:body",
+            "url": "https://provost.howard.edu/amgen-scholars"
+          }
+        },
+        {
+          "reference": "S4",
+          "text": "Amgen Scholars Program\n\nDeadline: February 1, 2026 (11:59PM Eastern Time)\n\nBrief Description\n\nThe Amgen Scholars Program at Howard is a 9-week residential summer research program for undergraduates interested in doing research in biotechnology and related biomedical sciences.\n\nInternship Dates: Saturday, May 16, 2026 through Saturday, July 18, 2026.\n\nHoward Amgen Scholars conduct hands-on research under the mentorship of faculty and supervisors (post-docs and doctoral students). Laboratory hosts are affiliated with a variety of divisions of the university - the Faculty of Arts and Sciences (FAS) departments: Physics, Chemistry, Engineering; Howard University Medical School, Molecular and Cellular Biology, and Howard’s Interdisciplinary Research Institute.\n\n",
+          "metadata": {
+            "source": "Howard University Provost's Office",
+            "chunk_id": "amgen-scholars:body:0:4e12ae345cc8d5fb",
+            "chunk_index": 0,
+            "source_id": "amgen-scholars",
+            "document_id": "amgen-scholars:body",
+            "url": "https://provost.howard.edu/amgen-scholars"
+          }
+        },
+        {
+          "reference": "S5",
+          "text": "hysics, Chemistry, Engineering; Howard University Medical School, Molecular and Cellular Biology, and Howard’s Interdisciplinary Research Institute.\n\nHoward Amgen Scholars participate in scholarly and pre-professional development sessions and cohort social activities and will attend the North American Amgen Scholars Symposium. Examples of Howard’s pre-professional development and scholarly training include workshops on topics such as how to think like a scientist/researcher, research integrity, PhD and MD/PhD student experiences, and the graduate school application process. Additionally, the interns will have the opportunity to speak to graduate students, and various scientists.\n\nScholar expectations include:\n\n",
+          "metadata": {
+            "source": "Howard University Provost's Office",
+            "chunk_id": "amgen-scholars:body:1:4da0a040776823da",
+            "chunk_index": 1,
+            "source_id": "amgen-scholars",
+            "document_id": "amgen-scholars:body",
+            "url": "https://provost.howard.edu/amgen-scholars"
+          }
+        }
+      ],
+      "status": "answered",
+      "manual_review": {
+        "retrieval_quality": "Relevant",
+        "response_accuracy": "Accurate",
+        "reason": "The answer covers the eligibility and commitment requirements asked for, all supported by the five Amgen chunks. It does not repeat the stipend and travel benefits in the planning answer, which are not eligibility or commitment requirements."
+      }
+    },
+    {
+      "label": "planning question 4",
+      "question": "What must a student arrange before beginning an Independent Study in Howard’s Department of Afro-American Studies?",
+      "expected_answer": "The department requires a cumulative weighted average of 3.0 or better by the end of the second year, a written agreement from a full-time faculty member, and a written proposal submitted for approval. The request must be made in the preceding semester. A full-time AFRO professor must approve, supervise, and evaluate the project. These are department-specific requirements.",
+      "retrieved_chunks": [
+        {
+          "id": "afro-independent-study:body:0:d16e112e01a90207",
+          "text": "Independent Study\n\nIndependent Study Project Instructions\n\nIn an independent study, you essentially create your own course on a topic of your choice, working in concert with your faculty advisor. If you are looking for something different - a special field experience, a chance to try research, or simply explore a topic in more depth - you should consider doing an independent study under faculty supervision. In some cases, faculty members are willing to have you assist with their research projects or will guide your study on a topic of mutual interest.\n\nEligibility\n\nTo be eligible to register for Independent Study, a student must:\n\nEarn a cumulative weighted average of 3.0 or better by the end of their second year;\n\n",
+          "metadata": {
+            "document_id": "afro-independent-study:body",
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/afro-independent-study.html",
+            "load_mode": "cached",
+            "token_count": 134,
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "source": "Howard University Department of Afro-American Studies — Independent Study",
+            "chunk_size": 800,
+            "title": "Independent Study | Howard University Department of Afro-American Studies",
+            "url": "https://afroamericanstudies.howard.edu/beyond-classroom/independent-study",
+            "end_char": 725,
+            "start_char": 0,
+            "source_id": "afro-independent-study",
+            "char_count": 725,
+            "profile": "formal",
+            "chunk_overlap": 150,
+            "embedding_token_count": 147,
+            "kind": "html",
+            "chunk_index": 0
+          },
+          "distance": 0.23948657512664795
+        },
+        {
+          "id": "afro-independent-study:body:1:b0db48b34ced2e43",
+          "text": "be eligible to register for Independent Study, a student must:\n\nEarn a cumulative weighted average of 3.0 or better by the end of their second year;\n\nSecure a written agreement from a full-time faculty member to supervise the project; and\n\nSubmit a written proposal for approval for the project\n\nThe request must be made in the semester preceding the commencement of an independent study.\n\nWritten Proposal\n\nThe proposal may be in the form of a memorandum that describes the problem or issue that will be addressed in the independent study project. The student must set forth a description of the anticipated objective(s) of the project in terms of potential issues that will be addressed and proposed solution(s) and a research plan that demonstrates that some preliminary research has been done.\n\n",
+          "metadata": {
+            "token_count": 149,
+            "chunk_overlap": 150,
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/afro-independent-study.html",
+            "chunk_size": 800,
+            "end_char": 1374,
+            "load_mode": "cached",
+            "embedding_token_count": 162,
+            "url": "https://afroamericanstudies.howard.edu/beyond-classroom/independent-study",
+            "start_char": 575,
+            "document_id": "afro-independent-study:body",
+            "title": "Independent Study | Howard University Department of Afro-American Studies",
+            "char_count": 799,
+            "profile": "formal",
+            "source_id": "afro-independent-study",
+            "kind": "html",
+            "chunk_index": 1,
+            "source": "Howard University Department of Afro-American Studies — Independent Study"
+          },
+          "distance": 0.2580968141555786
+        },
+        {
+          "id": "afro-independent-study:body:3:a182aff8f4b1a401",
+          "text": "issue your project addresses and secondary legal sources, e.g. law review and journal articles, books (monographs and anthologies).\n\nFaculty Advisor\n\nEach project must be supervised by a full-time AFRO professor. The student must meet with the faculty advisor to ensure the focus and scope of the project is clearly laid out in the proposal. The faculty member must provide both a written approval of the project and a written commitment to supervise and evaluate the project.",
+          "metadata": {
+            "source_id": "afro-independent-study",
+            "chunk_size": 800,
+            "source": "Howard University Department of Afro-American Studies — Independent Study",
+            "chunk_overlap": 150,
+            "embedding_token_count": 105,
+            "chunk_index": 3,
+            "title": "Independent Study | Howard University Department of Afro-American Studies",
+            "kind": "html",
+            "document_id": "afro-independent-study:body",
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "url": "https://afroamericanstudies.howard.edu/beyond-classroom/independent-study",
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/afro-independent-study.html",
+            "char_count": 476,
+            "end_char": 2140,
+            "profile": "formal",
+            "token_count": 92,
+            "load_mode": "cached",
+            "start_char": 1664
+          },
+          "distance": 0.28294938802719116
+        },
+        {
+          "id": "afro-independent-study:body:2:ffd1e7b284af4fdd",
+          "text": "potential issues that will be addressed and proposed solution(s) and a research plan that demonstrates that some preliminary research has been done.\n\nThe memorandum must be a minimum of two pages, single-spaced, and include the following:\n\na statement of the problem or issue the project addresses;\n\na preliminary annotated bibliography. The bibliography must include both the sources of law cited in your statement of the legal problem or issue your project addresses and secondary legal sources, e.g. law review and journal articles, books (monographs and anthologies).\n\nFaculty Advisor\n\n",
+          "metadata": {
+            "load_mode": "cached",
+            "chunk_size": 800,
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/afro-independent-study.html",
+            "end_char": 1814,
+            "source_id": "afro-independent-study",
+            "profile": "formal",
+            "title": "Independent Study | Howard University Department of Afro-American Studies",
+            "kind": "html",
+            "chunk_index": 2,
+            "chunk_overlap": 150,
+            "url": "https://afroamericanstudies.howard.edu/beyond-classroom/independent-study",
+            "embedding_token_count": 125,
+            "token_count": 112,
+            "start_char": 1224,
+            "document_id": "afro-independent-study:body",
+            "char_count": 590,
+            "source": "Howard University Department of Afro-American Studies — Independent Study",
+            "processed_at": "2026-09-27T08:04:24.241351+00:00"
+          },
+          "distance": 0.4285048842430115
+        },
+        {
+          "id": "ous-research:body:3:fc5887448d703f4b",
+          "text": "s a means to prepare students for research outside of the collegiate environment.\n\nContact the Ukweli Team at huurj@howard.edu for more information.\n\nHoward University Research Programs for Undergraduates\n\nHumanities, Social Sciences\n\nHoward University Center for African Studies - Foreign Language & Area Studies (FLAS) Fellowship Program\n\nLibrary of Congress Archive, History and Heritage Advanced (AHHA) Summer Internship Program\n\nMellon Mays Undergraduate Fellowship Program\n\nUC Davis Summer Poverty Research Engagement Experience (UCD-SPREE)\n\nYoung AfricanA Leadership Initiative (YAALI) Research Abroad\n\nSTEM\n\nHHMI Science Education Alliance-Phage Hunters Advancing Genomics and Evolutionary Science (SEA-PHAGES) Program\n\n",
+          "metadata": {
+            "token_count": 134,
+            "end_char": 2203,
+            "source_id": "ous-research",
+            "source": "Howard University Office of Undergraduate Studies",
+            "profile": "formal",
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "chunk_overlap": 150,
+            "start_char": 1475,
+            "load_mode": "cached",
+            "embedding_token_count": 142,
+            "chunk_index": 3,
+            "chunk_size": 800,
+            "kind": "html",
+            "document_id": "ous-research:body",
+            "title": "Undergraduate Research | Howard University Office of Undergraduate Studies",
+            "url": "https://ous.howard.edu/undergraduate-research",
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/ous-research.html",
+            "char_count": 728
+          },
+          "distance": 0.47046947479248047
+        }
+      ],
+      "answer": "A student must secure a written agreement from a full\\-time faculty member to supervise the independent study project. [S2] [S3]\n\nA student must submit a written proposal for approval of the project before beginning the independent study. [S2]\n\nThe request for an independent study must be made in the semester preceding the commencement of the study. [S2]",
+      "sources_markdown": "## Sources — retrieved context\n\n- **[S1, S2, S3, S4] Howard University Department of Afro\\-American Studies — Independent Study** — chunk positions (zero-based): 0, 1, 3, 2 — chunk IDs: afro\\-independent\\-study:body:0:d16e112e01a90207, afro\\-independent\\-study:body:1:b0db48b34ced2e43, afro\\-independent\\-study:body:3:a182aff8f4b1a401, afro\\-independent\\-study:body:2:ffd1e7b284af4fdd — [Open source](https://afroamericanstudies.howard.edu/beyond-classroom/independent-study)\n- **[S5] Howard University Office of Undergraduate Studies** — chunk positions (zero-based): 3 — chunk IDs: ous\\-research:body:3:fc5887448d703f4b — [Open source](https://ous.howard.edu/undergraduate-research)",
+      "included_chunks": [
+        {
+          "reference": "S1",
+          "text": "Independent Study\n\nIndependent Study Project Instructions\n\nIn an independent study, you essentially create your own course on a topic of your choice, working in concert with your faculty advisor. If you are looking for something different - a special field experience, a chance to try research, or simply explore a topic in more depth - you should consider doing an independent study under faculty supervision. In some cases, faculty members are willing to have you assist with their research projects or will guide your study on a topic of mutual interest.\n\nEligibility\n\nTo be eligible to register for Independent Study, a student must:\n\nEarn a cumulative weighted average of 3.0 or better by the end of their second year;\n\n",
+          "metadata": {
+            "source": "Howard University Department of Afro-American Studies — Independent Study",
+            "chunk_id": "afro-independent-study:body:0:d16e112e01a90207",
+            "chunk_index": 0,
+            "source_id": "afro-independent-study",
+            "document_id": "afro-independent-study:body",
+            "url": "https://afroamericanstudies.howard.edu/beyond-classroom/independent-study"
+          }
+        },
+        {
+          "reference": "S2",
+          "text": "be eligible to register for Independent Study, a student must:\n\nEarn a cumulative weighted average of 3.0 or better by the end of their second year;\n\nSecure a written agreement from a full-time faculty member to supervise the project; and\n\nSubmit a written proposal for approval for the project\n\nThe request must be made in the semester preceding the commencement of an independent study.\n\nWritten Proposal\n\nThe proposal may be in the form of a memorandum that describes the problem or issue that will be addressed in the independent study project. The student must set forth a description of the anticipated objective(s) of the project in terms of potential issues that will be addressed and proposed solution(s) and a research plan that demonstrates that some preliminary research has been done.\n\n",
+          "metadata": {
+            "source": "Howard University Department of Afro-American Studies — Independent Study",
+            "chunk_id": "afro-independent-study:body:1:b0db48b34ced2e43",
+            "chunk_index": 1,
+            "source_id": "afro-independent-study",
+            "document_id": "afro-independent-study:body",
+            "url": "https://afroamericanstudies.howard.edu/beyond-classroom/independent-study"
+          }
+        },
+        {
+          "reference": "S3",
+          "text": "issue your project addresses and secondary legal sources, e.g. law review and journal articles, books (monographs and anthologies).\n\nFaculty Advisor\n\nEach project must be supervised by a full-time AFRO professor. The student must meet with the faculty advisor to ensure the focus and scope of the project is clearly laid out in the proposal. The faculty member must provide both a written approval of the project and a written commitment to supervise and evaluate the project.",
+          "metadata": {
+            "source": "Howard University Department of Afro-American Studies — Independent Study",
+            "chunk_id": "afro-independent-study:body:3:a182aff8f4b1a401",
+            "chunk_index": 3,
+            "source_id": "afro-independent-study",
+            "document_id": "afro-independent-study:body",
+            "url": "https://afroamericanstudies.howard.edu/beyond-classroom/independent-study"
+          }
+        },
+        {
+          "reference": "S4",
+          "text": "potential issues that will be addressed and proposed solution(s) and a research plan that demonstrates that some preliminary research has been done.\n\nThe memorandum must be a minimum of two pages, single-spaced, and include the following:\n\na statement of the problem or issue the project addresses;\n\na preliminary annotated bibliography. The bibliography must include both the sources of law cited in your statement of the legal problem or issue your project addresses and secondary legal sources, e.g. law review and journal articles, books (monographs and anthologies).\n\nFaculty Advisor\n\n",
+          "metadata": {
+            "source": "Howard University Department of Afro-American Studies — Independent Study",
+            "chunk_id": "afro-independent-study:body:2:ffd1e7b284af4fdd",
+            "chunk_index": 2,
+            "source_id": "afro-independent-study",
+            "document_id": "afro-independent-study:body",
+            "url": "https://afroamericanstudies.howard.edu/beyond-classroom/independent-study"
+          }
+        },
+        {
+          "reference": "S5",
+          "text": "s a means to prepare students for research outside of the collegiate environment.\n\nContact the Ukweli Team at huurj@howard.edu for more information.\n\nHoward University Research Programs for Undergraduates\n\nHumanities, Social Sciences\n\nHoward University Center for African Studies - Foreign Language & Area Studies (FLAS) Fellowship Program\n\nLibrary of Congress Archive, History and Heritage Advanced (AHHA) Summer Internship Program\n\nMellon Mays Undergraduate Fellowship Program\n\nUC Davis Summer Poverty Research Engagement Experience (UCD-SPREE)\n\nYoung AfricanA Leadership Initiative (YAALI) Research Abroad\n\nSTEM\n\nHHMI Science Education Alliance-Phage Hunters Advancing Genomics and Evolutionary Science (SEA-PHAGES) Program\n\n",
+          "metadata": {
+            "source": "Howard University Office of Undergraduate Studies",
+            "chunk_id": "ous-research:body:3:fc5887448d703f4b",
+            "chunk_index": 3,
+            "source_id": "ous-research",
+            "document_id": "ous-research:body",
+            "url": "https://ous.howard.edu/undergraduate-research"
+          }
+        }
+      ],
+      "status": "answered",
+      "manual_review": {
+        "retrieval_quality": "Partially relevant",
+        "response_accuracy": "Partially accurate",
+        "reason": "The answer gives the agreement, proposal and timing. It omits the 3.0 threshold and the full-time AFRO professor and written approval/evaluation details even though S1/S2/S3 contain them."
+      }
+    },
+    {
+      "label": "planning question 5",
+      "question": "Where can Howard undergraduate students publish their independent research findings on campus?",
+      "expected_answer": "Students can submit their manuscripts to *Ukweli: The Howard University Undergraduate Research Journal*, a student-led biannual peer-reviewed journal housed in the College of Arts and Sciences and supported by the Office of Undergraduate Studies, the Office of the Provost, and the Office of the Vice President for Research.",
+      "retrieved_chunks": [
+        {
+          "id": "ous-research:body:2:2a4f22c0e5a39db4",
+          "text": "rojects, and outstanding creative works.\n\nFor information, please visit: researchmonth.howard.edu/\n\nHoward University Undergraduate Research Journal\n\nFounded in 2020, Ukweli - The Howard University Undergraduate Research Journal is a biannual student-led publication with the purpose of showcasing the academic writing and research conducted by undergraduates at Howard University. Ukweli serves as a virtual learning center for the exchange of knowledge and ideas across disciplines, giving Howard University undergraduate students access to becoming published scholars, and the satisfaction and peer recognition of published scholarship as a means to prepare students for research outside of the collegiate environment.\n\nContact the Ukweli Team at huurj@howard.edu for more information.\n\n",
+          "metadata": {
+            "start_char": 835,
+            "char_count": 790,
+            "source_id": "ous-research",
+            "chunk_index": 2,
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "token_count": 144,
+            "kind": "html",
+            "document_id": "ous-research:body",
+            "end_char": 1625,
+            "source": "Howard University Office of Undergraduate Studies",
+            "profile": "formal",
+            "chunk_size": 800,
+            "load_mode": "cached",
+            "title": "Undergraduate Research | Howard University Office of Undergraduate Studies",
+            "embedding_token_count": 152,
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/ous-research.html",
+            "url": "https://ous.howard.edu/undergraduate-research",
+            "chunk_overlap": 150
+          },
+          "distance": 0.30654990673065186
+        },
+        {
+          "id": "ous-research:body:1:3b9841215b38a474",
+          "text": "tudents present their creative projects during Howard University Research Month, and publish in research journals.\n\nHoward University Research Month\n\nResearch Month is part of Howard's ongoing efforts to foster the research mission and to celebrate the University’s research enterprise, which is comprised of external grants and contracts, distinguished scholarly projects, and outstanding creative works.\n\nFor information, please visit: researchmonth.howard.edu/\n\nHoward University Undergraduate Research Journal\n\n",
+          "metadata": {
+            "chunk_index": 1,
+            "end_char": 985,
+            "profile": "formal",
+            "embedding_token_count": 95,
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "title": "Undergraduate Research | Howard University Office of Undergraduate Studies",
+            "token_count": 87,
+            "kind": "html",
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/ous-research.html",
+            "chunk_overlap": 150,
+            "document_id": "ous-research:body",
+            "source": "Howard University Office of Undergraduate Studies",
+            "load_mode": "cached",
+            "source_id": "ous-research",
+            "start_char": 470,
+            "char_count": 515,
+            "url": "https://ous.howard.edu/undergraduate-research",
+            "chunk_size": 800
+          },
+          "distance": 0.3365589380264282
+        },
+        {
+          "id": "ous-research:body:0:69dec5d00e7fd05f",
+          "text": "Undergraduate Research\n\n“Personal experience is important in any scholarly activity, but it cannot substitute for scientific research.” -James Cone\n\nHoward's unique brand of enterprising research opportunities span not only science, technology, engineering, and mathematics (STEM) fields, but also the humanities and social sciences. Advance your academic career with programs, internships and fellowships based in diversity, and through external grants and contracts. Students present their creative projects during Howard University Research Month, and publish in research journals.\n\nHoward University Research Month\n\n",
+          "metadata": {
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/ous-research.html",
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "kind": "html",
+            "embedding_token_count": 112,
+            "document_id": "ous-research:body",
+            "source": "Howard University Office of Undergraduate Studies",
+            "start_char": 0,
+            "url": "https://ous.howard.edu/undergraduate-research",
+            "title": "Undergraduate Research | Howard University Office of Undergraduate Studies",
+            "load_mode": "cached",
+            "source_id": "ous-research",
+            "profile": "formal",
+            "chunk_index": 0,
+            "token_count": 104,
+            "end_char": 620,
+            "chunk_size": 800,
+            "chunk_overlap": 150,
+            "char_count": 620
+          },
+          "distance": 0.35850459337234497
+        },
+        {
+          "id": "ous-research:body:3:fc5887448d703f4b",
+          "text": "s a means to prepare students for research outside of the collegiate environment.\n\nContact the Ukweli Team at huurj@howard.edu for more information.\n\nHoward University Research Programs for Undergraduates\n\nHumanities, Social Sciences\n\nHoward University Center for African Studies - Foreign Language & Area Studies (FLAS) Fellowship Program\n\nLibrary of Congress Archive, History and Heritage Advanced (AHHA) Summer Internship Program\n\nMellon Mays Undergraduate Fellowship Program\n\nUC Davis Summer Poverty Research Engagement Experience (UCD-SPREE)\n\nYoung AfricanA Leadership Initiative (YAALI) Research Abroad\n\nSTEM\n\nHHMI Science Education Alliance-Phage Hunters Advancing Genomics and Evolutionary Science (SEA-PHAGES) Program\n\n",
+          "metadata": {
+            "chunk_overlap": 150,
+            "title": "Undergraduate Research | Howard University Office of Undergraduate Studies",
+            "chunk_index": 3,
+            "url": "https://ous.howard.edu/undergraduate-research",
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/ous-research.html",
+            "start_char": 1475,
+            "source_id": "ous-research",
+            "document_id": "ous-research:body",
+            "load_mode": "cached",
+            "chunk_size": 800,
+            "kind": "html",
+            "source": "Howard University Office of Undergraduate Studies",
+            "token_count": 134,
+            "profile": "formal",
+            "char_count": 728,
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "embedding_token_count": 142,
+            "end_char": 2203
+          },
+          "distance": 0.368530809879303
+        },
+        {
+          "id": "chemistry-research:body:2:9f34a59e2fdf6fc4",
+          "text": "nce is important and can help students when applying for jobs, internships, and graduate programs.\n\nWhat Types of Research are Undergraduates Doing?\n\nUndergraduates at Howard University are working on projects such as the synthesis of inorganic nanoparticles, determining the amount of particulate matter in the atmosphere, using computational algorithms to design nanoscale materials, developing novel medicines to fight cancer, and even designing biomaterials. Others have performed research across campus and at other universities with applications for materials, medicine, and technology. Some of their work can be found in published manuscripts with their faculty advisors, graduate students, and postdoctoral associates.\n\nBrowse Our Research Opportunities\n\n",
+          "metadata": {
+            "chunk_size": 800,
+            "chunk_index": 2,
+            "char_count": 763,
+            "load_mode": "cached",
+            "token_count": 134,
+            "end_char": 1544,
+            "source": "Howard University Department of Chemistry",
+            "chunk_overlap": 150,
+            "source_id": "chemistry-research",
+            "profile": "formal",
+            "document_id": "chemistry-research:body",
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/chemistry-research.html",
+            "embedding_token_count": 141,
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "title": "Undergraduate Research | Howard University Department of Chemistry",
+            "url": "https://chemistry.howard.edu/academics/undergraduate-program/undergraduate-research",
+            "kind": "html",
+            "start_char": 781
+          },
+          "distance": 0.3719743490219116
+        }
+      ],
+      "answer": "Howard undergraduate students can publish their independent research findings in the Howard University Undergraduate Research Journal, Ukweli, a biannual student‑led publication. [S1]\n\nStudents also have the opportunity to present their work during Howard University Research Month, which includes publishing in research journals. [S2] [S3]",
+      "sources_markdown": "## Sources — retrieved context\n\n- **[S1, S2, S3, S4] Howard University Office of Undergraduate Studies** — chunk positions (zero-based): 2, 1, 0, 3 — chunk IDs: ous\\-research:body:2:2a4f22c0e5a39db4, ous\\-research:body:1:3b9841215b38a474, ous\\-research:body:0:69dec5d00e7fd05f, ous\\-research:body:3:fc5887448d703f4b — [Open source](https://ous.howard.edu/undergraduate-research)\n- **[S5] Howard University Department of Chemistry** — chunk positions (zero-based): 2 — chunk IDs: chemistry\\-research:body:2:9f34a59e2fdf6fc4 — [Open source](https://chemistry.howard.edu/academics/undergraduate-program/undergraduate-research)",
+      "included_chunks": [
+        {
+          "reference": "S1",
+          "text": "rojects, and outstanding creative works.\n\nFor information, please visit: researchmonth.howard.edu/\n\nHoward University Undergraduate Research Journal\n\nFounded in 2020, Ukweli - The Howard University Undergraduate Research Journal is a biannual student-led publication with the purpose of showcasing the academic writing and research conducted by undergraduates at Howard University. Ukweli serves as a virtual learning center for the exchange of knowledge and ideas across disciplines, giving Howard University undergraduate students access to becoming published scholars, and the satisfaction and peer recognition of published scholarship as a means to prepare students for research outside of the collegiate environment.\n\nContact the Ukweli Team at huurj@howard.edu for more information.\n\n",
+          "metadata": {
+            "source": "Howard University Office of Undergraduate Studies",
+            "chunk_id": "ous-research:body:2:2a4f22c0e5a39db4",
+            "chunk_index": 2,
+            "source_id": "ous-research",
+            "document_id": "ous-research:body",
+            "url": "https://ous.howard.edu/undergraduate-research"
+          }
+        },
+        {
+          "reference": "S2",
+          "text": "tudents present their creative projects during Howard University Research Month, and publish in research journals.\n\nHoward University Research Month\n\nResearch Month is part of Howard's ongoing efforts to foster the research mission and to celebrate the University’s research enterprise, which is comprised of external grants and contracts, distinguished scholarly projects, and outstanding creative works.\n\nFor information, please visit: researchmonth.howard.edu/\n\nHoward University Undergraduate Research Journal\n\n",
+          "metadata": {
+            "source": "Howard University Office of Undergraduate Studies",
+            "chunk_id": "ous-research:body:1:3b9841215b38a474",
+            "chunk_index": 1,
+            "source_id": "ous-research",
+            "document_id": "ous-research:body",
+            "url": "https://ous.howard.edu/undergraduate-research"
+          }
+        },
+        {
+          "reference": "S3",
+          "text": "Undergraduate Research\n\n“Personal experience is important in any scholarly activity, but it cannot substitute for scientific research.” -James Cone\n\nHoward's unique brand of enterprising research opportunities span not only science, technology, engineering, and mathematics (STEM) fields, but also the humanities and social sciences. Advance your academic career with programs, internships and fellowships based in diversity, and through external grants and contracts. Students present their creative projects during Howard University Research Month, and publish in research journals.\n\nHoward University Research Month\n\n",
+          "metadata": {
+            "source": "Howard University Office of Undergraduate Studies",
+            "chunk_id": "ous-research:body:0:69dec5d00e7fd05f",
+            "chunk_index": 0,
+            "source_id": "ous-research",
+            "document_id": "ous-research:body",
+            "url": "https://ous.howard.edu/undergraduate-research"
+          }
+        },
+        {
+          "reference": "S4",
+          "text": "s a means to prepare students for research outside of the collegiate environment.\n\nContact the Ukweli Team at huurj@howard.edu for more information.\n\nHoward University Research Programs for Undergraduates\n\nHumanities, Social Sciences\n\nHoward University Center for African Studies - Foreign Language & Area Studies (FLAS) Fellowship Program\n\nLibrary of Congress Archive, History and Heritage Advanced (AHHA) Summer Internship Program\n\nMellon Mays Undergraduate Fellowship Program\n\nUC Davis Summer Poverty Research Engagement Experience (UCD-SPREE)\n\nYoung AfricanA Leadership Initiative (YAALI) Research Abroad\n\nSTEM\n\nHHMI Science Education Alliance-Phage Hunters Advancing Genomics and Evolutionary Science (SEA-PHAGES) Program\n\n",
+          "metadata": {
+            "source": "Howard University Office of Undergraduate Studies",
+            "chunk_id": "ous-research:body:3:fc5887448d703f4b",
+            "chunk_index": 3,
+            "source_id": "ous-research",
+            "document_id": "ous-research:body",
+            "url": "https://ous.howard.edu/undergraduate-research"
+          }
+        },
+        {
+          "reference": "S5",
+          "text": "nce is important and can help students when applying for jobs, internships, and graduate programs.\n\nWhat Types of Research are Undergraduates Doing?\n\nUndergraduates at Howard University are working on projects such as the synthesis of inorganic nanoparticles, determining the amount of particulate matter in the atmosphere, using computational algorithms to design nanoscale materials, developing novel medicines to fight cancer, and even designing biomaterials. Others have performed research across campus and at other universities with applications for materials, medicine, and technology. Some of their work can be found in published manuscripts with their faculty advisors, graduate students, and postdoctoral associates.\n\nBrowse Our Research Opportunities\n\n",
+          "metadata": {
+            "source": "Howard University Department of Chemistry",
+            "chunk_id": "chemistry-research:body:2:9f34a59e2fdf6fc4",
+            "chunk_index": 2,
+            "source_id": "chemistry-research",
+            "document_id": "chemistry-research:body",
+            "url": "https://chemistry.howard.edu/academics/undergraduate-program/undergraduate-research"
+          }
+        }
+      ],
+      "status": "answered",
+      "manual_review": {
+        "retrieval_quality": "Partially relevant",
+        "response_accuracy": "Partially accurate",
+        "reason": "S1 correctly identifies Ukweli. The second sentence incorrectly implies Research Month itself includes journal publishing; S2/S3 describe presenting and publishing as separate activities."
+      }
+    },
+    {
+      "label": "planning question 6",
+      "question": "Do these sources establish an automatic university research stipend available without applying to a program or arranging a research opportunity?",
+      "expected_answer": "The collected sources do not establish such an entitlement. They describe specific program benefits and application or mentorship arrangements. The system should explain that evidence limit rather than invent a university-wide funding policy or treat the Goldwater tuition scholarship as an automatic lab stipend.",
+      "retrieved_chunks": [
+        {
+          "id": "ous-research:body:3:fc5887448d703f4b",
+          "text": "s a means to prepare students for research outside of the collegiate environment.\n\nContact the Ukweli Team at huurj@howard.edu for more information.\n\nHoward University Research Programs for Undergraduates\n\nHumanities, Social Sciences\n\nHoward University Center for African Studies - Foreign Language & Area Studies (FLAS) Fellowship Program\n\nLibrary of Congress Archive, History and Heritage Advanced (AHHA) Summer Internship Program\n\nMellon Mays Undergraduate Fellowship Program\n\nUC Davis Summer Poverty Research Engagement Experience (UCD-SPREE)\n\nYoung AfricanA Leadership Initiative (YAALI) Research Abroad\n\nSTEM\n\nHHMI Science Education Alliance-Phage Hunters Advancing Genomics and Evolutionary Science (SEA-PHAGES) Program\n\n",
+          "metadata": {
+            "url": "https://ous.howard.edu/undergraduate-research",
+            "char_count": 728,
+            "load_mode": "cached",
+            "token_count": 134,
+            "chunk_index": 3,
+            "source": "Howard University Office of Undergraduate Studies",
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "chunk_overlap": 150,
+            "document_id": "ous-research:body",
+            "source_id": "ous-research",
+            "kind": "html",
+            "chunk_size": 800,
+            "start_char": 1475,
+            "title": "Undergraduate Research | Howard University Office of Undergraduate Studies",
+            "end_char": 2203,
+            "embedding_token_count": 142,
+            "profile": "formal",
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/ous-research.html"
+          },
+          "distance": 0.5342938899993896
+        },
+        {
+          "id": "hilltop-r1:body:12:02ba80905f32499d",
+          "text": "olve more than one department, and, in some cases, more than one college, around research projects. For example, The College of Medicine may collaborate with The School of Social Work on pursuing a research grant from the National Institute of Health,” Jones said.\n\n",
+          "metadata": {
+            "source_id": "hilltop-r1",
+            "chunk_size": 500,
+            "char_count": 266,
+            "title": "Beyond the Numbers: What R1 Status Can Mean for Howard - The Hilltop",
+            "embedding_token_count": 63,
+            "document_id": "hilltop-r1:body",
+            "end_char": 3684,
+            "start_char": 3418,
+            "url": "https://thehilltoponline.com/2024/11/22/beyond-the-numbers-what-r1-status-can-mean-for-howard/",
+            "load_mode": "cached",
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "profile": "commentary",
+            "source": "The Hilltop (Student Newspaper)",
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/hilltop-r1.html",
+            "chunk_index": 12,
+            "kind": "html",
+            "token_count": 55,
+            "chunk_overlap": 100
+          },
+          "distance": 0.5530960559844971
+        },
+        {
+          "id": "karsh-scholars:body:2:ed2ecaf9477329ab",
+          "text": " role in government or the corporate world.\n\nHow to Apply\n\nThe Complete Package\n\nTuition Scholarship (either 75% or 100% depending on family income)\n\nRoom + board\n\nBooks + supplies stipend\n\nMandatory Summer Bridge Program (incoming freshman)\n\nResearch internships (required during summers)\n\nStudy abroad\n\nIn-program Advising\n\nLarge & small study groups\n\nTutoring\n\nMentoring\n\nCultural arts\n\nScholar Spotlight\n\nLadaisha Thompson\n\nCohort 1\n\n",
+          "metadata": {
+            "document_id": "karsh-scholars:body",
+            "chunk_overlap": 150,
+            "load_mode": "cached",
+            "chunk_index": 2,
+            "start_char": 1160,
+            "profile": "formal",
+            "token_count": 80,
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "char_count": 438,
+            "kind": "html",
+            "end_char": 1598,
+            "chunk_size": 800,
+            "source": "Howard University Karsh STEM Scholars Program (Official Site)",
+            "title": "About | Karsh STEM Scholars",
+            "url": "https://karshstemscholars.howard.edu/about",
+            "embedding_token_count": 94,
+            "source_id": "karsh-scholars",
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/karsh-scholars.html"
+          },
+          "distance": 0.5623177289962769
+        },
+        {
+          "id": "research-month:body:0:a123942591191c4c",
+          "text": "Office of Research\n\nResearch Month 2027\n\nApr 1, 2027 - May 1, 2027\n\nAbout Research Month\n\nResearch Month Program Book 2026\nResearch Month Abstract Book 2026\n\nResearch Month 2027 is part of our ongoing efforts to foster the research mission and to celebrate the University's research enterprise, which is comprised of external grants and contracts, distinguished scholarly projects,\nand outstanding creative works.\n\n",
+          "metadata": {
+            "chunk_index": 0,
+            "source": "Howard University Research Month",
+            "url": "https://researchmonth.howard.edu/",
+            "chunk_overlap": 150,
+            "title": "Home | Howard University Research Month",
+            "document_id": "research-month:body",
+            "embedding_token_count": 84,
+            "load_mode": "cached",
+            "kind": "html",
+            "source_id": "research-month",
+            "char_count": 415,
+            "start_char": 0,
+            "profile": "formal",
+            "token_count": 78,
+            "end_char": 415,
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/research-month.html",
+            "chunk_size": 800,
+            "processed_at": "2026-09-27T08:04:24.241351+00:00"
+          },
+          "distance": 0.5655621290206909
+        },
+        {
+          "id": "amgen-scholars:body:3:7b6ce12461922171",
+          "text": "\nComplete surveys, readings (articles) as assigned\n\nScholars will receive:\n\nA $5,000 stipend\n\nHousing and meals paid for by the Howard Amgen Program\n\nTravel allowance for travel to and from DC\n\nPaid travel to and from the Amgen Scholars Symposium.\n\nEligibility\n\nThe Amgen Scholars Program at Howard selects undergraduates with high academic success, research interests in the indicated fields, and a commitment to pursuing a career in science, especially research. Applicants must:\n\nBe a U.S. citizen or a U.S. permanent resident\n\nBe undergraduate students enrolled in accredited four-year colleges or universities in the United States, Puerto Rico or other U.S. territories\n\n",
+          "metadata": {
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/amgen-scholars.html",
+            "token_count": 133,
+            "chunk_size": 800,
+            "title": "Amgen Scholars Program | Howard University Provost's Office",
+            "load_mode": "cached",
+            "profile": "formal",
+            "embedding_token_count": 141,
+            "source_id": "amgen-scholars",
+            "char_count": 676,
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "document_id": "amgen-scholars:body",
+            "chunk_overlap": 150,
+            "source": "Howard University Provost's Office",
+            "chunk_index": 3,
+            "url": "https://provost.howard.edu/amgen-scholars",
+            "start_char": 1814,
+            "end_char": 2490,
+            "kind": "html"
+          },
+          "distance": 0.566715657711029
+        }
+      ],
+      "answer": "The retrieved sources describe research stipends only as components of specific programs \\(e.g., Karsh STEM Scholars stipend, Amgen Scholars $5,000 stipend\\) that require eligibility criteria or application, and do not indicate an automatic university research stipend available without applying or arranging a research opportunity. [S3] [S5]",
+      "sources_markdown": "## Sources — retrieved context\n\n- **[S1] Howard University Office of Undergraduate Studies** — chunk positions (zero-based): 3 — chunk IDs: ous\\-research:body:3:fc5887448d703f4b — [Open source](https://ous.howard.edu/undergraduate-research)\n- **[S2] The Hilltop \\(Student Newspaper\\)** — chunk positions (zero-based): 12 — chunk IDs: hilltop\\-r1:body:12:02ba80905f32499d — [Open source](https://thehilltoponline.com/2024/11/22/beyond-the-numbers-what-r1-status-can-mean-for-howard/)\n- **[S3] Howard University Karsh STEM Scholars Program \\(Official Site\\)** — chunk positions (zero-based): 2 — chunk IDs: karsh\\-scholars:body:2:ed2ecaf9477329ab — [Open source](https://karshstemscholars.howard.edu/about)\n- **[S4] Howard University Research Month** — chunk positions (zero-based): 0 — chunk IDs: research\\-month:body:0:a123942591191c4c — [Open source](https://researchmonth.howard.edu/)\n- **[S5] Howard University Provost's Office** — chunk positions (zero-based): 3 — chunk IDs: amgen\\-scholars:body:3:7b6ce12461922171 — [Open source](https://provost.howard.edu/amgen-scholars)",
+      "included_chunks": [
+        {
+          "reference": "S1",
+          "text": "s a means to prepare students for research outside of the collegiate environment.\n\nContact the Ukweli Team at huurj@howard.edu for more information.\n\nHoward University Research Programs for Undergraduates\n\nHumanities, Social Sciences\n\nHoward University Center for African Studies - Foreign Language & Area Studies (FLAS) Fellowship Program\n\nLibrary of Congress Archive, History and Heritage Advanced (AHHA) Summer Internship Program\n\nMellon Mays Undergraduate Fellowship Program\n\nUC Davis Summer Poverty Research Engagement Experience (UCD-SPREE)\n\nYoung AfricanA Leadership Initiative (YAALI) Research Abroad\n\nSTEM\n\nHHMI Science Education Alliance-Phage Hunters Advancing Genomics and Evolutionary Science (SEA-PHAGES) Program\n\n",
+          "metadata": {
+            "source": "Howard University Office of Undergraduate Studies",
+            "chunk_id": "ous-research:body:3:fc5887448d703f4b",
+            "chunk_index": 3,
+            "source_id": "ous-research",
+            "document_id": "ous-research:body",
+            "url": "https://ous.howard.edu/undergraduate-research"
+          }
+        },
+        {
+          "reference": "S2",
+          "text": "olve more than one department, and, in some cases, more than one college, around research projects. For example, The College of Medicine may collaborate with The School of Social Work on pursuing a research grant from the National Institute of Health,” Jones said.\n\n",
+          "metadata": {
+            "source": "The Hilltop (Student Newspaper)",
+            "chunk_id": "hilltop-r1:body:12:02ba80905f32499d",
+            "chunk_index": 12,
+            "source_id": "hilltop-r1",
+            "document_id": "hilltop-r1:body",
+            "url": "https://thehilltoponline.com/2024/11/22/beyond-the-numbers-what-r1-status-can-mean-for-howard/"
+          }
+        },
+        {
+          "reference": "S3",
+          "text": " role in government or the corporate world.\n\nHow to Apply\n\nThe Complete Package\n\nTuition Scholarship (either 75% or 100% depending on family income)\n\nRoom + board\n\nBooks + supplies stipend\n\nMandatory Summer Bridge Program (incoming freshman)\n\nResearch internships (required during summers)\n\nStudy abroad\n\nIn-program Advising\n\nLarge & small study groups\n\nTutoring\n\nMentoring\n\nCultural arts\n\nScholar Spotlight\n\nLadaisha Thompson\n\nCohort 1\n\n",
+          "metadata": {
+            "source": "Howard University Karsh STEM Scholars Program (Official Site)",
+            "chunk_id": "karsh-scholars:body:2:ed2ecaf9477329ab",
+            "chunk_index": 2,
+            "source_id": "karsh-scholars",
+            "document_id": "karsh-scholars:body",
+            "url": "https://karshstemscholars.howard.edu/about"
+          }
+        },
+        {
+          "reference": "S4",
+          "text": "Office of Research\n\nResearch Month 2027\n\nApr 1, 2027 - May 1, 2027\n\nAbout Research Month\n\nResearch Month Program Book 2026\nResearch Month Abstract Book 2026\n\nResearch Month 2027 is part of our ongoing efforts to foster the research mission and to celebrate the University's research enterprise, which is comprised of external grants and contracts, distinguished scholarly projects,\nand outstanding creative works.\n\n",
+          "metadata": {
+            "source": "Howard University Research Month",
+            "chunk_id": "research-month:body:0:a123942591191c4c",
+            "chunk_index": 0,
+            "source_id": "research-month",
+            "document_id": "research-month:body",
+            "url": "https://researchmonth.howard.edu/"
+          }
+        },
+        {
+          "reference": "S5",
+          "text": "\nComplete surveys, readings (articles) as assigned\n\nScholars will receive:\n\nA $5,000 stipend\n\nHousing and meals paid for by the Howard Amgen Program\n\nTravel allowance for travel to and from DC\n\nPaid travel to and from the Amgen Scholars Symposium.\n\nEligibility\n\nThe Amgen Scholars Program at Howard selects undergraduates with high academic success, research interests in the indicated fields, and a commitment to pursuing a career in science, especially research. Applicants must:\n\nBe a U.S. citizen or a U.S. permanent resident\n\nBe undergraduate students enrolled in accredited four-year colleges or universities in the United States, Puerto Rico or other U.S. territories\n\n",
+          "metadata": {
+            "source": "Howard University Provost's Office",
+            "chunk_id": "amgen-scholars:body:3:7b6ce12461922171",
+            "chunk_index": 3,
+            "source_id": "amgen-scholars",
+            "document_id": "amgen-scholars:body",
+            "url": "https://provost.howard.edu/amgen-scholars"
+          }
+        }
+      ],
+      "status": "answered",
+      "manual_review": {
+        "retrieval_quality": "Partially relevant",
+        "response_accuracy": "Partially accurate",
+        "reason": "The conclusion correctly limits what these sources establish. However, S3 describes a books-and-supplies stipend, not a Karsh research stipend, so the wording misclassifies that benefit. General R1/Research Month hits do not help."
+      }
+    },
+    {
+      "label": "planning question 7",
+      "question": "How did Camille Wimberly begin undergraduate research, and what mentoring did she describe?",
+      "expected_answer": "The Dig profile reports that she joined Dr. Karl Thompson’s microbiology lab in her first year at Howard. She describes support from older undergraduates and an available faculty mentor, and credits peer mentor Ananya Hota with help in coursework and her academic journey. This is one student’s experience, not a guaranteed placement route.",
+      "retrieved_chunks": [
+        {
+          "id": "dig-goldwater:body:1:96fa98d22790fc32",
+          "text": "thematics (STEM).\n\nCamille Wimberly conducting research in 2025. (All photos courtesy of Wimberly)\n\nWimberly, a rising junior majoring in biology and double minoring in chemistry and philosophy, was one of the 454 students selected to receive a Goldwater Scholarship for the 2026-2027 academic year. ",
+          "metadata": {
+            "url": "https://thedig.howard.edu/all-stories/howard-university-student-camille-wimberly-selected-2026-goldwater-scholarship-recipient",
+            "source_id": "dig-goldwater",
+            "profile": "commentary",
+            "document_id": "dig-goldwater:body",
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "end_char": 574,
+            "title": "Howard University Student Camille Wimberly Selected as a 2026 Goldwater Scholarship Recipient | The Dig at Howard University",
+            "source": "The Dig at Howard University — Camille Wimberly Goldwater Scholar Profile",
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/dig-goldwater.html",
+            "chunk_overlap": 100,
+            "start_char": 274,
+            "char_count": 300,
+            "token_count": 71,
+            "kind": "html",
+            "embedding_token_count": 87,
+            "chunk_size": 500,
+            "chunk_index": 1,
+            "load_mode": "cached"
+          },
+          "distance": 0.3591175079345703
+        },
+        {
+          "id": "dig-goldwater:body:15:2ce4e83beb8cd704",
+          "text": "that because I like working with kids, promoting knowledge, and STEM-related things that I enjoy.”\n\nCamille Wimberly on Howard's campus.\n\nWimberly supports younger learners the same way other Howard students have helped to support her along her academic journey, such as alum Ananya Hota (B.S. ’25), a 2024 Goldwater Scholarship recipient who also worked in Thompson’s microbiology lab.\n\n",
+          "metadata": {
+            "embedding_token_count": 106,
+            "profile": "commentary",
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "document_id": "dig-goldwater:body",
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/dig-goldwater.html",
+            "token_count": 90,
+            "source": "The Dig at Howard University — Camille Wimberly Goldwater Scholar Profile",
+            "load_mode": "cached",
+            "start_char": 4449,
+            "chunk_overlap": 100,
+            "end_char": 4837,
+            "kind": "html",
+            "title": "Howard University Student Camille Wimberly Selected as a 2026 Goldwater Scholarship Recipient | The Dig at Howard University",
+            "source_id": "dig-goldwater",
+            "url": "https://thedig.howard.edu/all-stories/howard-university-student-camille-wimberly-selected-2026-goldwater-scholarship-recipient",
+            "chunk_index": 15,
+            "chunk_size": 500,
+            "char_count": 388
+          },
+          "distance": 0.38271909952163696
+        },
+        {
+          "id": "dig-goldwater:body:13:5329c9adda87f426",
+          "text": "f Microbiology and she also joined Howard’s Alternative Spring Break program as a database manager. Wimberly is a member of the Precious Pearls Youth Outreach organization and recently became a member of the Alpha Chapter of the Alpha Kappa Alpha Sorority.\n\nWimberly found a way to merge her passion for community service with her research interests by helping to expose younger students to STEM research.\n\n",
+          "metadata": {
+            "token_count": 77,
+            "chunk_size": 500,
+            "start_char": 3779,
+            "title": "Howard University Student Camille Wimberly Selected as a 2026 Goldwater Scholarship Recipient | The Dig at Howard University",
+            "source_id": "dig-goldwater",
+            "end_char": 4186,
+            "embedding_token_count": 93,
+            "document_id": "dig-goldwater:body",
+            "char_count": 407,
+            "source": "The Dig at Howard University — Camille Wimberly Goldwater Scholar Profile",
+            "chunk_index": 13,
+            "kind": "html",
+            "url": "https://thedig.howard.edu/all-stories/howard-university-student-camille-wimberly-selected-2026-goldwater-scholarship-recipient",
+            "chunk_overlap": 100,
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/dig-goldwater.html",
+            "load_mode": "cached",
+            "profile": "commentary",
+            "processed_at": "2026-09-27T08:04:24.241351+00:00"
+          },
+          "distance": 0.38458162546157837
+        },
+        {
+          "id": "dig-goldwater:body:8:6a39b8dade73d6b2",
+          "text": "reat mentor.”\n\nCamille Wimberly presenting her research at Howard's 2026 Research Symposium event.\n\nWorking in Thompson’s lab helped Wimberly to land other research opportunities. In summer 2025, she participated in the University of Pennsylvania’s Summer Undergraduate Internship Program where she investigated the intersection of cell wall-modifying enzymes and auxin in leaf morphogenesis. ",
+          "metadata": {
+            "end_char": 2877,
+            "chunk_index": 8,
+            "chunk_size": 500,
+            "token_count": 79,
+            "document_id": "dig-goldwater:body",
+            "load_mode": "cached",
+            "profile": "commentary",
+            "chunk_overlap": 100,
+            "source_id": "dig-goldwater",
+            "title": "Howard University Student Camille Wimberly Selected as a 2026 Goldwater Scholarship Recipient | The Dig at Howard University",
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/dig-goldwater.html",
+            "embedding_token_count": 95,
+            "url": "https://thedig.howard.edu/all-stories/howard-university-student-camille-wimberly-selected-2026-goldwater-scholarship-recipient",
+            "start_char": 2484,
+            "char_count": 393,
+            "source": "The Dig at Howard University — Camille Wimberly Goldwater Scholar Profile",
+            "kind": "html"
+          },
+          "distance": 0.43714916706085205
+        },
+        {
+          "id": "dig-goldwater:body:0:11a6e45c8f99dff4",
+          "text": "Howard University student Camille Wimberly was recently selected as a 2026 recipient of the Barry M. Goldwater Scholarship, a prestigious award that provides funding to college sophomores and juniors interested in pursuing careers in science, technology, engineering, and mathematics (STEM).\n\nCamille Wimberly conducting research in 2025. (All photos courtesy of Wimberly)\n\n",
+          "metadata": {
+            "chunk_index": 0,
+            "url": "https://thedig.howard.edu/all-stories/howard-university-student-camille-wimberly-selected-2026-goldwater-scholarship-recipient",
+            "load_mode": "cached",
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/dig-goldwater.html",
+            "title": "Howard University Student Camille Wimberly Selected as a 2026 Goldwater Scholarship Recipient | The Dig at Howard University",
+            "embedding_token_count": 90,
+            "source_id": "dig-goldwater",
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "profile": "commentary",
+            "source": "The Dig at Howard University — Camille Wimberly Goldwater Scholar Profile",
+            "chunk_overlap": 100,
+            "document_id": "dig-goldwater:body",
+            "char_count": 374,
+            "kind": "html",
+            "end_char": 374,
+            "chunk_size": 500,
+            "token_count": 74,
+            "start_char": 0
+          },
+          "distance": 0.4522436261177063
+        }
+      ],
+      "answer": "Camille Wimberly began her undergraduate research by working in Thompson’s microbiology lab. [S4]\n\nShe described mentorship from alum Ananya Hota \\(B.S. ’25\\), a 2024 Goldwater Scholarship recipient who also worked in Thompson’s lab. [S2]\n\nShe referred to a “great mentor” in her research experience. [S4]\n\n**Missing information:** Details on the exact circumstances or steps that led her to start in Thompson’s lab are not provided.",
+      "sources_markdown": "## Sources — retrieved context\n\n- **[S1, S2, S3, S4, S5] The Dig at Howard University — Camille Wimberly Goldwater Scholar Profile** — chunk positions (zero-based): 1, 15, 13, 8, 0 — chunk IDs: dig\\-goldwater:body:1:96fa98d22790fc32, dig\\-goldwater:body:15:2ce4e83beb8cd704, dig\\-goldwater:body:13:5329c9adda87f426, dig\\-goldwater:body:8:6a39b8dade73d6b2, dig\\-goldwater:body:0:11a6e45c8f99dff4 — [Open source](https://thedig.howard.edu/all-stories/howard-university-student-camille-wimberly-selected-2026-goldwater-scholarship-recipient)",
+      "included_chunks": [
+        {
+          "reference": "S1",
+          "text": "thematics (STEM).\n\nCamille Wimberly conducting research in 2025. (All photos courtesy of Wimberly)\n\nWimberly, a rising junior majoring in biology and double minoring in chemistry and philosophy, was one of the 454 students selected to receive a Goldwater Scholarship for the 2026-2027 academic year. ",
+          "metadata": {
+            "source": "The Dig at Howard University — Camille Wimberly Goldwater Scholar Profile",
+            "chunk_id": "dig-goldwater:body:1:96fa98d22790fc32",
+            "chunk_index": 1,
+            "source_id": "dig-goldwater",
+            "document_id": "dig-goldwater:body",
+            "url": "https://thedig.howard.edu/all-stories/howard-university-student-camille-wimberly-selected-2026-goldwater-scholarship-recipient"
+          }
+        },
+        {
+          "reference": "S2",
+          "text": "that because I like working with kids, promoting knowledge, and STEM-related things that I enjoy.”\n\nCamille Wimberly on Howard's campus.\n\nWimberly supports younger learners the same way other Howard students have helped to support her along her academic journey, such as alum Ananya Hota (B.S. ’25), a 2024 Goldwater Scholarship recipient who also worked in Thompson’s microbiology lab.\n\n",
+          "metadata": {
+            "source": "The Dig at Howard University — Camille Wimberly Goldwater Scholar Profile",
+            "chunk_id": "dig-goldwater:body:15:2ce4e83beb8cd704",
+            "chunk_index": 15,
+            "source_id": "dig-goldwater",
+            "document_id": "dig-goldwater:body",
+            "url": "https://thedig.howard.edu/all-stories/howard-university-student-camille-wimberly-selected-2026-goldwater-scholarship-recipient"
+          }
+        },
+        {
+          "reference": "S3",
+          "text": "f Microbiology and she also joined Howard’s Alternative Spring Break program as a database manager. Wimberly is a member of the Precious Pearls Youth Outreach organization and recently became a member of the Alpha Chapter of the Alpha Kappa Alpha Sorority.\n\nWimberly found a way to merge her passion for community service with her research interests by helping to expose younger students to STEM research.\n\n",
+          "metadata": {
+            "source": "The Dig at Howard University — Camille Wimberly Goldwater Scholar Profile",
+            "chunk_id": "dig-goldwater:body:13:5329c9adda87f426",
+            "chunk_index": 13,
+            "source_id": "dig-goldwater",
+            "document_id": "dig-goldwater:body",
+            "url": "https://thedig.howard.edu/all-stories/howard-university-student-camille-wimberly-selected-2026-goldwater-scholarship-recipient"
+          }
+        },
+        {
+          "reference": "S4",
+          "text": "reat mentor.”\n\nCamille Wimberly presenting her research at Howard's 2026 Research Symposium event.\n\nWorking in Thompson’s lab helped Wimberly to land other research opportunities. In summer 2025, she participated in the University of Pennsylvania’s Summer Undergraduate Internship Program where she investigated the intersection of cell wall-modifying enzymes and auxin in leaf morphogenesis. ",
+          "metadata": {
+            "source": "The Dig at Howard University — Camille Wimberly Goldwater Scholar Profile",
+            "chunk_id": "dig-goldwater:body:8:6a39b8dade73d6b2",
+            "chunk_index": 8,
+            "source_id": "dig-goldwater",
+            "document_id": "dig-goldwater:body",
+            "url": "https://thedig.howard.edu/all-stories/howard-university-student-camille-wimberly-selected-2026-goldwater-scholarship-recipient"
+          }
+        },
+        {
+          "reference": "S5",
+          "text": "Howard University student Camille Wimberly was recently selected as a 2026 recipient of the Barry M. Goldwater Scholarship, a prestigious award that provides funding to college sophomores and juniors interested in pursuing careers in science, technology, engineering, and mathematics (STEM).\n\nCamille Wimberly conducting research in 2025. (All photos courtesy of Wimberly)\n\n",
+          "metadata": {
+            "source": "The Dig at Howard University — Camille Wimberly Goldwater Scholar Profile",
+            "chunk_id": "dig-goldwater:body:0:11a6e45c8f99dff4",
+            "chunk_index": 0,
+            "source_id": "dig-goldwater",
+            "document_id": "dig-goldwater:body",
+            "url": "https://thedig.howard.edu/all-stories/howard-university-student-camille-wimberly-selected-2026-goldwater-scholarship-recipient"
+          }
+        }
+      ],
+      "status": "partial",
+      "manual_review": {
+        "retrieval_quality": "Partially relevant",
+        "response_accuracy": "Partially accurate",
+        "reason": "All hits are from the right profile, but the first-year lab entry (document chunk 4) and fuller faculty/peer mentorship account (chunk 7) are missing. S4 establishes work in the lab, not that this was her first research experience, and begins with a clipped mentor quote. The response adds an unsupported beginning claim and cannot give the full requested account."
+      }
+    }
+  ]
+}

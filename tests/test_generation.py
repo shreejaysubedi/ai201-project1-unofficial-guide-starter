@@ -1,5 +1,9 @@
 """Generation contracts tested without API calls or model downloads."""
 import json
+from contextlib import redirect_stdout
+from io import StringIO
+from pathlib import Path
+from tempfile import TemporaryDirectory
 from types import SimpleNamespace
 import unittest
 from unittest.mock import Mock, patch
@@ -164,6 +168,37 @@ class InterfaceTests(unittest.TestCase):
         demo = app.build_demo()
         self.assertEqual(len(demo.config["dependencies"]), 2)
         demo.close()
+
+
+class PlanningEvaluationTests(unittest.TestCase):
+    def test_planning_run_keeps_questions_expected_answers_and_sources_together(self):
+        import check_generation
+        from generation import GenerationResult
+
+        with TemporaryDirectory() as directory:
+            plan = Path(directory) / "planning.md"
+            output = Path(directory) / "results.json"
+            plan.write_text("## Evaluation Plan\n| # | Question | Expected answer |\n"
+                            "| 1 | Duration? | Nine weeks. |\n"
+                            "| 2 | Cost? | Not specified. |\n\n## Other section\n")
+            def answer(question, records):
+                selected = assemble_context(records)
+                return GenerationResult(question, sources_markdown(selected), selected, "answered")
+
+            with patch("sys.argv", ["check_generation.py", "--live", "--planning", str(plan),
+                                    "--pause", "20", "--output", str(output)]), \
+                 patch("app.get_retriever") as retriever, \
+                 patch("check_generation.generate_answer", side_effect=answer), \
+                 patch("check_generation.time.sleep") as sleep, redirect_stdout(StringIO()):
+                retriever.return_value.retrieve.return_value = [chunk()]
+                check_generation.main()
+            saved = json.loads(output.read_text())["cases"]
+            self.assertEqual([r["question"] for r in saved], ["Duration?", "Cost?"])
+            self.assertEqual([r["expected_answer"] for r in saved], ["Nine weeks.", "Not specified."])
+            self.assertEqual([r["answer"] for r in saved], ["Duration?", "Cost?"])
+            self.assertEqual(saved[0]["included_chunks"][0]["metadata"]["chunk_id"], "guide:0")
+            self.assertEqual(retriever.return_value.retrieve.call_count, 2)
+            sleep.assert_called_once_with(20)
 
 
 if __name__ == "__main__":
