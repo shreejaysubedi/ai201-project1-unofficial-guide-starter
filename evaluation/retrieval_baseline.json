@@ -1,0 +1,390 @@
+{
+  "evaluated_at": "2026-09-27T08:25:19.597739+00:00",
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "distance_metric": "cosine",
+  "k": 5,
+  "collection": "howard_research",
+  "indexed_chunks": 88,
+  "chunks_sha256": "7837fe46a6dd4f90c7464d2f879436dfb27fa0d3e3ab99c5622c5bd4061e762c",
+  "queries": [
+    {
+      "question_number": 1,
+      "query": "What does a Howard student receive as a Karsh STEM Scholar, and what is required of them in return?",
+      "results": [
+        {
+          "id": "karsh-scholars:body:0:9ed05f7d8fb0ca31",
+          "text": "About\n\n2020 Inspiring Programs in STEM Award Recipient\n\nEach year, the Karsh STEM Scholars Program attracts hundreds of competitive high school students who are interested in beginning their STEM careers at Howard University. Scholars selected for the program are awarded a scholarship for tuition, mandatory fees, room, board and an allowance for books associated with attending the University and are required to ultimately pursue, a PhD, or a combined MD-PhD, within a STEM discipline. The program aims to challenge students, through rigorous coursework and preparation, to live, prosper and contribute to a world that is increasingly diverse and global in nature. ",
+          "metadata": {
+            "source_id": "karsh-scholars",
+            "token_count": 122,
+            "kind": "html",
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/karsh-scholars.html",
+            "char_count": 668,
+            "chunk_overlap": 150,
+            "start_char": 0,
+            "url": "https://karshstemscholars.howard.edu/about",
+            "load_mode": "cached",
+            "document_id": "karsh-scholars:body",
+            "chunk_index": 0,
+            "end_char": 668,
+            "source": "Howard University Karsh STEM Scholars Program (Official Site)",
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "title": "About | Karsh STEM Scholars",
+            "chunk_size": 800,
+            "profile": "formal"
+          },
+          "distance": 0.1936206817626953
+        },
+        {
+          "id": "karsh-scholars:body:1:8a3131ab1147f45d",
+          "text": " students, through rigorous coursework and preparation, to live, prosper and contribute to a world that is increasingly diverse and global in nature. Since 2017, the Karsh STEM Scholars Program has been home to some of the University’s most talented students, many of whom are student researchers and interns at STEM-related organizations across the world.\n\nOur Mission\n\nThe Karsh STEM Scholars Program’s mission is to increase the number of underrepresented minorities who earn a PhD or combined MD/PhD in a STEM discipline. Participants must be interested in pursuing a career in research and/or teaching, policy development or a leadership role in government or the corporate world.\n\nHow to Apply\n\nThe Complete Package\n\nTuition Scholarship (either 75% or 100% depending on family income)\n\n",
+          "metadata": {
+            "start_char": 518,
+            "load_mode": "cached",
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "url": "https://karshstemscholars.howard.edu/about",
+            "chunk_index": 1,
+            "source_id": "karsh-scholars",
+            "profile": "formal",
+            "end_char": 1310,
+            "token_count": 157,
+            "document_id": "karsh-scholars:body",
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/karsh-scholars.html",
+            "chunk_overlap": 150,
+            "title": "About | Karsh STEM Scholars",
+            "kind": "html",
+            "chunk_size": 800,
+            "char_count": 792,
+            "source": "Howard University Karsh STEM Scholars Program (Official Site)"
+          },
+          "distance": 0.2928426265716553
+        },
+        {
+          "id": "hilltop-r1:body:19:640ed2c0414ebd0b",
+          "text": "continue reading.\n\nHall is also a member of the seventh cohort of the Karsh STEM Scholars Program.\n\nThe ripple effects of R1 status extend beyond research labs. Increased funding will allow for more research fellowships and scholarships while raising the university’s profile among donors and corporate partners. This elevated status will attract new opportunities, ensuring Howard’s students and faculty continue to lead in fields ranging from environmental science to cultural studies.\n\n",
+          "metadata": {
+            "profile": "commentary",
+            "end_char": 5952,
+            "char_count": 489,
+            "source": "The Hilltop (Student Newspaper)",
+            "url": "https://thehilltoponline.com/2024/11/22/beyond-the-numbers-what-r1-status-can-mean-for-howard/",
+            "start_char": 5463,
+            "load_mode": "cached",
+            "source_id": "hilltop-r1",
+            "title": "Beyond the Numbers: What R1 Status Can Mean for Howard - The Hilltop",
+            "document_id": "hilltop-r1:body",
+            "chunk_index": 19,
+            "chunk_overlap": 100,
+            "kind": "html",
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/hilltop-r1.html",
+            "token_count": 87,
+            "chunk_size": 500,
+            "processed_at": "2026-09-27T08:04:24.241351+00:00"
+          },
+          "distance": 0.3220773935317993
+        },
+        {
+          "id": "amgen-scholars:body:4:b9d3956860f6bdbd",
+          "text": "ent\n\nBe undergraduate students enrolled in accredited four-year colleges or universities in the United States, Puerto Rico or other U.S. territories\n\nBe sophomores (with four quarters or three semesters of college experience), juniors or non-graduating seniors (who are returning in the fall to continue undergraduate studies)\n\nHave earned a cumulative grade point average of 3.2 or above (on a 4.0 scale)\n\nHave an interest in pursuing a STEM Ph.D. or M.D./Ph.D.\n\nPrevious research experience is not required for participation\n\nHow to Apply\n\nReview the program and application information thoroughly\n\nGo to link to complete an Howard-Amgen Scholars application in Submittable\n\nFaculty profiles will be listed on the webpage soon.\n\nFor questions, please contact: Ronald.smith1@howard.edu\n\nApply Here",
+          "metadata": {
+            "chunk_size": 800,
+            "load_mode": "cached",
+            "start_char": 2340,
+            "profile": "formal",
+            "chunk_overlap": 150,
+            "token_count": 167,
+            "chunk_index": 4,
+            "end_char": 3138,
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/amgen-scholars.html",
+            "title": "Amgen Scholars Program | Howard University Provost's Office",
+            "char_count": 798,
+            "source_id": "amgen-scholars",
+            "source": "Howard University Provost's Office",
+            "document_id": "amgen-scholars:body",
+            "url": "https://provost.howard.edu/amgen-scholars",
+            "kind": "html",
+            "processed_at": "2026-09-27T08:04:24.241351+00:00"
+          },
+          "distance": 0.3364294767379761
+        },
+        {
+          "id": "karsh-scholars:body:3:b24cbac9876c8b99",
+          "text": ")\n\nStudy abroad\n\nIn-program Advising\n\nLarge & small study groups\n\nTutoring\n\nMentoring\n\nCultural arts\n\nScholar Spotlight\n\nLadaisha Thompson\n\nCohort 1\n\nBeing a member of the inaugural cohort of the Karsh STEM Scholars Program is so special to me. I’m not only able to meet so many wonderful, bright people who look like me, but I’m learning just how important diversity in research and STEM is. It’s so exciting to be able to use research to further my passion for designing biological based tools, engineering them, and discovering how they can save lives.",
+          "metadata": {
+            "char_count": 555,
+            "chunk_size": 800,
+            "end_char": 2003,
+            "url": "https://karshstemscholars.howard.edu/about",
+            "title": "About | Karsh STEM Scholars",
+            "document_id": "karsh-scholars:body",
+            "source_id": "karsh-scholars",
+            "chunk_overlap": 150,
+            "chunk_index": 3,
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/karsh-scholars.html",
+            "kind": "html",
+            "source": "Howard University Karsh STEM Scholars Program (Official Site)",
+            "profile": "formal",
+            "start_char": 1448,
+            "token_count": 116,
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "load_mode": "cached"
+          },
+          "distance": 0.4047107696533203
+        }
+      ]
+    },
+    {
+      "question_number": 3,
+      "query": "What are the eligibility and commitment requirements for the Amgen Scholars Program at Howard University?",
+      "results": [
+        {
+          "id": "amgen-scholars:body:4:b9d3956860f6bdbd",
+          "text": "ent\n\nBe undergraduate students enrolled in accredited four-year colleges or universities in the United States, Puerto Rico or other U.S. territories\n\nBe sophomores (with four quarters or three semesters of college experience), juniors or non-graduating seniors (who are returning in the fall to continue undergraduate studies)\n\nHave earned a cumulative grade point average of 3.2 or above (on a 4.0 scale)\n\nHave an interest in pursuing a STEM Ph.D. or M.D./Ph.D.\n\nPrevious research experience is not required for participation\n\nHow to Apply\n\nReview the program and application information thoroughly\n\nGo to link to complete an Howard-Amgen Scholars application in Submittable\n\nFaculty profiles will be listed on the webpage soon.\n\nFor questions, please contact: Ronald.smith1@howard.edu\n\nApply Here",
+          "metadata": {
+            "start_char": 2340,
+            "chunk_overlap": 150,
+            "chunk_index": 4,
+            "title": "Amgen Scholars Program | Howard University Provost's Office",
+            "kind": "html",
+            "profile": "formal",
+            "token_count": 167,
+            "end_char": 3138,
+            "chunk_size": 800,
+            "load_mode": "cached",
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/amgen-scholars.html",
+            "source_id": "amgen-scholars",
+            "document_id": "amgen-scholars:body",
+            "source": "Howard University Provost's Office",
+            "url": "https://provost.howard.edu/amgen-scholars",
+            "char_count": 798,
+            "processed_at": "2026-09-27T08:04:24.241351+00:00"
+          },
+          "distance": 0.20088720321655273
+        },
+        {
+          "id": "amgen-scholars:body:3:7b6ce12461922171",
+          "text": "\nComplete surveys, readings (articles) as assigned\n\nScholars will receive:\n\nA $5,000 stipend\n\nHousing and meals paid for by the Howard Amgen Program\n\nTravel allowance for travel to and from DC\n\nPaid travel to and from the Amgen Scholars Symposium.\n\nEligibility\n\nThe Amgen Scholars Program at Howard selects undergraduates with high academic success, research interests in the indicated fields, and a commitment to pursuing a career in science, especially research. Applicants must:\n\nBe a U.S. citizen or a U.S. permanent resident\n\nBe undergraduate students enrolled in accredited four-year colleges or universities in the United States, Puerto Rico or other U.S. territories\n\n",
+          "metadata": {
+            "start_char": 1814,
+            "kind": "html",
+            "source_id": "amgen-scholars",
+            "end_char": 2490,
+            "profile": "formal",
+            "document_id": "amgen-scholars:body",
+            "source": "Howard University Provost's Office",
+            "chunk_overlap": 150,
+            "chunk_size": 800,
+            "url": "https://provost.howard.edu/amgen-scholars",
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/amgen-scholars.html",
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "chunk_index": 3,
+            "char_count": 676,
+            "load_mode": "cached",
+            "token_count": 133,
+            "title": "Amgen Scholars Program | Howard University Provost's Office"
+          },
+          "distance": 0.20190292596817017
+        },
+        {
+          "id": "amgen-scholars:body:2:92489f92f7d8d8f8",
+          "text": "n process. Additionally, the interns will have the opportunity to speak to graduate students, and various scientists.\n\nScholar expectations include:\n\nFull participation in the 9 weeks of the internship program. Scholars will not have time to take summer courses or have a job other than the Howard Amgen Internship.\n\nReside in housing provided on Howard’s campus\n\nParticipate as a full collaborator in the assigned laboratory\n\nAttend all activities as part of the summer experience\n\nMandatory attendance and participation in the Amgen Scholars Symposium\n\nPresent his/her/their summer project at the symposium oral presentation\n\nComplete surveys, readings (articles) as assigned\n\nScholars will receive:\n\nA $5,000 stipend\n\nHousing and meals paid for by the Howard Amgen Program\n\n",
+          "metadata": {
+            "url": "https://provost.howard.edu/amgen-scholars",
+            "source_id": "amgen-scholars",
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/amgen-scholars.html",
+            "chunk_index": 2,
+            "document_id": "amgen-scholars:body",
+            "source": "Howard University Provost's Office",
+            "title": "Amgen Scholars Program | Howard University Provost's Office",
+            "load_mode": "cached",
+            "char_count": 777,
+            "token_count": 142,
+            "chunk_size": 800,
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "profile": "formal",
+            "chunk_overlap": 150,
+            "kind": "html",
+            "start_char": 1187,
+            "end_char": 1964
+          },
+          "distance": 0.2415628433227539
+        },
+        {
+          "id": "amgen-scholars:body:0:4e12ae345cc8d5fb",
+          "text": "Amgen Scholars Program\n\nDeadline: February 1, 2026 (11:59PM Eastern Time)\n\nBrief Description\n\nThe Amgen Scholars Program at Howard is a 9-week residential summer research program for undergraduates interested in doing research in biotechnology and related biomedical sciences.\n\nInternship Dates: Saturday, May 16, 2026 through Saturday, July 18, 2026.\n\nHoward Amgen Scholars conduct hands-on research under the mentorship of faculty and supervisors (post-docs and doctoral students). Laboratory hosts are affiliated with a variety of divisions of the university - the Faculty of Arts and Sciences (FAS) departments: Physics, Chemistry, Engineering; Howard University Medical School, Molecular and Cellular Biology, and Howard’s Interdisciplinary Research Institute.\n\n",
+          "metadata": {
+            "chunk_overlap": 150,
+            "profile": "formal",
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/amgen-scholars.html",
+            "kind": "html",
+            "source_id": "amgen-scholars",
+            "document_id": "amgen-scholars:body",
+            "source": "Howard University Provost's Office",
+            "start_char": 0,
+            "token_count": 148,
+            "url": "https://provost.howard.edu/amgen-scholars",
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "title": "Amgen Scholars Program | Howard University Provost's Office",
+            "chunk_size": 800,
+            "char_count": 767,
+            "load_mode": "cached",
+            "end_char": 767,
+            "chunk_index": 0
+          },
+          "distance": 0.3129085898399353
+        },
+        {
+          "id": "amgen-scholars:body:1:4da0a040776823da",
+          "text": "hysics, Chemistry, Engineering; Howard University Medical School, Molecular and Cellular Biology, and Howard’s Interdisciplinary Research Institute.\n\nHoward Amgen Scholars participate in scholarly and pre-professional development sessions and cohort social activities and will attend the North American Amgen Scholars Symposium. Examples of Howard’s pre-professional development and scholarly training include workshops on topics such as how to think like a scientist/researcher, research integrity, PhD and MD/PhD student experiences, and the graduate school application process. Additionally, the interns will have the opportunity to speak to graduate students, and various scientists.\n\nScholar expectations include:\n\n",
+          "metadata": {
+            "chunk_overlap": 150,
+            "kind": "html",
+            "profile": "formal",
+            "end_char": 1337,
+            "url": "https://provost.howard.edu/amgen-scholars",
+            "load_mode": "cached",
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/amgen-scholars.html",
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "start_char": 617,
+            "chunk_index": 1,
+            "source_id": "amgen-scholars",
+            "char_count": 720,
+            "document_id": "amgen-scholars:body",
+            "source": "Howard University Provost's Office",
+            "title": "Amgen Scholars Program | Howard University Provost's Office",
+            "chunk_size": 800,
+            "token_count": 125
+          },
+          "distance": 0.31922709941864014
+        }
+      ]
+    },
+    {
+      "question_number": 4,
+      "query": "What must a student arrange before beginning an Independent Study in Howard’s Department of Afro-American Studies?",
+      "results": [
+        {
+          "id": "afro-independent-study:body:0:d16e112e01a90207",
+          "text": "Independent Study\n\nIndependent Study Project Instructions\n\nIn an independent study, you essentially create your own course on a topic of your choice, working in concert with your faculty advisor. If you are looking for something different - a special field experience, a chance to try research, or simply explore a topic in more depth - you should consider doing an independent study under faculty supervision. In some cases, faculty members are willing to have you assist with their research projects or will guide your study on a topic of mutual interest.\n\nEligibility\n\nTo be eligible to register for Independent Study, a student must:\n\nEarn a cumulative weighted average of 3.0 or better by the end of their second year;\n\n",
+          "metadata": {
+            "end_char": 725,
+            "load_mode": "cached",
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "start_char": 0,
+            "char_count": 725,
+            "url": "https://afroamericanstudies.howard.edu/beyond-classroom/independent-study",
+            "chunk_index": 0,
+            "document_id": "afro-independent-study:body",
+            "chunk_overlap": 150,
+            "kind": "html",
+            "title": "Independent Study | Howard University Department of Afro-American Studies",
+            "source_id": "afro-independent-study",
+            "profile": "formal",
+            "token_count": 134,
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/afro-independent-study.html",
+            "chunk_size": 800,
+            "source": "Howard University Department of Afro-American Studies — Independent Study"
+          },
+          "distance": 0.44910573959350586
+        },
+        {
+          "id": "afro-independent-study:body:1:b0db48b34ced2e43",
+          "text": "be eligible to register for Independent Study, a student must:\n\nEarn a cumulative weighted average of 3.0 or better by the end of their second year;\n\nSecure a written agreement from a full-time faculty member to supervise the project; and\n\nSubmit a written proposal for approval for the project\n\nThe request must be made in the semester preceding the commencement of an independent study.\n\nWritten Proposal\n\nThe proposal may be in the form of a memorandum that describes the problem or issue that will be addressed in the independent study project. The student must set forth a description of the anticipated objective(s) of the project in terms of potential issues that will be addressed and proposed solution(s) and a research plan that demonstrates that some preliminary research has been done.\n\n",
+          "metadata": {
+            "profile": "formal",
+            "kind": "html",
+            "chunk_overlap": 150,
+            "source": "Howard University Department of Afro-American Studies — Independent Study",
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/afro-independent-study.html",
+            "document_id": "afro-independent-study:body",
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "char_count": 799,
+            "load_mode": "cached",
+            "token_count": 149,
+            "chunk_size": 800,
+            "url": "https://afroamericanstudies.howard.edu/beyond-classroom/independent-study",
+            "chunk_index": 1,
+            "source_id": "afro-independent-study",
+            "end_char": 1374,
+            "start_char": 575,
+            "title": "Independent Study | Howard University Department of Afro-American Studies"
+          },
+          "distance": 0.46264487504959106
+        },
+        {
+          "id": "ous-research:body:0:69dec5d00e7fd05f",
+          "text": "Undergraduate Research\n\n“Personal experience is important in any scholarly activity, but it cannot substitute for scientific research.” -James Cone\n\nHoward's unique brand of enterprising research opportunities span not only science, technology, engineering, and mathematics (STEM) fields, but also the humanities and social sciences. Advance your academic career with programs, internships and fellowships based in diversity, and through external grants and contracts. Students present their creative projects during Howard University Research Month, and publish in research journals.\n\nHoward University Research Month\n\n",
+          "metadata": {
+            "profile": "formal",
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "chunk_index": 0,
+            "token_count": 104,
+            "url": "https://ous.howard.edu/undergraduate-research",
+            "document_id": "ous-research:body",
+            "source": "Howard University Office of Undergraduate Studies",
+            "source_id": "ous-research",
+            "start_char": 0,
+            "chunk_overlap": 150,
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/ous-research.html",
+            "char_count": 620,
+            "load_mode": "cached",
+            "title": "Undergraduate Research | Howard University Office of Undergraduate Studies",
+            "kind": "html",
+            "chunk_size": 800,
+            "end_char": 620
+          },
+          "distance": 0.4829316735267639
+        },
+        {
+          "id": "amgen-scholars:body:4:b9d3956860f6bdbd",
+          "text": "ent\n\nBe undergraduate students enrolled in accredited four-year colleges or universities in the United States, Puerto Rico or other U.S. territories\n\nBe sophomores (with four quarters or three semesters of college experience), juniors or non-graduating seniors (who are returning in the fall to continue undergraduate studies)\n\nHave earned a cumulative grade point average of 3.2 or above (on a 4.0 scale)\n\nHave an interest in pursuing a STEM Ph.D. or M.D./Ph.D.\n\nPrevious research experience is not required for participation\n\nHow to Apply\n\nReview the program and application information thoroughly\n\nGo to link to complete an Howard-Amgen Scholars application in Submittable\n\nFaculty profiles will be listed on the webpage soon.\n\nFor questions, please contact: Ronald.smith1@howard.edu\n\nApply Here",
+          "metadata": {
+            "chunk_size": 800,
+            "char_count": 798,
+            "kind": "html",
+            "token_count": 167,
+            "chunk_index": 4,
+            "end_char": 3138,
+            "chunk_overlap": 150,
+            "start_char": 2340,
+            "title": "Amgen Scholars Program | Howard University Provost's Office",
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/amgen-scholars.html",
+            "url": "https://provost.howard.edu/amgen-scholars",
+            "document_id": "amgen-scholars:body",
+            "source": "Howard University Provost's Office",
+            "profile": "formal",
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "source_id": "amgen-scholars",
+            "load_mode": "cached"
+          },
+          "distance": 0.4889987111091614
+        },
+        {
+          "id": "amgen-scholars:body:3:7b6ce12461922171",
+          "text": "\nComplete surveys, readings (articles) as assigned\n\nScholars will receive:\n\nA $5,000 stipend\n\nHousing and meals paid for by the Howard Amgen Program\n\nTravel allowance for travel to and from DC\n\nPaid travel to and from the Amgen Scholars Symposium.\n\nEligibility\n\nThe Amgen Scholars Program at Howard selects undergraduates with high academic success, research interests in the indicated fields, and a commitment to pursuing a career in science, especially research. Applicants must:\n\nBe a U.S. citizen or a U.S. permanent resident\n\nBe undergraduate students enrolled in accredited four-year colleges or universities in the United States, Puerto Rico or other U.S. territories\n\n",
+          "metadata": {
+            "kind": "html",
+            "source": "Howard University Provost's Office",
+            "raw_path": "/Users/shreejaysubedi/Coding/Codepath/ai201-project1-unofficial-guide-starter/documents/processed/raw/amgen-scholars.html",
+            "profile": "formal",
+            "url": "https://provost.howard.edu/amgen-scholars",
+            "chunk_overlap": 150,
+            "document_id": "amgen-scholars:body",
+            "token_count": 133,
+            "load_mode": "cached",
+            "start_char": 1814,
+            "processed_at": "2026-09-27T08:04:24.241351+00:00",
+            "end_char": 2490,
+            "chunk_index": 3,
+            "chunk_size": 800,
+            "source_id": "amgen-scholars",
+            "char_count": 676,
+            "title": "Amgen Scholars Program | Howard University Provost's Office"
+          },
+          "distance": 0.4897879958152771
+        }
+      ]
+    }
+  ],
+  "input_format": "text-only-v1"
+}

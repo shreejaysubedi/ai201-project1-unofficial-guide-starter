@@ -30,8 +30,6 @@ This is a useful topic for a RAG system because getting research experience is a
 | 9 | College of Engineering and Architecture (CEA) | Department of Electrical Engineering & Computer Science directory of active faculty research centers, labs, and sponsored projects, with named PI directors. | `https://cea.howard.edu/academics/departments/electrical-engineering-and-computer-science/research/research-centers-and` |
 | 10 | Howard University Department of Chemistry | Undergraduate Research portal: project descriptions in computational modeling, nanoparticles, biomaterials, publication examples, and explicit instructions for cold-emailing faculty to join a lab. | `https://chemistry.howard.edu/academics/undergraduate-program/undergraduate-research` |
 
-**Source revision (September 27, 2026):** The Dig profile replaces the inaccessible Reddit thread, and the Afro-American Studies guide replaces the unavailable Political Science PDF. The student-perspective source is university-published reporting with attributed student quotes, not an anonymous community discussion. Independent-study rules in this corpus now apply to Afro-American Studies; the former POLS GPA, credit, and grading rules are no longer evaluation evidence.
-
 ---
 
 ## Chunking Strategy
@@ -53,18 +51,9 @@ My documents basically fall into two types, so I used two different chunk sizes:
    * I used a bigger chunk size (800 characters) here because a lot of these documents have requirements that depend on each other and need to stay together. For example, the Afro-American Studies guide lists an academic threshold, a faculty-supervision agreement, and a written proposal, all pretty close together in the text. If I chunked it too small, I might split the academic threshold from the supervision requirement, and the chatbot could give a half-true answer.
    * I used a 150-character overlap so that when there's a section break, the requirement and the rule that goes with it don't get separated.
 
-**Note:** Some formal sources (e.g., the Karsh Scholars "About" page, the Afro-American Studies independent-study guide) are pretty short, so they'll only make a few 800-character chunks each. That's fine — it just means the source itself is short, not that something went wrong with chunking.
 
-**Implementation detail:** The custom recursive chunker uses the sizes above as
-maximum character counts, preferring paragraph, line, sentence, then word
-boundaries. Consecutive chunks retain exactly the configured character overlap;
-an overlap may start inside a word or sentence. The active corpus consists of
-10 HTML sources, each kept as a separate document with citation metadata.
-The loader also supports Reddit JSON and PDFs for future manifests. HTML is parsed
-to remove navigation and footer elements before regex whitespace cleanup.
-`python ingest.py --check-tokens` checks actual MiniLM token counts, including
-special tokens, against 256; the character-based estimates alone are not a
-guarantee. A token overflow is reported as a source failure instead of truncated.
+**Implementation detail:** 
+The custom recursive chunker uses the sizes above as maximum character counts, preferring paragraph, line, sentence, then word boundaries. Consecutive chunks retain exactly the configured character overlap; an overlap may start inside a word or sentence. The active corpus consists of 10 HTML sources, each kept as a separate document with citation metadata. The loader also supports Reddit JSON and PDFs for future manifests. HTML is parsed to remove navigation and footer elements before regex whitespace cleanup. `python ingest.py --check-tokens` checks actual MiniLM token counts, including special tokens, against 256; the character-based estimates alone are not a guarantee. A token overflow is reported as a source failure instead of truncated.
 
 ---
 
@@ -73,6 +62,12 @@ guarantee. A token overflow is reported as a source failure instead of truncated
 **Embedding model:** `sentence-transformers/all-MiniLM-L6-v2` (runs locally, 384 dimensions, 256-token maximum sequence length).
 
 **Top-k:** 5 chunks.
+
+**Implemented embedding and storage:** `embeddings.py` loads `SentenceTransformer("all-MiniLM-L6-v2")` on CPU and normalizes its 384-dimensional vectors. Each embedding input is `Source: <source name>` followed by the original chunk text. The source prefix was added after the text-only baseline confused some program requirements: it restored the Karsh summer-internships chunk and AFRO faculty-advisor rule to rank 3. Both chunk bodies and complete embedding inputs are checked against the 256-token limit. Original text, source name, URL, document ID, and zero-based chunk position are preserved in Chroma metadata/text fields.
+
+**Persistent index and retrieval:** ChromaDB stores the `howard_research` collection under `./chroma_db`, explicitly configured for cosine distance. Rebuilding upserts current records and removes stale IDs. `Retriever.retrieve(query, k=5)` embeds the query with the same model and returns full texts, source metadata, and distances in nearest-first order. Chroma receives explicit vectors (`embedding_function=None`). No source filter or automatic distance cutoff is applied.
+
+**Observed retrieval check:** The 88-chunk index was evaluated on questions 1, 3, and 4. After adding source context, the top three results cover the requested Karsh, Amgen, and AFRO requirements. Lower-ranked results still include unrelated programs or general opportunity listings, so low cosine distance alone is not proof of relevance. The default remains k=5 pending broader evaluation; chunk sizes are unchanged. Exact results and the baseline comparison are recorded in the README and `evaluation/`.
 
 **Why I picked k = 5:**
 * If k is too low (like 2 or 3), the system might not pull in enough info to answer questions that have multiple parts, like comparing getting course credit vs. getting paid for research. You need chunks from more than one source to answer that well.
@@ -84,8 +79,8 @@ Semantic search compares the *meaning* of a query to the *meaning* of a chunk, n
 
 **Things I'd have to think about if this were a real production system:**
 * **Weird vocabulary:** This topic uses a lot of specific jargon (PI, R1, REU, Karsh, Ukweli, Amgen, "independent study"). A bigger, more powerful embedding model like OpenAI's `text-embedding-3-small/large` or Cohere's `embed-english-v3.0` would probably understand this specific college jargon better than the small local model I'm using.
-* **Length limits:** `all-MiniLM-L6-v2` can only handle up to 256 tokens per input before it starts cutting text off. My chunks (500–800 characters) fit fine under that limit, but if a bug ever let a chunk get too long (like over 1,000 characters), part of it could get silently cut off without me noticing, so I should test for that.
-* **Speed vs. scale:** Running this small model locally on my laptop's CPU is fast enough for a small class project (under 30ms per query). But if Howard actually wanted to roll this out for thousands of students at once, they'd need real GPU servers or a hosted embedding API to keep up with all the traffic.
+* **Length limits:** `all-MiniLM-L6-v2` can only handle up to 256 tokens per input before it starts cutting text off. Character counts alone do not guarantee this limit. The implementation checks chunk bodies, source-prefixed embedding inputs, and queries without truncation; the current corpus peaks at 200 tokens including source context and special tokens.
+* **Speed vs. scale:** This small model runs locally on CPU for the class project. Query latency has not been benchmarked, so no per-query timing target is claimed. But if Howard actually wanted to roll this out for thousands of students at once, they'd need real GPU servers or a hosted embedding API to keep up with all the traffic.
 
 ---
 
@@ -143,6 +138,7 @@ Semantic search compares the *meaning* of a query to the *meaning* of a chunk, n
 |  - Embedding Model: sentence-transformers/all-MiniLM-L6-v2 (384-dim,    |
 |    256-token max sequence length)                                       |
 |  - Vector Store: ChromaDB (persistent local storage in ./chroma_db)     |
+|  - Embed source name + chunk; store original text and metadata         |
 +-------------------------------------------------------------------------+
                                      |
                                      v

@@ -1,19 +1,19 @@
 # The Unofficial Guide — Project 1
 
-## Running ingestion and chunking
+## Running the pipeline
 
-The first two pipeline stages are implemented in `ingest.py` and `chunking.py`.
-`sources.json` contains the 10 URLs and source profiles from `planning.md`.
+Stages 1–4 from the planning diagram are implemented: ingestion, chunking, local embeddings, and persistent retrieval. `sources.json` contains the 10 source URLs and profiles.
 
 ```bash
 python -m pip install -r requirements.txt
 python ingest.py --check-tokens
+python embeddings.py
+python retrieval.py "What are the requirements for Amgen Scholars?" --offline
+python evaluate_retrieval.py --offline
 python -m unittest discover -s tests -v
 ```
 
-See [INGESTION.md](INGESTION.md) for output formats, offline runs, and local-file
-fallbacks for inaccessible sources. Embedding, vector storage, and querying are
-not implemented yet.
+The first embedding run downloads MiniLM; subsequent runs can use `python embeddings.py --offline`. See [INGESTION.md](INGESTION.md) for source handling and [RETRIEVAL.md](RETRIEVAL.md) for architecture, Python usage, Chroma API explanations, and debugging notes. `retrieval.py` prints evidence with source information and cosine distances. Groq answer generation and the answer interface are not implemented yet.
 
 ---
 
@@ -190,54 +190,394 @@ These five samples were copied from `documents/processed/chunks.jsonl` from the 
 
 ## Embedding Model
 
-<!-- Name the embedding model you used and explain your choice.
-     Then answer: if you were deploying this system for real users and cost wasn't a constraint,
-     what tradeoffs would you weigh in choosing a different model?
-     Consider: context length limits, multilingual support, accuracy on domain-specific text,
-     latency, and local vs. API-hosted. -->
+**Model used:** `sentence-transformers/all-MiniLM-L6-v2`, loaded locally with `SentenceTransformer("all-MiniLM-L6-v2")` on CPU. It produces 384-dimensional normalized vectors and needs no API key. All 88 chunks from 10 sources are stored in the persistent ChromaDB collection `howard_research` under `./chroma_db`, using cosine distance. Each vector embeds the source name plus chunk text; the returned document remains the original chunk text. The longest complete embedding input is 200 tokens, below the 256-token model limit. Attribution includes source name, URL, document ID, and zero-based chunk position.
 
-**Model used:**
-
-**Production tradeoff reflection:**
+**Production tradeoff reflection:** This model is small and practical for a local class project, but the baseline confused requirements from different programs and missed a relevant list when its body omitted the program name. Source context improved this test, but a production evaluation should compare stronger embedding models and rerankers on department-specific rules, jargon, incomplete evidence, and cross-program questions. Larger or hosted models introduce memory, latency, operational cost, and data-sharing tradeoffs; model changes also require re-embedding the corpus. No latency benchmark or general accuracy claim has been established by these three tests.
 
 ---
 
 ## Retrieval Test Results
 
-<!-- Run these 3 queries through your retrieval system and record the top returned chunks.
-     For at least 2 of the 3, explain why the returned chunks are relevant to the query.
-     Results must be text — not screenshots. -->
+These are actual results for evaluation questions **1, 3, and 4** from `planning.md`, using **k=5**, all 88 chunks, and source-prefixed MiniLM embeddings. Cosine distance is lower for closer matches; it is not an answer-confidence score. Full machine-readable results are saved in [evaluation/retrieval_results.json](evaluation/retrieval_results.json), and the original text-only baseline is preserved in [evaluation/retrieval_baseline.json](evaluation/retrieval_baseline.json). All returned texts below are complete chunks, with only outer whitespace removed for display.
 
-**Query 1:**
+
+**Query 1 (planning question 1):** What does a Howard student receive as a Karsh STEM Scholar, and what is required of them in return?
 
 Top returned chunks:
--
--
--
 
-Relevance explanation:
+### Query 1, result 1
+
+**Source:** [Howard University Karsh STEM Scholars Program (Official Site)](https://karshstemscholars.howard.edu/about)
+
+**Chunk ID:** `karsh-scholars:body:0:9ed05f7d8fb0ca31`; position 0 (zero-based); **cosine distance: 0.1816**.
+
+> About
+>
+> 2020 Inspiring Programs in STEM Award Recipient
+>
+> Each year, the Karsh STEM Scholars Program attracts hundreds of competitive high school students who are interested in beginning their STEM careers at Howard University. Scholars selected for the program are awarded a scholarship for tuition, mandatory fees, room, board and an allowance for books associated with attending the University and are required to ultimately pursue, a PhD, or a combined MD-PhD, within a STEM discipline. The program aims to challenge students, through rigorous coursework and preparation, to live, prosper and contribute to a world that is increasingly diverse and global in nature.
+
+**Inspection:** Relevant: identifies Karsh scholarship coverage and the PhD/MD-PhD expectation.
+
+### Query 1, result 2
+
+**Source:** [Howard University Karsh STEM Scholars Program (Official Site)](https://karshstemscholars.howard.edu/about)
+
+**Chunk ID:** `karsh-scholars:body:1:8a3131ab1147f45d`; position 1 (zero-based); **cosine distance: 0.2322**.
+
+> students, through rigorous coursework and preparation, to live, prosper and contribute to a world that is increasingly diverse and global in nature. Since 2017, the Karsh STEM Scholars Program has been home to some of the University’s most talented students, many of whom are student researchers and interns at STEM-related organizations across the world.
+>
+> Our Mission
+>
+> The Karsh STEM Scholars Program’s mission is to increase the number of underrepresented minorities who earn a PhD or combined MD/PhD in a STEM discipline. Participants must be interested in pursuing a career in research and/or teaching, policy development or a leadership role in government or the corporate world.
+>
+> How to Apply
+>
+> The Complete Package
+>
+> Tuition Scholarship (either 75% or 100% depending on family income)
+
+**Inspection:** Relevant: names Karsh, explains the program mission, and specifies 75% or 100% tuition depending on family income.
+
+### Query 1, result 3
+
+**Source:** [Howard University Karsh STEM Scholars Program (Official Site)](https://karshstemscholars.howard.edu/about)
+
+**Chunk ID:** `karsh-scholars:body:2:ed2ecaf9477329ab`; position 2 (zero-based); **cosine distance: 0.2549**.
+
+> role in government or the corporate world.
+>
+> How to Apply
+>
+> The Complete Package
+>
+> Tuition Scholarship (either 75% or 100% depending on family income)
+>
+> Room + board
+>
+> Books + supplies stipend
+>
+> Mandatory Summer Bridge Program (incoming freshman)
+>
+> Research internships (required during summers)
+>
+> Study abroad
+>
+> In-program Advising
+>
+> Large & small study groups
+>
+> Tutoring
+>
+> Mentoring
+>
+> Cultural arts
+>
+> Scholar Spotlight
+>
+> Ladaisha Thompson
+>
+> Cohort 1
+
+**Inspection:** Relevant: supplies room/board, books, the mandatory summer bridge, and required summer research internships.
+
+### Query 1, result 4
+
+**Source:** [Howard University Provost's Office](https://provost.howard.edu/amgen-scholars)
+
+**Chunk ID:** `amgen-scholars:body:4:b9d3956860f6bdbd`; position 4 (zero-based); **cosine distance: 0.3301**.
+
+> ent
+>
+> Be undergraduate students enrolled in accredited four-year colleges or universities in the United States, Puerto Rico or other U.S. territories
+>
+> Be sophomores (with four quarters or three semesters of college experience), juniors or non-graduating seniors (who are returning in the fall to continue undergraduate studies)
+>
+> Have earned a cumulative grade point average of 3.2 or above (on a 4.0 scale)
+>
+> Have an interest in pursuing a STEM Ph.D. or M.D./Ph.D.
+>
+> Previous research experience is not required for participation
+>
+> How to Apply
+>
+> Review the program and application information thoroughly
+>
+> Go to link to complete an Howard-Amgen Scholars application in Submittable
+>
+> Faculty profiles will be listed on the webpage soon.
+>
+> For questions, please contact: Ronald.smith1@howard.edu
+>
+> Apply Here
+
+**Inspection:** Off-target for this question: these are Amgen eligibility rules, not Karsh rules. Its 3.2 GPA threshold must not be attributed to Karsh.
+
+### Query 1, result 5
+
+**Source:** [The Hilltop (Student Newspaper)](https://thehilltoponline.com/2024/11/22/beyond-the-numbers-what-r1-status-can-mean-for-howard/)
+
+**Chunk ID:** `hilltop-r1:body:19:640ed2c0414ebd0b`; position 19 (zero-based); **cosine distance: 0.3437**.
+
+> continue reading.
+>
+> Hall is also a member of the seventh cohort of the Karsh STEM Scholars Program.
+>
+> The ripple effects of R1 status extend beyond research labs. Increased funding will allow for more research fellowships and scholarships while raising the university’s profile among donors and corporate partners. This elevated status will attract new opportunities, ensuring Howard’s students and faculty continue to lead in fields ranging from environmental science to cultural studies.
+
+**Inspection:** Only background: mentions a Karsh student and R1 funding but does not establish Karsh benefits or obligations. The opening also contains advertisement residue.
+
+**Relevance explanation:** Ranks 1–3 jointly support the requested benefits and obligations from the official Karsh source, including summer research. In the text-only baseline, the summer-internships chunk was absent from the top five; adding the source name to its embedding input moved it to rank 3. Ranks 4–5 show residual cross-program noise despite distances below 0.35. Overall, the needed evidence is present, but the full result set is only partially relevant.
 
 ---
 
-**Query 2:**
+**Query 2 (planning question 3):** What are the eligibility and commitment requirements for the Amgen Scholars Program at Howard University?
 
 Top returned chunks:
--
--
--
 
-Relevance explanation:
+### Query 2, result 1
+
+**Source:** [Howard University Provost's Office](https://provost.howard.edu/amgen-scholars)
+
+**Chunk ID:** `amgen-scholars:body:3:7b6ce12461922171`; position 3 (zero-based); **cosine distance: 0.2031**.
+
+> Complete surveys, readings (articles) as assigned
+>
+> Scholars will receive:
+>
+> A $5,000 stipend
+>
+> Housing and meals paid for by the Howard Amgen Program
+>
+> Travel allowance for travel to and from DC
+>
+> Paid travel to and from the Amgen Scholars Symposium.
+>
+> Eligibility
+>
+> The Amgen Scholars Program at Howard selects undergraduates with high academic success, research interests in the indicated fields, and a commitment to pursuing a career in science, especially research. Applicants must:
+>
+> Be a U.S. citizen or a U.S. permanent resident
+>
+> Be undergraduate students enrolled in accredited four-year colleges or universities in the United States, Puerto Rico or other U.S. territories
+
+**Inspection:** Relevant: contains Amgen funding, citizenship/residency, and enrollment conditions.
+
+### Query 2, result 2
+
+**Source:** [Howard University Provost's Office](https://provost.howard.edu/amgen-scholars)
+
+**Chunk ID:** `amgen-scholars:body:4:b9d3956860f6bdbd`; position 4 (zero-based); **cosine distance: 0.2202**.
+
+> ent
+>
+> Be undergraduate students enrolled in accredited four-year colleges or universities in the United States, Puerto Rico or other U.S. territories
+>
+> Be sophomores (with four quarters or three semesters of college experience), juniors or non-graduating seniors (who are returning in the fall to continue undergraduate studies)
+>
+> Have earned a cumulative grade point average of 3.2 or above (on a 4.0 scale)
+>
+> Have an interest in pursuing a STEM Ph.D. or M.D./Ph.D.
+>
+> Previous research experience is not required for participation
+>
+> How to Apply
+>
+> Review the program and application information thoroughly
+>
+> Go to link to complete an Howard-Amgen Scholars application in Submittable
+>
+> Faculty profiles will be listed on the webpage soon.
+>
+> For questions, please contact: Ronald.smith1@howard.edu
+>
+> Apply Here
+
+**Inspection:** Relevant: gives eligible class years, the 3.2 GPA threshold, the STEM doctorate interest requirement, and the fact that prior research is not required.
+
+### Query 2, result 3
+
+**Source:** [Howard University Provost's Office](https://provost.howard.edu/amgen-scholars)
+
+**Chunk ID:** `amgen-scholars:body:2:92489f92f7d8d8f8`; position 2 (zero-based); **cosine distance: 0.2564**.
+
+> n process. Additionally, the interns will have the opportunity to speak to graduate students, and various scientists.
+>
+> Scholar expectations include:
+>
+> Full participation in the 9 weeks of the internship program. Scholars will not have time to take summer courses or have a job other than the Howard Amgen Internship.
+>
+> Reside in housing provided on Howard’s campus
+>
+> Participate as a full collaborator in the assigned laboratory
+>
+> Attend all activities as part of the summer experience
+>
+> Mandatory attendance and participation in the Amgen Scholars Symposium
+>
+> Present his/her/their summer project at the symposium oral presentation
+>
+> Complete surveys, readings (articles) as assigned
+>
+> Scholars will receive:
+>
+> A $5,000 stipend
+>
+> Housing and meals paid for by the Howard Amgen Program
+
+**Inspection:** Relevant: specifies the nine-week commitment, no concurrent summer courses or outside job, housing, laboratory participation, and symposium obligations.
+
+### Query 2, result 4
+
+**Source:** [Howard University Provost's Office](https://provost.howard.edu/amgen-scholars)
+
+**Chunk ID:** `amgen-scholars:body:0:4e12ae345cc8d5fb`; position 0 (zero-based); **cosine distance: 0.2891**.
+
+> Amgen Scholars Program
+>
+> Deadline: February 1, 2026 (11:59PM Eastern Time)
+>
+> Brief Description
+>
+> The Amgen Scholars Program at Howard is a 9-week residential summer research program for undergraduates interested in doing research in biotechnology and related biomedical sciences.
+>
+> Internship Dates: Saturday, May 16, 2026 through Saturday, July 18, 2026.
+>
+> Howard Amgen Scholars conduct hands-on research under the mentorship of faculty and supervisors (post-docs and doctoral students). Laboratory hosts are affiliated with a variety of divisions of the university - the Faculty of Arts and Sciences (FAS) departments: Physics, Chemistry, Engineering; Howard University Medical School, Molecular and Cellular Biology, and Howard’s Interdisciplinary Research Institute.
+
+**Inspection:** Relevant context: identifies the residential program, research areas, mentorship, and explicitly dated 2026 schedule.
+
+### Query 2, result 5
+
+**Source:** [Howard University Provost's Office](https://provost.howard.edu/amgen-scholars)
+
+**Chunk ID:** `amgen-scholars:body:1:4da0a040776823da`; position 1 (zero-based); **cosine distance: 0.3293**.
+
+> hysics, Chemistry, Engineering; Howard University Medical School, Molecular and Cellular Biology, and Howard’s Interdisciplinary Research Institute.
+>
+> Howard Amgen Scholars participate in scholarly and pre-professional development sessions and cohort social activities and will attend the North American Amgen Scholars Symposium. Examples of Howard’s pre-professional development and scholarly training include workshops on topics such as how to think like a scientist/researcher, research integrity, PhD and MD/PhD student experiences, and the graduate school application process. Additionally, the interns will have the opportunity to speak to graduate students, and various scientists.
+>
+> Scholar expectations include:
+
+**Inspection:** Relevant context: covers training sessions and symposium participation, though its trailing expectations heading is incomplete.
+
+**Relevance explanation:** All five results come from the Amgen page, and the first three contain the specific eligibility and commitment rules. This is strong retrieval: the 3.2 GPA threshold, eligible class years, citizenship/residency, nine-week commitment, housing, and symposium duties are available together in the returned set. Opening overlap fragments remain, but the substantive clauses are readable and correctly attributed.
 
 ---
 
-**Query 3:**
+**Query 3 (planning question 4):** What must a student arrange before beginning an Independent Study in Howard’s Department of Afro-American Studies?
 
 Top returned chunks:
--
--
--
 
-Relevance explanation:
+### Query 3, result 1
+
+**Source:** [Howard University Department of Afro-American Studies — Independent Study](https://afroamericanstudies.howard.edu/beyond-classroom/independent-study)
+
+**Chunk ID:** `afro-independent-study:body:0:d16e112e01a90207`; position 0 (zero-based); **cosine distance: 0.2395**.
+
+> Independent Study
+>
+> Independent Study Project Instructions
+>
+> In an independent study, you essentially create your own course on a topic of your choice, working in concert with your faculty advisor. If you are looking for something different - a special field experience, a chance to try research, or simply explore a topic in more depth - you should consider doing an independent study under faculty supervision. In some cases, faculty members are willing to have you assist with their research projects or will guide your study on a topic of mutual interest.
+>
+> Eligibility
+>
+> To be eligible to register for Independent Study, a student must:
+>
+> Earn a cumulative weighted average of 3.0 or better by the end of their second year;
+
+**Inspection:** Relevant: introduces independent study under faculty supervision and the 3.0 academic threshold, but is incomplete on its own.
+
+### Query 3, result 2
+
+**Source:** [Howard University Department of Afro-American Studies — Independent Study](https://afroamericanstudies.howard.edu/beyond-classroom/independent-study)
+
+**Chunk ID:** `afro-independent-study:body:1:b0db48b34ced2e43`; position 1 (zero-based); **cosine distance: 0.2581**.
+
+> be eligible to register for Independent Study, a student must:
+>
+> Earn a cumulative weighted average of 3.0 or better by the end of their second year;
+>
+> Secure a written agreement from a full-time faculty member to supervise the project; and
+>
+> Submit a written proposal for approval for the project
+>
+> The request must be made in the semester preceding the commencement of an independent study.
+>
+> Written Proposal
+>
+> The proposal may be in the form of a memorandum that describes the problem or issue that will be addressed in the independent study project. The student must set forth a description of the anticipated objective(s) of the project in terms of potential issues that will be addressed and proposed solution(s) and a research plan that demonstrates that some preliminary research has been done.
+
+**Inspection:** Relevant: contains the threshold, written faculty agreement, proposal approval, preceding-semester request, and proposal objectives.
+
+### Query 3, result 3
+
+**Source:** [Howard University Department of Afro-American Studies — Independent Study](https://afroamericanstudies.howard.edu/beyond-classroom/independent-study)
+
+**Chunk ID:** `afro-independent-study:body:3:a182aff8f4b1a401`; position 3 (zero-based); **cosine distance: 0.2829**.
+
+> issue your project addresses and secondary legal sources, e.g. law review and journal articles, books (monographs and anthologies).
+>
+> Faculty Advisor
+>
+> Each project must be supervised by a full-time AFRO professor. The student must meet with the faculty advisor to ensure the focus and scope of the project is clearly laid out in the proposal. The faculty member must provide both a written approval of the project and a written commitment to supervise and evaluate the project.
+
+**Inspection:** Relevant: gives the full-time AFRO professor requirement and written commitments to approve, supervise, and evaluate.
+
+### Query 3, result 4
+
+**Source:** [Howard University Department of Afro-American Studies — Independent Study](https://afroamericanstudies.howard.edu/beyond-classroom/independent-study)
+
+**Chunk ID:** `afro-independent-study:body:2:ffd1e7b284af4fdd`; position 2 (zero-based); **cosine distance: 0.4285**.
+
+> potential issues that will be addressed and proposed solution(s) and a research plan that demonstrates that some preliminary research has been done.
+>
+> The memorandum must be a minimum of two pages, single-spaced, and include the following:
+>
+> a statement of the problem or issue the project addresses;
+>
+> a preliminary annotated bibliography. The bibliography must include both the sources of law cited in your statement of the legal problem or issue your project addresses and secondary legal sources, e.g. law review and journal articles, books (monographs and anthologies).
+>
+> Faculty Advisor
+
+**Inspection:** Relevant: supplies proposal length and bibliography details; it begins with an overlap fragment.
+
+### Query 3, result 5
+
+**Source:** [Howard University Office of Undergraduate Studies](https://ous.howard.edu/undergraduate-research)
+
+**Chunk ID:** `ous-research:body:3:fc5887448d703f4b`; position 3 (zero-based); **cosine distance: 0.4705**.
+
+> s a means to prepare students for research outside of the collegiate environment.
+>
+> Contact the Ukweli Team at huurj@howard.edu for more information.
+>
+> Howard University Research Programs for Undergraduates
+>
+> Humanities, Social Sciences
+>
+> Howard University Center for African Studies - Foreign Language & Area Studies (FLAS) Fellowship Program
+>
+> Library of Congress Archive, History and Heritage Advanced (AHHA) Summer Internship Program
+>
+> Mellon Mays Undergraduate Fellowship Program
+>
+> UC Davis Summer Poverty Research Engagement Experience (UCD-SPREE)
+>
+> Young AfricanA Leadership Initiative (YAALI) Research Abroad
+>
+> STEM
+>
+> HHMI Science Education Alliance-Phage Hunters Advancing Genomics and Evolutionary Science (SEA-PHAGES) Program
+
+**Inspection:** Off-target for the requested departmental rules: a general humanities/research-opportunity list does not establish AFRO independent-study requirements.
+
+**Relevance explanation:** Ranks 1–4 all come from the AFRO guide. The first three jointly cover the threshold, agreement, proposal, request timing, and full-time AFRO professor requirement. The baseline returned only two department chunks and missed the specific advisor rule; source context restored that rule to rank 3. Rank 5 is a general opportunity list, so the full set remains partially relevant. These departmental requirements must not be generalized to all Howard students.
+
+---
+
+**Tuning decision:** Keep the planned k=5 baseline for now. These three questions receive their key evidence in the first three hits, so increasing k is not justified by this run. Source context fixed the missing evidence without enlarging chunks or changing the 88-chunk corpus. Test the remaining evaluation questions before deciding whether to reduce k or introduce reranking. No automatic distance cutoff is applied: the Karsh results demonstrate that a low score can still accompany the wrong program.
 
 ---
 
@@ -335,24 +675,13 @@ System response (refusal):
 
 ## Failure Case Analysis
 
-<!-- Identify at least one question where retrieval or generation did not work as expected.
-     Write a specific explanation of *why* it failed, tied to a part of the pipeline.
+**Question that failed:** “What does a Howard student receive as a Karsh STEM Scholar, and what is required of them in return?” in the initial text-only retrieval run.
 
-     "The answer was wrong" is not an explanation.
+**What the system returned:** The top five included Karsh overview/mission material, Hilltop R1 reporting, Amgen eligibility, and a Karsh student spotlight. The Karsh chunk listing required summer research internships was missing. No generated answer was produced; this was a retrieval coverage failure.
 
-     "The relevant information was split across a chunk boundary, so retrieval returned
-     only half the context — the model didn't have enough to answer correctly" is an explanation.
+**Root cause (tied to a specific pipeline stage):** The benefits/requirements list did not name Karsh in its chunk body. Its attribution metadata was correct, but metadata stored in Chroma does not automatically influence a manually supplied embedding. Related program text therefore outranked a necessary chunk.
 
-     "The embedding model treated the professor's nickname as out-of-vocabulary and returned
-     results from an unrelated review" is an explanation. -->
-
-**Question that failed:**
-
-**What the system returned:**
-
-**Root cause (tied to a specific pipeline stage):**
-
-**What you would change to fix it:**
+**What changed:** The document embedding input now includes the source name before the unchanged chunk text. The missing Karsh list moved into rank 3, and the AFRO faculty-advisor rule also moved into rank 3 for question 4. Token validation covers this prefix. Lower-ranked cross-program hits and overlap fragments remain limitations; the saved baseline and final results make the improvement and remaining noise inspectable.
 
 ---
 

@@ -21,3 +21,6 @@ chroma/
 
 # Downloaded source snapshots and generated ingestion outputs
 documents/processed/
+
+# Downloaded local embedding model
+.cache/
